@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://subhadeep.net/sitemap.xml
+Sitemap: subhadeep.net/sitemap.xml
