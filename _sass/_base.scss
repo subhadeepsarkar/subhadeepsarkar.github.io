@@ -24,13 +24,14 @@ hr {
 }
 
 table {
+
   td,
   th {
-    font-size: 1rem;
+    color: var(--global-text-color);
   }
 
-  th {
-    font-weight: bold;
+  td {
+    font-size: 1rem;
   }
 }
 
@@ -135,7 +136,7 @@ blockquote {
 
 @media (min-width: 576px) {
   .profile {
-    width: 30%;
+    width: 15%;
 
     .address {
       p {
@@ -165,12 +166,12 @@ blockquote {
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
+  background-color: var(--nav-bar-light-color);
   opacity: 0.95;
 }
 
 .navbar .dropdown-menu {
-  background-color: var(--global-bg-color);
+  background-color: var(--nav-bar-light-color);
   border: 1px solid var(--global-divider-color);
 
   a:not(.active) {
@@ -191,7 +192,7 @@ blockquote {
 
   &:hover {
     color: var(--global-hover-color);
-    background-color: var(--global-bg-color);
+    background-color: var(--nav-bar-light-color);
   }
 }
 
@@ -413,12 +414,6 @@ footer.sticky-bottom {
   }
 }
 
-.post-title {
-  mjx-container[jax="CHTML"][display="true"] {
-    display: unset;
-  }
-}
-
 .post-list {
   margin: 0;
   margin-bottom: 40px;
@@ -450,10 +445,6 @@ footer.sticky-bottom {
       &:hover {
         color: var(--global-theme-color);
       }
-    }
-
-    mjx-container[jax="CHTML"][display="true"] {
-      display: unset;
     }
   }
 }
@@ -560,19 +551,20 @@ footer.sticky-bottom {
   h2.year {
     color: var(--global-divider-color);
     border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
-    margin-top: 2rem;
-    margin-bottom: -2rem;
+    padding-top: -2rem;
+    margin-top: -0.25rem;
+    margin-bottom: 0rem;
     text-align: right;
   }
 
   ol.bibliography {
     list-style: none;
     padding: 0;
-    margin-top: 0;
+    margin-top: -2rem;
+    margin-bottom: 0;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 0rem;
 
       .preview {
         width: 100%;
@@ -582,7 +574,7 @@ footer.sticky-bottom {
 
       .abbr {
         height: 2rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0rem;
 
         abbr {
           display: inline-block;
@@ -607,10 +599,13 @@ footer.sticky-bottom {
 
       .title {
         font-weight: bolder;
+        margin-bottom: -0.25rem;
       }
 
       .author {
         a {
+          margin: 0px;
+          padding-top: 0px;
           border-bottom: 1px dashed var(--global-theme-color);
 
           &:hover {
@@ -651,6 +646,7 @@ footer.sticky-bottom {
             border-color: var(--global-theme-color);
           }
         }
+        margin-bottom: -1rem;
       }
 
       .badges {
@@ -835,21 +831,29 @@ progress::-moz-progress-bar {
   height: inherit;
 }
 
-/* Copy button */
-.code-display-wrapper {
+pre {
+  padding: 8px 12px;
   position: relative;
 
+  /* Copy code to clipboard button */
   .copy {
     background: var(--global-card-bg-color);
     border-color: var(--global-bg-color);
     border-radius: .3rem;
-    border-style: none;
+    border-style: solid;
     color: var(--global-text-color);
     font-size: medium;
     opacity: 0;
     position: absolute;
-    right: .5rem;
-    top: .5rem;
+    right: .25rem;
+    top: .25rem;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: var(--global-hover-color);
+      opacity: 1;
+    }
   }
 
   &:active .copy,
@@ -859,91 +863,3 @@ progress::-moz-progress-bar {
     opacity: 1;
   }
 }
-
-.btn-group.dropdown {
-  .btn {
-    box-shadow: none;
-    -webkit-box-shadow: none;
-  }
-
-  .btn-secondary.dropdown-toggle {
-    border: 1px solid var(--global-divider-color);
-
-    .page-size {
-      color: inherit;
-    }
-
-    &:not(.active) {
-      background-color: var(--global-bg-color) !important;
-      color: var(--global-text-color);
-    }
-
-    &:hover {
-      background-color: var(--global-hover-color) !important;
-      color: var(--global-hover-text-color) !important;
-    }
-  }
-
-  .dropdown-menu {
-    background-color: var(--global-bg-color);
-  }
-
-  .dropdown-item {
-    background-color: var(--global-bg-color);
-    color: var(--global-text-color);
-
-    &:hover {
-      color: var(--global-hover-color);
-    }
-  }
-
-  .dropdown-item.active, .dropdown-item:active {
-    background-color: var(--global-hover-color);
-    color: var(--global-hover-text-color) !important;
-
-    &:hover {
-      color: var(--global-hover-text-color);
-    }
-  }
-}
-
-/* Table of Contents */
-nav[data-toggle="toc"] {
-  top: 5rem;
-
-  .nav .nav>li>a {
-    font-size: .75rem;
-  }
-
-  .nav>li>a {
-    color: var(--global-text-color);
-    font-size: .75rem;
-
-    &:hover {
-      color: var(--global-hover-color);
-      border-left-color: var(--global-hover-color);
-    }
-  }
-
-  .nav-link.active {
-    color: var(--global-theme-color);
-    border-left-color: var(--global-theme-color);
-    font-size: .75rem;
-
-    &:hover {
-      color: var(--global-hover-color);
-      border-left-color: var(--global-hover-color);
-    }
-  }
-}
-
-/* small screens */
-@media (max-width: 576px) {
-  /* override stickyness so that the navigation does not follow scrolling */
-  nav[data-toggle="toc"] {
-    visibility: hidden;
-    height: 0;
-    top: 0;
-  }
-}
-

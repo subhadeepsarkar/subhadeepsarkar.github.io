@@ -1,17 +1,18 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: "Assistant Professor, "
+department: Department of Computer Science, Brandeis University
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: Subhadeep-W.png
   image_circular: false # crops the image to make it circular
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p><h6>Office: TBD</p>
+    <p>415 South Street</p>
+    <p>Waltham, MA 02453</p>
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
@@ -19,8 +20,11 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am an assistant professor of Computer Science at Brandeis University. I work at the intersection of designing data layouts and access methods for storage engines and developing systems-level solutions for privacy protection in modern data systems. The goal of my research is to design efficient privacy-aware data systems by navigating the privacy-performance tradeoff and designing privacy-aware data structures and algorithms that supports <i>privacy by design</i>. My research interests span data systems, storage layouts, access methods, and their intersection with data privacy.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Before joining Brandeis, I was a post-doctoral associate at Boston University in the [Data-intensive Systems and Computing (DiSC) lab](https://disc.bu.edu/) with Manos Athanassoulis (2019-2023). Prior to that, I spent two years at Inria, Rennes (France) a post-doctoral researcher with Christine Morin (2017-2018). I got my PhD in Computer Science from IIT Kharagpur in 2017. 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<h5><b>Prospective students and post-docs</b></h5>
+I am recruiting motivated PhD students and post-docs for Fall 2023. 
+
+

@@ -1,35 +1,335 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@inproceedings{DBLP:conf/sigmod/ZhuSA23,
+  author       = {Zichen Zhu and Subhadeep Sarkar and Manos Athanassoulis},
+  title        = {Acheron: Persisting Tombstones in {LSM} Engines},
+  booktitle    = {Proceedings of the {ACM SIGMOD} International Conference on Management of Data},
+  publisher    = {{ACM}},
+  year         = {2023},
+  abbr         = {SIGMOD},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+@inproceedings{DBLP:conf/icde/SarkarA23,
+  author       = {Subhadeep Sarkar and Manos Athanassoulis},
+  title        = {The LSM Design Space and its Read Optimizations},
+  booktitle    = {Proceedings of the IEEE International Conference on Data Engineering ({ICDE})},
+  pages        = {3554--3560},
+  year         = {2023},
+  url          = {https://doi.org/10.1109/ICDE55515.2023.00273},
+  doi          = {10.1109/ICDE55515.2023.00273},
+  abbr         = {ICDE},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf},
+  selected     = {true}
+}
+
+@inproceedings{DBLP:conf/icde/RamanSOA23,
+  author       = {Aneesh Raman and Subhadeep Sarkar and Matthaios Olma and Manos Athanassoulis},
+  title        = {Indexing for Near-Sorted Data},
+  booktitle    = {Proceedings of the IEEE International Conference on Data Engineering ({ICDE})},
+  pages        = {1469--1482},
+  year         = {2023},
+  url          = {https://doi.org/10.1109/ICDE55515.2023.00117},
+  doi          = {10.1109/ICDE55515.2023.00117},
+  abbr         = {ICDE},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
+}
+
+@article{DBLP:journals/debu/AthanassoulisSP22,
+  title        = {Building Deletion-Compliant Data Systems},
+  author       = {Athanassoulis, Manos and Sarkar, Subhadeep},
+  journal      = {{IEEE} Data Engineering Bulletin},
+  volume       = {45},
+  issue        = {1},
+  pages        = {21--36},
+  year         = {2022},
+  publisher    = {IEEE},
+  abbr         = {DEBull},
+  abstract     = {Most modern data systems have been designed with two goals in mind -- fast ingestion and low-latency query processing. The ﬁrst goal has led to the development of a plethora of write-optimized data stores that employ the out-of-place paradigm. Due to their write-optimized design, out-of-place data systems perform deletes logically via invalidation, and retain the invalid data for arbitrarily long. However, due to the recent enactment of new data privacy regulations, the requirement of timely deletion of user data has become central. The right to be forgotten (in EU's GDPR), right to delete (in California's CCPA and CPRA), or deletion right (in Virginia's VCDPA) mandates that service providers persistently delete a user's data within a pre-set time duration. Logical deletion in out-of-place data systems, however, does not offer guarantees for timely and persistent deletion, and attempting to enforce it using existing tools leads to poor performance and increased operational costs. 
+  
+  In this paper, we present a new framework for building deletion-compliant data systems from a holistic perspective. We analyze the new regulations and the requirements derived from the new policies, and we propose changes in the application and the system layer of data management. We outline the new types of deletion requests that need to be supported, the query language modiﬁcations needed to be able to request for timely persistent data deletion, and the system-level changes needed to realize timely and persistent deletes. The proposed framework for deletion compliance lays the groundwork for a new class of data systems that can offer system-level guarantees for user data privacy. We present recent results spanning all layers of the framework: the requirements and the application layer target any database system, while the system layer discussion is geared towards out-of-place systems. Finally, we conclude with a discussion on next steps and open challenges on building deletion-compliant data systems.},
+  url          = {http://sites.computer.org/debull/A22mar/p21.pdf},
+  pdf          = {example_pdf.pdf}
+}
+
+@inproceedings{DBLP:conf/edbt/SarkarA22,
+  author       = {Subhadeep Sarkar and Manos Athanassoulis},
+  editor       = {Julia Stoyanovich and Jens Teubner and Paolo Guagliardo and Milos Nikolic and Andreas Pieris and Jan M{\"{u}}hlig and Fatma {\"{O}}zcan and Sebastian Schelter and H. V. Jagadish and Meihui Zhang},
+  title        = {Query Language Support for Timely Data Deletion},
+  booktitle    = {Proceedings of the International Conference on Extending Database Technology ({EDBT})},
+  pages        = {2:429--2:434},
+  publisher    = {OpenProceedings.org},
+  year         = {2022},
+  url          = {https://doi.org/10.48786/edbt.2022.35},
+  doi          = {10.48786/edbt.2022.35},
+  abbr         = {EDBT},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
+}
+
+@inproceedings{DBLP:conf/sigmod/SarkarCZA22,
+  author       = {Subhadeep Sarkar and Kaijie Chen and Zichen Zhu and Manos Athanassoulis},
+  editor       = {Zachary G. Ives and Angela Bonifati and Amr El Abbadi},
+  title        = {Compactionary: {A} Dictionary for {LSM} Compactions},
+  booktitle    = {Proceedings of the {ACM SIGMOD} International Conference on Management of Data},
+  pages        = {2429--2432},
+  publisher    = {{ACM}},
+  year         = {2022},
+  url          = {https://doi.org/10.1145/3514221.3520169},
+  doi          = {10.1145/3514221.3520169},
+  abbr         = {SIGMOD},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf},
+  selected     = {true}
+}
+
+@inproceedings{DBLP:conf/sigmod/SarkarA22,
+  author       = {Subhadeep Sarkar and Manos Athanassoulis},
+  editor       = {Zachary G. Ives and Angela Bonifati and Amr El Abbadi},
+  title        = {Dissecting, Designing, and Optimizing LSM-based Data Stores},
+  booktitle    = {Proceedings of the {ACM SIGMOD} International Conference on Management of Data},
+  pages        = {2489--2497},
+  publisher    = {{ACM}},
+  year         = {2022},
+  url          = {https://doi.org/10.1145/3514221.3522563},
+  doi          = {10.1145/3514221.3522563},
+  abbr         = {SIGMOD},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf},
+  selected     = {true}
+}
+
+@inproceedings{DBLP:conf/tpctc/RamanKSOA22,
+  author       = {Aneesh Raman and Konstantinos Karatsenidis and Subhadeep Sarkar and Matthaios Olma and Manos Athanassoulis},
+  editor       = {Raghunath Nambiar and Meikel Poess},
+  title        = {{BoDS}: {A} Benchmark on Data Sortedness},
+  booktitle    = {Performance Evaluation and Benchmarking {TPC} Technology Conference ({TPCTC})},
+  series       = {Lecture Notes in Computer Science},
+  volume       = {13860},
+  pages        = {17--32},
+  publisher    = {Springer},
+  year         = {2022},
+  url          = {https://doi.org/10.1007/978-3-031-29576-8\_2},
+  doi          = {10.1007/978-3-031-29576-8\_2},
+  abbr         = {TPCTC},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
+}
+
+@article{DBLP:journals/pvldb/SarkarSZA21,
+  author       = {Subhadeep Sarkar and Dimitris Staratzis and Zichen Zhu and Manos Athanassoulis},
+  title        = {Constructing and Analyzing the {LSM} Compaction Design Space},
+  journal      = {Proceedings of the {VLDB} Endowment},
+  volume       = {14},
+  number       = {11},
+  pages        = {2216--2229},
+  year         = {2021},
+  url          = {http://www.vldb.org/pvldb/vol14/p2216-sarkar.pdf},
+  doi          = {10.14778/3476249.3476274},
+  abbr         = {PVLDB},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf},
+  selected     = {true}
+}
+
+@article{DBLP:conf/sigmod/SarkarPSA20,
+  title        = {Lethe: {A} Tunable Delete-Aware {LSM} Engine},
+  author       = {Sarkar, Subhadeep and Papon, Tarikul Islam and Staratzis, Dimitris and Athanassoulis, Manos},
+  journal      = {Proceedings of the {ACM SIGMOD} International Conference on Management of Data},
+  pages        = {893--908},
+  year         = {2020},
+  publisher    = {ACM},
+  url          = {https://doi.org/10.1145/3318464.3389757},
+  doi          = {10.1145/3318464.3389757},
+  abbr         = {SIGMOD},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf},
+  selected     = {true}
+}
+
+@article{DBLP:journals/tcc/SarkarCM18,
+  author       = {Subhadeep Sarkar and Subarna Chatterjee and Sudip Misra},
+  title        = {Assessment of the Suitability of Fog Computing in the Context of Internet of Things},
+  journal      = {{IEEE} Transactions on Cloud Computing},
+  volume       = {6},
+  number       = {1},
+  pages        = {46--59},
+  year         = {2018},
+  url          = {https://doi.org/10.1109/TCC.2015.2485206},
+  doi          = {10.1109/TCC.2015.2485206},
+  abbr         = {TCC},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
+}
+
+@article{DBLP:journals/sj/MisraBS21,
+  author       = {Sudip Misra and Pradyumna Kumar Bishoyi and Subhadeep Sarkar},
+  title        = {i-{MAC}: In-Body Sensor {MAC} in Wireless Body Area Networks for Healthcare {IoT}},
+  journal      = {{IEEE} Systems Journal},
+  volume       = {15},
+  number       = {3},
+  pages        = {4413--4420},
+  year         = {2021},
+  url          = {https://doi.org/10.1109/JSYST.2020.3020306},
+  doi          = {10.1109/JSYST.2020.3020306},
+  abbr         = {SYSTEMS J.},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
+}
+
+@inproceedings{DBLP:conf/ithings/SarkarBRM18,
+  author       = {Subhadeep Sarkar and Jean{-}Pierre Ban{\^{a}}tre and Louis Rilling and Christine Morin},
+  title        = {Towards Enforcement of the {EU} {GDPR:} Enabling Data Erasure},
+  booktitle    = {{IEEE} International Conference on Internet of Things ({iThings})},
+  pages        = {222--229},
+  publisher    = {{IEEE}},
+  year         = {2018},
+  url          = {https://doi.org/10.1109/Cybermatics\_2018.2018.00067},
+  doi          = {10.1109/Cybermatics\_2018.2018.00067},
+  abbr         = {iThings},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
+}
+
+@article{DBLP:journals/cn/BhavathankarSM17,
+  author       = {Prasenjit Bhavathankar and Subhadeep Sarkar and Sudip Misra},
+  title        = {Optimal Decision Rule-based Ex-Ante Frequency Hopping for Jamming Avoidance in Wireless Sensor Networks},
+  journal      = {Computer Networks, Elsevier},
+  volume       = {128},
+  pages        = {172--185},
+  year         = {2017},
+  url          = {https://doi.org/10.1016/j.comnet.2017.03.009},
+  doi          = {10.1016/j.comnet.2017.03.009},
+  abbr         = {COMM NETWORKS},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
+}
+
+@article{DBLP:journals/icl/SarkarCMK17,
+  author       = {Subhadeep Sarkar and Subarna Chatterjee and Sudip Misra and Rajesh Kudupudi},
+  title        = {Privacy-Aware Blind Cloud Framework for Advanced Healthcare},
+  journal      = {{IEEE} Communications Letters},
+  volume       = {21},
+  number       = {11},
+  pages        = {2492--2495},
+  year         = {2017},
+  url          = {https://doi.org/10.1109/LCOMM.2017.2739141},
+  doi          = {10.1109/LCOMM.2017.2739141},
+  abbr         = {COMM LETTERS},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
+}
+
+@article{DBLP:journals/iet-net/SarkarM16,
+  author       = {Subhadeep Sarkar and Sudip Misra},
+  title        = {Theoretical Modelling of Fog Computing: {A} Green Computing Paradigm to Support IoT Applications},
+  journal      = {{IET} Networks},
+  volume       = {5},
+  number       = {2},
+  pages        = {23--29},
+  year         = {2016},
+  url          = {https://doi.org/10.1049/iet-net.2015.0034},
+  doi          = {10.1049/iet-net.2015.0034},
+  abbr         = {IET NETWORKS},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
+}
+
+@inproceedings{DBLP:conf/globecom/SarkarMO16,
+  author       = {Subhadeep Sarkar and Sudip Misra and Mohammad S. Obaidat},
+  title        = {Resource Allocation for Wireless Body Area Networks in Presence of Selfish Agents},
+  booktitle    = {2016 {IEEE} Global Communications Conference ({GLOBECOM})},
+  pages        = {1--6},
+  publisher    = {{IEEE}},
+  year         = {2016},
+  url          = {https://doi.org/10.1109/GLOCOM.2016.7842222},
+  doi          = {10.1109/GLOCOM.2016.7842222},
+  abbr         = {GLOBECOM},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
+}
+
+@article{DBLP:journals/tc/SarkarMBCO15,
+  author       = {Subhadeep Sarkar and Sudip Misra and Bitan Bandyopadhyay and Chandan Chakraborty and Mohammad S. Obaidat},
+  title        = {Performance Analysis of {IEEE} 802.15.6 {MAC} Protocol under Non-Ideal Channel Conditions and Saturated Traffic Regime},
+  journal      = {{IEEE} Transactions on Computers},
+  volume       = {64},
+  number       = {10},
+  pages        = {2912--2925},
+  year         = {2015},
+  url          = {https://doi.org/10.1109/TC.2015.2389806},
+  doi          = {10.1109/TC.2015.2389806},
+  abbr         = {TC},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
+}
+
+@article{DBLP:journals/titb/MisraS15,
+  author       = {Sudip Misra and Subhadeep Sarkar},
+  title        = {Priority-Based Time-Slot Allocation in Wireless Body Area Networks During Medical Emergency Situations: An Evolutionary Game-Theoretic Perspective},
+  journal      = {{IEEE} Journal of Biomedical and Health Informatics},
+  volume       = {19},
+  number       = {2},
+  pages        = {541--548},
+  year         = {2015},
+  url          = {https://doi.org/10.1109/JBHI.2014.2313374},
+  doi          = {10.1109/JBHI.2014.2313374},
+  abbr         = {JBHI},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
+}
+
+@inproceedings{DBLP:conf/icc/ChatterjeeSM15,
+  author       = {Subarna Chatterjee and Subhadeep Sarkar and Sudip Misra},
+  title        = {Quantification of Node Misbehavior in Wireless Sensor Networks: {A} Social Choice-based Approach},
+  booktitle    = {{IEEE} International Conference on Communication ({ICC}) Workshops},
+  pages        = {1479--1484},
+  publisher    = {{IEEE}},
+  year         = {2015},
+  url          = {https://doi.org/10.1109/ICCW.2015.7247388},
+  doi          = {10.1109/ICCW.2015.7247388},
+  abbr         = {ICC},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
+}
+
+@article{DBLP:journals/cloudcomp/SarkarCM14,
+  author       = {Subhadeep Sarkar and Subarna Chatterjee and Sudip Misra},
+  title        = {Evacuation and Emergency Management Using a Federated Cloud},
+  journal      = {{IEEE} Cloud Computing},
+  volume       = {1},
+  number       = {4},
+  pages        = {68--76},
+  year         = {2014},
+  url          = {https://doi.org/10.1109/MCC.2014.72},
+  doi          = {10.1109/MCC.2014.72},
+  abbr         = {CLOUD COMP},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
+}
+
+@inproceedings{DBLP:conf/globecom/SarkarMCO14,
+  author       = {Subhadeep Sarkar and Sudip Misra and Chandan Chakraborty and Mohammad S. Obaidat},
+  title        = {Analysis of Reliability and Throughput under Saturation Condition of {IEEE} 802.15.6 {CSMA/CA} for Wireless Body Area Networks},
+  booktitle    = {{IEEE} Global Communications Conference ({GLOBECOM})},
+  pages        = {2405--2410},
+  publisher    = {{IEEE}},
+  year         = {2014},
+  url          = {https://doi.org/10.1109/GLOCOM.2014.7037168},
+  doi          = {10.1109/GLOCOM.2014.7037168},
+  abbr         = {VLDB},
+  abstract     = {Abstract},
+  pdf          = {example_pdf.pdf}
 }
 
 @article{PhysRev.47.777,
   abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
+  title={Can Quantum-Mechanical ...?},
   author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
   journal={Phys. Rev.},
   volume={47},
   issue={10},
@@ -43,35 +343,7 @@
   html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
   pdf={example_pdf.pdf},
   altmetric={248277},
-  dimensions={true},
-  selected={true}
-}
-
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
+  dimensions={true}
 }
 
 @book{przibram1967letters,
