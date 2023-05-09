@@ -1,43 +1,213 @@
+<div class="news">
+    {% if site.news != blank -%} {%- assign news_size = site.news | size -%}
+    <div class="table-responsive" {% if site.news.scrollable and news_size>
+        3 %}style="max-height: 10vw"{% endif %}>
+        <p style="margin-bottom: 2mm">
+            <b>Apr 2023</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our paper "Enabling Timely and Persistent Deletion in LSM-Engines" is
+            <b>accepted for publication</b> in ACM ToDS.
+        </p>
 
-          <div class="news">
-            {% if site.news != blank -%}
-            {%- assign news_size = site.news | size -%}
-            <div class="table-responsive" {% if site.news.scrollable and news_size > 3 %}style="max-height: 10vw"{% endif %}>
-              <p style="margin-bottom:2mm;"><b>Apr 2023</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our paper <a href="#" target="_blank">"Enabling Timely and Persistent Deletion in LSM-Engines"</a> is <b>accepted for publication</b> in <a href="#" target="_blank">ACM ToDS</a>.</p>
+        <p style="margin-bottom: 2mm">
+            <b>Mar 2023</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I am excited to announce the
+            <b>I will be joining Brandeis University as an Assistant Professor of
+        Computer Science</b
+      >
+      from Fall 2023.
+    </p>
 
-              <p style="margin-bottom:2mm;"><b>Mar 2023</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I am excited to announce the <b>I will be joining Brandeis University as an Assistant Professor of Computer Science</b> from Fall 2023.</p>
+    <p style="margin-bottom: 2mm">
+      <b>Mar 2023</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our demonstration paper
+            <a href="fulltext/Acheron_Persisting_Tombstones_in_LSM_Engines.pdf" target="_blank">"Acheron: Persisting Tombstones in LSM Engines"</a
+      >
+      is <b>accepted for publication</b> in
+      <a
+        href="assets/fulltext/Acheron_Persisting_Tombstones_in_LSM_Engines.pdf"
+        target="_blank"
+        >SIGMOD 2023</a
+      >.
+      <b
+        ><a href="https://disc-projects.bu.edu/acheron/" target="_blank"
+          >[Demo]</a
+        ></b
+      >
+    </p>
 
-              <p style="margin-bottom:2mm;"><b>Mar 2023</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our demonstration paper <a href="fulltext/Acheron_Persisting_Tombstones_in_LSM_Engines.pdf" target="_blank">"Acheron: Persisting Tombstones in LSM Engines"</a> is <b>accepted for publication</b> in <a href="fulltext/Acheron_Persisting_Tombstones_in_LSM_Engines.pdf" target="_blank">SIGMOD 2023</a>. <b><a href="https://disc-projects.bu.edu/acheron/" target="_blank">[Demo]</a></b> </p>
+    <p style="margin-bottom: 2mm">
+      <b>Mar 2023</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I will be serving in
+      the <b>Program Committee</b> of
+      <a href="https://vldb.org/2022/?call-for-demonstrations" target="_blank"
+        >VLDB Demo 2023</a
+      >.
+    </p>
 
-              <p style="margin-bottom:2mm;"><b>Mar 2023</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I will be serving in the <b>Program Committee</b> of <a href="https://vldb.org/2022/?call-for-demonstrations" target="_blank">VLDB Demo 2023</a>.</p>
-              
-              <p style="margin-bottom:2mm;"><b>Feb 2023</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I will be serving in the <b>Program Committee</b> of <a href="http://bigdataieee.org/BigData2023/index.html" target="_blank">IEEE BigData 2023</a>.</p>
+    <p style="margin-bottom: 2mm">
+      <b>Feb 2023</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I will be serving in
+      the <b>Program Committee</b> of
+      <a href="http://bigdataieee.org/BigData2023/index.html" target="_blank"
+        >IEEE BigData 2023</a
+      >.
+    </p>
 
-              <p style="margin-bottom:2mm;"><b>Jan 2023</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our tutorial on <a href="fulltext/The_LSM_Design_Space_and_its_Read_Optimizations.pdf" target="_blank">"The LSM Design Space and its Read Optimizations"</a> is <b>accepted for publication</b> in <a href="fulltext/The_LSM_Design_Space_and_its_Read_Optimizations.pdf" target="_blank">ICDE 2023</a>.</p>
+    <p style="margin-bottom: 2mm">
+      <b>Jan 2023</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our tutorial on
+      <a
+        href="assets/fulltext/The_LSM_Design_Space_and_its_Read_Optimizations.pdf"
+        target="_blank"
+        >"The LSM Design Space and its Read Optimizations"</a
+      >
+      is <b>accepted for publication</b> in
+      <a
+        href="fulltext/The_LSM_Design_Space_and_its_Read_Optimizations.pdf"
+        target="_blank"
+        >ICDE 2023</a
+      >.
+    </p>
 
-              <p style="margin-bottom:2mm;"><b>Dec 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our paper <a href="fulltext/Indexing_for_Near-Sorted_Data.pdf" target="_blank">"Indexing for Near-Sorted Data"</a> is <b>accepted for publication</b> in <a href="fulltext/Indexing_for_Near-Sorted_Data.pdf" target="_blank">ICDE 2023</a>.</p>
+    <p style="margin-bottom: 2mm">
+      <b>Dec 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our paper
+      <a
+        href="assets/fulltext/Indexing_for_Near-Sorted_Data.pdf"
+        target="_blank"
+        >"Indexing for Near-Sorted Data"</a
+      >
+      is <b>accepted for publication</b> in
+      <a href="fulltext/Indexing_for_Near-Sorted_Data.pdf" target="_blank"
+        >ICDE 2023</a
+      >.
+    </p>
 
-              <p style="margin-bottom:2mm;"><b>Nov 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I will be <b>delivering a talk</b> on "Constructing and Analyzing the LSM Compaction Design Space" at <b>MongoDB</b>.</p>
-              
-              <p style="margin-bottom:2mm;"><b>Oct 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I will be <b>delivering a invited talk</b> on <a href="fulltext/Toward_Building_Deletion_Compliant_Data_Systems.pdf" target="_blank">"Toward Building Deletion-Compliant Data Systems"</a> at <a href="http://hpts.ws/agenda.html" target="_blank">HPTS 2022</a>. <b><a href="resources/HPTS.pdf" target="_blank">[Slides]</a></b> </p>
+    <p style="margin-bottom: 2mm">
+      <b>Nov 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I will be
+      <b>delivering a talk</b> on "Constructing and Analyzing the LSM Compaction
+      Design Space" at <b>MongoDB</b>.
+    </p>
 
-              <p style="margin-bottom:2mm;"><b>Aug 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our paper <a href="https://cs-people.bu.edu/mathan/publications/tpctc22-raman.pdf" target="_blank">"BoDS: A Benchmark on Data Sortedness"</a> is <b>accepted for publication</b> in <a href="https://cs-people.bu.edu/mathan/publications/tpctc22-raman.pdf" target="_blank">TPCTC 2022</a>.</p>
+    <p style="margin-bottom: 2mm">
+      <b>Oct 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I will be
+      <b>delivering a invited talk</b> on
+      <a
+        href="fulltext/Toward_Building_Deletion_Compliant_Data_Systems.pdf"
+        target="_blank"
+        >"Toward Building Deletion-Compliant Data Systems"</a
+      >
+      at <a href="http://hpts.ws/agenda.html" target="_blank">HPTS 2022</a>.
+            <b><a href="resources/HPTS.pdf" target="_blank">[Slides]</a></b>
+        </p>
 
-              <p style="margin-bottom:2mm;"><b>May 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I will be serving as the <b>Sponsorship Chair</b> and in the <b>Program Committee</b> of <a href="https://acmsocc.org/2022/officers.html" target="_blank">ACM SoCC 2022</a>. </p>
+        <p style="margin-bottom: 2mm">
+            <b>Aug 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our paper
+            <a href="assets/fulltext/BODS_A_Benchmark_on_Data_Sortedness.pdf" target="_blank">"BoDS: A Benchmark on Data Sortedness"</a
+      >
+      is <b>accepted for publication</b> in
+      <a
+        href="https://link.springer.com/chapter/10.1007/978-3-031-29576-8_2"
+        target="_blank"
+        >TPCTC 2022</a
+      >.
+    </p>
 
-              <p style="margin-bottom:2mm;"><b>Apr 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I will be serving in the <b>Program Committee</b> of <a href="http://edbticdt2023.cs.uoi.gr/?contents=EDBT_Committee.html" target="_blank">EDBT 2023</a>. </p>
+    <p style="margin-bottom: 2mm">
+      <b>May 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I will be serving as
+      the <b>Sponsorship Chair</b> and in the <b>Program Committee</b> of
+      <a href="https://acmsocc.org/2022/officers.html" target="_blank"
+        >ACM SoCC 2022</a
+      >.
+    </p>
 
-              <p style="margin-bottom:2mm;"><b>Mar 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our demonstration paper <a href="https://dl.acm.org/doi/10.1145/3514221.3520169" target="_blank">"Compactionary: A Dictionary for LSM Compactions"</a> is <b>accepted for publication</b> in <a href="https://dl.acm.org/doi/10.1145/3514221.3520169" target="_blank">SIGMOD 2022</a>. <b><a href="https://disc-projects.bu.edu/compactionary/#interactiveDemo" target="_blank">[Demo]</a></b> </p>
+    <p style="margin-bottom: 2mm">
+      <b>Apr 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I will be serving in
+      the <b>Program Committee</b> of
+      <a
+        href="http://edbticdt2023.cs.uoi.gr/?contents=EDBT_Committee.html"
+        target="_blank"
+        >EDBT 2023</a
+      >.
+    </p>
 
-              <p style="margin-bottom:2mm;"><b>Mar 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our tutorial on <a href="https://dl.acm.org/doi/10.1145/3514221.3522563" target="_blank">"Dissecting, Designing, and Optimizing LSM-based Data Stores"</a> is <b>accepted for publication</b> in <a href="https://dl.acm.org/doi/10.1145/3514221.3522563" target="_blank">SIGMOD 2022</a>. <b><a href="https://www.youtube.com/watch?v=Al3krW4Sh3Q" target="_blank">[Talk]</a></b> </p>
+    <p style="margin-bottom: 2mm">
+      <b>Mar 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our demonstration
+      paper
+      <a
+        href="assets/fulltext/Compactionary-A_Dictionary_for_LSM_Compactions.pdf"
+        target="_blank"
+        >"Compactionary: A Dictionary for LSM Compactions"</a
+      >
+      is <b>accepted for publication</b> in
+      <a href="https://dl.acm.org/doi/10.1145/3514221.3520169" target="_blank"
+        >SIGMOD 2022</a
+      >.
+      <b
+        ><a
+          href="https://disc-projects.bu.edu/compactionary/#interactiveDemo"
+          target="_blank"
+          >[Demo]</a
+        ></b
+      >
+    </p>
 
-              <p style="margin-bottom:2mm;"><b>Mar 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our <i>invited paper</i> on "<a href="fulltext/Building_Deletion-Compliant_Data_Systems.pdf" target="_blank">Building Deletion-Compliant Data Systems</a>" is now <b>published</b> in <a href="http://sites.computer.org/debull/A22mar/issue1.htm" target="_blank">IEEE Data Engineering Bulletin</a>. </p>
+    <p style="margin-bottom: 2mm">
+      <b>Mar 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our tutorial on
+      <a
+        href="assets/fulltext/Dissecting_Designing_and_Optimizing_LSM-based_Data_Stores.pdf"
+        target="_blank"
+        >"Dissecting, Designing, and Optimizing LSM-based Data Stores"</a
+      >
+      is <b>accepted for publication</b> in
+      <a href="https://dl.acm.org/doi/10.1145/3514221.3522563" target="_blank"
+        >SIGMOD 2022</a
+      >.
+      <b
+        ><a href="https://www.youtube.com/watch?v=Al3krW4Sh3Q" target="_blank"
+          >[Talk]</a
+        ></b
+      >
+    </p>
 
-              <p style="margin-bottom:2mm;"><b>Feb 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our paper <a href="fulltext/Query_Language_Support_for_Timely_Data_Deletion.pdf" target="_blank">"Query Language Support for Timely Data Deletion"</a> is <b>accepted for publication</b> in <a href="https://conferences.inf.ed.ac.uk/edbticdt2022/?contents=accepted-papers-research-track.html" target="_blank">EDBT 2022</a>. <b><a href="https://www.youtube.com/watch?v=aUZ_SCPOtWo" target="_blank">[Talk]</a></b>  </p>
+    <p style="margin-bottom: 2mm">
+      <b>Mar 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our
+      <i>invited paper</i> on "<a
+        href="assets/fulltext/Building_Deletion-Compliant_Data_Systems.pdf"
+        target="_blank"
+        >Building Deletion-Compliant Data Systems</a
+      >" is now <b>published</b> in
+      <a
+        href="http://sites.computer.org/debull/A22mar/issue1.htm"
+        target="_blank"
+        >IEEE Data Engineering Bulletin</a
+      >.
+    </p>
 
-              <p style="margin-bottom:10mm;"><b>Feb 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I will be serving in the <b>Program Committee</b> of <a href="https://bigdataieee.org/BigData2022/CallPapers.html" target="_blank">IEEE Big Data 2022</a>. </p>
-            </div>
-          {%- else -%}
-            <p>No news so far...</p>
-          {%- endif %}
-          </div>
+    <p style="margin-bottom: 2mm">
+      <b>Feb 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our paper
+      <a
+        href="assets/fulltext/Query_Language_Support_for_Timely_Data_Deletion.pdf"
+        target="_blank"
+        >"Query Language Support for Timely Data Deletion"</a
+      >
+      is <b>accepted for publication</b> in
+      <a
+        href="https://conferences.inf.ed.ac.uk/edbticdt2022/?contents=accepted-papers-research-track.html"
+        target="_blank"
+        >EDBT 2022</a
+      >.
+      <b
+        ><a href="https://www.youtube.com/watch?v=aUZ_SCPOtWo" target="_blank"
+          >[Talk]</a
+        ></b
+      >
+    </p>
+
+    <p style="margin-bottom: 10mm">
+      <b>Feb 2022</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I will be serving in
+      the <b>Program Committee</b> of
+      <a
+        href="https://bigdataieee.org/BigData2022/CallPapers.html"
+        target="_blank"
+        >IEEE Big Data 2022</a
+      >.
+    </p>
+  </div>
+  {%- else -%}
+  <p>No news so far...</p>
+  {%- endif %}
+</div>
