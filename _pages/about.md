@@ -10,7 +10,7 @@ profile:
   image: Subhadeep-W.png
   image_circular: false # crops the image to make it circular
   address: >
-    <p><span style="font-size: 16px;">Office: <b>TBD</b></span></p>
+    <p><span style="font-size: 16px;">Office: <b>Volen 259</b></span></p>
     <p><span style="font-size: 16px;">415 South Street </span></p>
     <p><span style="font-size: 16px;">Waltham, MA 02453</span></p>
     <p><span style="font-size: 15px; font-family: roboto;">
@@ -34,7 +34,7 @@ social: true  # includes social icons at the bottom of the page
 
 I am an assistant professor of Computer Science at Brandeis University. I work at the intersection of designing data layouts and access methods for storage engines and developing systems-level solutions for privacy protection in modern data systems. The goal of my research is to design efficient privacy-aware data systems by navigating the privacy-performance tradeoff and designing data structures and algorithms that support privacy by design. My research interests span data systems, storage layouts, access methods, and their intersection with data privacy. Here is my <a href="/assets/resources/research_statement.pdf" target="_blank">latest research statement</a>. 
 
-Before joining Brandeis, I was a post-doctoral associate at Boston University in the [Data-intensive Systems and Computing (DiSC) lab](https://disc.bu.edu/) with Manos Athanassoulis (2019-2023). Prior to that, I spent two years at Inria, Rennes (France) a post-doctoral researcher with Christine Morin (2017-2018). I got my PhD in Computer Science from IIT Kharagpur in 2017. <br>
+Before joining Brandeis, I was a post-doctoral associate at Boston University in the [Data-intensive Systems and Computing (DiSC) lab](https://disc.bu.edu/) with Manos Athanassoulis (2019-2023). Prior to that, I spent two years at Inria, Rennes (France) a post-doctoral researcher with Christine Morin (2017-2018). I received my PhD in Computer Science from IIT Kharagpur in 2017. <br>
 
 <h5><b>Prospective students and post-docs</b></h5>
 <b>I am recruiting motivated PhD students and post-docs for Fall 2023.</b> If you are fascinated by large-scale systems, love to code, and up to solving open research problems, consider joining my lab. 
