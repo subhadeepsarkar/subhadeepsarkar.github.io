@@ -7,7 +7,7 @@ department: Department of Computer Science, Brandeis University
 
 profile:
   align: right
-  image: Sarkar.png
+  image: Subhadeep-W.png
   image_circular: false # crops the image to make it circular
   address: >
     <p><span style="font-size: 16px;">Office: <b>Volen 259</b></span></p>
