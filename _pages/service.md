@@ -32,6 +32,7 @@ nav_order: 5
     <ul>
       <li>International Conference on Very Large Data Bases (<b>VLDB</b>) <b>Demo</b>, 2023</li>
       <li>International Conference on Extending Database Technology (<b>EDBT</b>), 2023</li>
+      <li>IEEE International Conference on Big Data (<b>BigData</b>), 2023</li>
       <li>ACM Symposium on Cloud Computing (<b>SoCC</b>), 2022</li>
       <li>International Conference on Very Large Data Bases (<b>VLDB</b>) <b>Demo</b>, 2022</li>
       <li>ACM International Conference on Distributed and Event‐​Based Systems (<b>DEBS</b>), 2022</li>
@@ -70,11 +71,11 @@ nav_order: 5
       <li>IEEE Transactions on Big Data (<b>TBD</b>)</li>
       <li>IEEE Transactions on Green Communications and Networking (<b>TGCN</b>)</li>
       <li>IEEE Transactions on Industrial Informatics  (<b>TII</b>)</li>
-      <li>IEEE Systems Journal (<b>ISJ</b>)</li>
-      <li>IEEE Communications Letters (<b>COMML</b>)</li>
+      <li>IEEE Systems Journal (<b>SJ</b>)</li>
+      <li>IEEE Communications Letters (<b>CL</b>)</li>
       <li>IEEE Wireless Communications Letters (<b>WCL</b>)</li>
-      <li>IEEE (<b>Communications</b>)</li>
-      <li>IEEE (<b>Vehicular Technology</b>)</li>
+      <li>IEEE Communications</li>
+      <li>IEEE Vehicular Technology (<b>VT</b>)</li>
       <li>International Journal of Communication Systems (<b>IJCS</b>), Wiley</li>
     </ul>
   </div>

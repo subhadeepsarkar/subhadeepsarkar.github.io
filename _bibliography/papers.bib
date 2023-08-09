@@ -4,6 +4,9 @@
   author    = {Subhadeep Sarkar and Tarikul Islam Papon and Zichen Zhu and Dimitris Staratzis and Manos Athanassoulis},
   title     = {Enabling Timely and Persistent Deletion in {LSM-E}ngines},
   journal   = {ACM Transactions on Database Systems},
+  volume    = {48},
+  issue     = {3},
+  pages     = {1--40},
   publisher = {{ACM}},
   year      = {2023},
   abbr      = {TODS},
@@ -14,6 +17,7 @@
                
                <br>To address these challenges, in this article, we build a new key-value storage engine, Lethe+, that uses a very small amount of additional metadata, a set of new delete-aware compaction policies, and a new physical data layout that weaves the sort and the delete key order. We show that Lethe+ supports any user-defined threshold for the delete persistence latency offering higher read throughput (1.17x-1.4x) and lower space amplification (2.1x-9.8x), with a modest increase in write amplification (between 4% and 25%) that can be further amortized to less than 1%. In addition, Lethe+ supports efficient range deletes on a secondary delete key by dropping entire data pages without sacrificing read performance or employing a costly full tree merge.
                },
+  pdf       = {Enabling_Timely_and_Persistent_Deletionin_LSM-Engines.pdf},
   selected  = {true}
 }
 
