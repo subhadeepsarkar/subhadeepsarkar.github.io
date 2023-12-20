@@ -21,7 +21,7 @@ nav_order: 4
   </figure>
 </div>
 <div style="width: 78%; float:right; margin-top: -25px; margin-bottom: 175px;">
-  <span style="font-size: 30px;"><a href="https://bu-disc.github.io/CS561/index.html">Data Systems Architectures</a> <span style="color: #2b2b2b;"><b>|</b> </span></span>
+  <span style="font-size: 30px;"><a href="https://bu-disc.github.io/CS561-Spring2023/">Data Systems Architectures</a> <span style="color: #2b2b2b;"><b>|</b> </span></span>
   <span style="font-size: 18px;"><span style="color: #808080;">code: </span><span style="color: #5e5e5e;"><b>CS 561 |</b> </span>
   <span style="color: #808080;">term: </span><span style="color: #5e5e5e;"><b>Spring 2023 |</b> </span>
   <span style="color: #808080;">students: <span style="color: #5e5e5e;"><b>27</b> </span></span></span>
@@ -47,4 +47,3 @@ nav_order: 4
     <br>
     <span style="font-size: 15px;"><span style="color: #5e5e5e; ">This course is designed to provide students with the fundamental notions in "systems". The concept of system is willfully made generic as one of the main objectives of this course is to cover reasoning approaches, mathematical tools, and modeling techniques that can be applied to a multitude of system instances, and to develop the ability to map new problems onto existing solutions. This course will help the students realize that many system instances have a common denominator of challenges and issues that can be approached using well established techniques and abstractions.</span></span>
 </div>
-
