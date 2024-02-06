@@ -16,6 +16,8 @@ nav_order: 5
   <div style="width: 100%; float:left; margin-top: -20px; margin-bottom: 0px;">
     <br> 
     <ul>
+      <li><i>Proceedings Chair</i>, Proceedings of International Conference on Very Large Data Bases (<b>PVLDB</b>), 2024-2025</li>
+      <li><i>Poster Chair</i>, ACM Symposium on Cloud Computing (<b>SoCC</b>), 2023</li>
       <li><i>Web Chair</i>, ACM <b>SIGMOD</b> International Conference on Management of Data <b>Availability & Reproducibility</b>, 2023</li>
       <li><i>Sponsorship Chair</i>, ACM Symposium on Cloud Computing (<b>SoCC</b>), 2022</li>
       <li><i>Web Chair</i>, ACM <b>SIGMOD</b> International Conference on Management of Data <b>Availability & Reproducibility</b>, 2022</li>
@@ -30,6 +32,7 @@ nav_order: 5
   <div style="width: 100%; float:left; margin-top: -20px; margin-bottom: 20px;">
     <br> 
     <ul>
+      <li>Workshop on Search, Exploration, and Analysis in Heterogeneous Datastores: Graph Edition (<b>SEAGraph</b>), 2024</li>
       <li>International Conference on Very Large Data Bases (<b>VLDB</b>) <b>Demo</b>, 2023</li>
       <li>International Conference on Extending Database Technology (<b>EDBT</b>), 2023</li>
       <li>IEEE International Conference on Big Data (<b>BigData</b>), 2023</li>
