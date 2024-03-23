@@ -17,6 +17,7 @@ nav_order: 5
     <br> 
     <ul>
       <li><i>Proceedings Chair</i>, Proceedings of International Conference on Very Large Data Bases (<b>PVLDB</b>), 2024-2025</li>
+      <li><i>Program Chair</i>, North-East Database Day (<b>NEDB Day</b>), 2024</li>
       <li><i>Poster Chair</i>, ACM Symposium on Cloud Computing (<b>SoCC</b>), 2023</li>
       <li><i>Web Chair</i>, ACM <b>SIGMOD</b> International Conference on Management of Data <b>Availability & Reproducibility</b>, 2023</li>
       <li><i>Sponsorship Chair</i>, ACM Symposium on Cloud Computing (<b>SoCC</b>), 2022</li>
