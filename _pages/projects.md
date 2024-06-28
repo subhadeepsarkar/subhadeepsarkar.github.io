@@ -18,7 +18,7 @@ My research interests include storage engines, access methods, and data manageme
       <picture>
         <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/al-folio/assets/img/1-480.webp">
         <!-- Fallback to the original file -->
-        <img src="/assets/img/x.png" class="img-fluid z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+        <img src="/assets/img/px.png" class="img-fluid z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
       </picture>
     </figure>
   </div>
