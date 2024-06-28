@@ -114,7 +114,84 @@
             <!-- _pages/publications.md -->
 <div class="publications">
   <h2 class="year">2024</h2>
-  <ol class="bibliography"></ol>
+  <ol class="bibliography">
+<li>
+<!-- _layouts/bib.html -->
+<div class="row">
+    <div class="col-sm-2 abbr"><abbr class="badge">DBTest</abbr></div>
+
+    <!-- Entry bib key -->
+    <div id="DBLP:conf/dbtest-ws/KaushikS24" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">
+            <h5>Anatomy of the LSM Memory Buffer: Insights &amp; Implications</h5>
+        </div>
+        <!-- Author -->
+        <div class="author">
+             Shubham Kaushik, and <em>Subhadeep Sarkar</em>
+</div>
+
+    <!-- Journal/Book title and date -->
+      <div class="periodical">
+<em>In Proceedings of the International Workshop on Testing Database Systems (DBTest)</em>, 2024</div>
+    <div class="periodical"></div>
+
+    <!-- Links/Buttons -->
+    <div class="links">
+      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a href="/assets/fulltext/Anatomy_of_the_LSM_Memory_Buffer_Insights_&amp;_Implications.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
+    </div>
+    
+    <div class="badges">
+      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="10.1145/3662165.3662766"></span>
+            <span class="__dimensions_badge_embed__" data-doi="10.1145/3662165.3662766" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px"></span>
+        </div> <!-- Hidden abstract block -->
+        <div class="abstract hidden">
+            <p>Log-structured merge (LSM) tree is an ingestion-optimized data structure that is widely used in modern NoSQL key-value stores. To support high throughput for writes, LSM-trees maintain an in-memory buffer that absorbs the incoming entries before writing them to slower secondary storage. We point out that the choice of the data structure and implementation of the memory buffer has a significant impact on the overall performance of LSM-based storage engines. In fact, even with the same implementation of the buffer, the performance of a storage engine can vary by up to several orders of magnitude if there is a shift in the input workload.
+               
+               <br>In this paper, we benchmark the performance of LSM-based storage engines with different memory buffer implementations and under different workload characteristics. We experiment with four buffer implementations, namely, (i) vector, (ii) skip-list, (iii) hash skip-list, and (iv) hash linked-list, and for each implementation, we vary any design choices (such as bucket count in a hash skip-list and prefix length in a hash linked-list). We present a comprehensive performance benchmark for each buffer configuration, and highlight how the relative performance of the different buffer implementations varies with a shift in input workload. Lastly, we present a guideline for selecting the appropriate buffer implementation for a given workload and performance goal.</p>
+        </div>
+    </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+<div class="row">
+    <div class="col-sm-2 abbr"><abbr class="badge">DBTest</abbr></div>
+
+    <!-- Entry bib key -->
+    <div id="DBLP:conf/dbtest-ws/ZhuSAS24" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">
+            <h5>KVBench: A Key-Value Benchmarking Suite</h5>
+        </div>
+        <!-- Author -->
+        <div class="author">
+             Zichen Zhu, Arpita Saha, Manos Athanassoulis, and <em>Subhadeep Sarkar</em>
+</div>
+
+    <!-- Journal/Book title and date -->
+      <div class="periodical">
+<em>In Proceedings of the International Workshop on Testing Database Systems (DBTest)</em>, 2024</div>
+    <div class="periodical"></div>
+
+    <!-- Links/Buttons -->
+    <div class="links">
+      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a href="/assets/fulltext/KVBench_A_Key-Value_Benchmarking_Suite.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
+    </div>
+    
+    <div class="badges">
+      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="10.1145/3662165.3662765"></span>
+            <span class="__dimensions_badge_embed__" data-doi="10.1145/3662165.3662765" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px"></span>
+        </div> <!-- Hidden abstract block -->
+        <div class="abstract hidden">
+            <p>Key-value stores are at the core of several modern NoSQL-based data systems, and thus, a comprehensive benchmark tool is of paramount importance in evaluating their performance under different workloads. Prior research reveals that real-world workloads have a diverse range of characteristics, such as the fraction of point queries that target non-existing keys, point and range deletes, as well as, different distributions for queries and updates, all of which have very different performance implications. State-of-the-art key-value workload generators, such as YCSB and db_bench, fail to generate workloads that emulate these practical workloads, limiting the dimensions on which we can benchmark the systems’ performance.
+               
+               <br>In this paper, we present KVBench, a novel synthetic workload generator that fills the gap between classical key-value workload generators and more complex real-life workloads. KVBench supports a wide range of operations, including point queries, range queries, inserts, updates, deletes, range deletes, and among these options, inserts, queries, and updates can be customized by different distributions. Compared to state-of-the-art key-value workload generators, KVBench offers a richer array of knobs, including the proportion of empty point queries, customized distributions for updates and queries, and range deletes with specific selectivity, constituting a significantly flexible framework that can better emulate real-world workloads.</p>
+        </div>
+    </div>
+</div>
+</li>
+</ol>
 
   <h2 class="year">2023</h2>
   <ol class="bibliography">
@@ -124,7 +201,7 @@
     <div class="col-sm-2 abbr"><abbr class="badge">TODS</abbr></div>
 
     <!-- Entry bib key -->
-    <div id="TBD2" class="col-sm-8">
+    <div id="DBLP:journals/tods/SarkarPSZA23" class="col-sm-8">
         <!-- Title -->
         <div class="title">
             <h5>Enabling Timely and Persistent Deletion in LSM-Engines</h5>
@@ -144,8 +221,8 @@
     </div>
     
     <div class="badges">
-      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
-            <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px"></span>
+      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="10.1145/3612919"></span>
+            <span class="__dimensions_badge_embed__" data-doi="10.1145/3612919" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px"></span>
         </div> <!-- Hidden abstract block -->
         <div class="abstract hidden">
             <p>Data-intensive applications have fueled the evolution of log-structured merge (LSM) based key-value engines that employ the out-of-place paradigm to support high ingestion rates with low read/write interference. These benefits, however, come at the cost of treating deletes as second-class citizens. A delete operation inserts a tombstone that invalidates older instances of the deleted key. State-of-the-art LSM-engines do not provide guarantees as to how fast a tombstone will propagate to persist the deletion. 
@@ -519,7 +596,7 @@
 
     <!-- Journal/Book title and date -->
       <div class="periodical">
-<em>Proceedings of the ACM SIGMOD International Conference on Management of Data</em>, 2020</div>
+<em>In Proceedings of the ACM SIGMOD International Conference on Management of Data</em>, 2020</div>
     <div class="periodical"></div>
 
     <!-- Links/Buttons -->
@@ -595,7 +672,7 @@
 
     <!-- Journal/Book title and date -->
       <div class="periodical">
-<em></em> 2019</div>
+<em>CRC Press, Taylor &amp; Francis Group</em>, 2019</div>
     <div class="periodical"></div>
 
     <!-- Links/Buttons -->
