@@ -1,6 +1,37 @@
 
 
-@article{TBD2,
+@inproceedings{DBLP:conf/dbtest-ws/KaushikS24,
+  author    = {Shubham Kaushik and Subhadeep Sarkar},
+  title     = {Anatomy of the {LSM} Memory Buffer: Insights {\&} Implications},
+  booktitle = {Proceedings of the International Workshop on Testing Database Systems ({DBT}est)},
+  pages     = {23--29},
+  year      = {2024},
+  url       = {https://doi.org/10.1145/3662165.3662766},
+  doi       = {10.1145/3662165.3662766},
+  abbr      = {DBTest},
+  abstract  = {Log-structured merge (LSM) tree is an ingestion-optimized data structure that is widely used in modern NoSQL key-value stores. To support high throughput for writes, LSM-trees maintain an in-memory buffer that absorbs the incoming entries before writing them to slower secondary storage. We point out that the choice of the data structure and implementation of the memory buffer has a significant impact on the overall performance of LSM-based storage engines. In fact, even with the same implementation of the buffer, the performance of a storage engine can vary by up to several orders of magnitude if there is a shift in the input workload.
+               
+               <br>In this paper, we benchmark the performance of LSM-based storage engines with different memory buffer implementations and under different workload characteristics. We experiment with four buffer implementations, namely, (i) vector, (ii) skip-list, (iii) hash skip-list, and (iv) hash linked-list, and for each implementation, we vary any design choices (such as bucket count in a hash skip-list and prefix length in a hash linked-list). We present a comprehensive performance benchmark for each buffer configuration, and highlight how the relative performance of the different buffer implementations varies with a shift in input workload. Lastly, we present a guideline for selecting the appropriate buffer implementation for a given workload and performance goal.},
+  pdf       = {Anatomy_of_the_LSM_Memory_Buffer_Insights_&_Implications.pdf},
+  selected  = {true}
+}
+@inproceedings{DBLP:conf/dbtest-ws/ZhuSAS24,
+  author    = {Zichen Zhu and Arpita Saha and Manos Athanassoulis and Subhadeep Sarkar},
+  title     = {{KVB}ench: {A} Key-Value Benchmarking Suite},
+  booktitle = {Proceedings of the International Workshop on Testing Database Systems ({DBT}est)},
+  pages     = {9--15},
+  year      = {2024},
+  url       = {https://doi.org/10.1145/3662165.3662765},
+  doi       = {10.1145/3662165.3662765},
+  abbr      = {DBTest},
+  abstract  = {Key-value stores are at the core of several modern NoSQL-based data systems, and thus, a comprehensive benchmark tool is of paramount importance in evaluating their performance under different workloads. Prior research reveals that real-world workloads have a diverse range of characteristics, such as the fraction of point queries that target non-existing keys, point and range deletes, as well as, different distributions for queries and updates, all of which have very different performance implications. State-of-the-art key-value workload generators, such as YCSB and db_bench, fail to generate workloads that emulate these practical workloads, limiting the dimensions on which we can benchmark the systems' performance.
+               
+               <br>In this paper, we present KVBench, a novel synthetic workload generator that fills the gap between classical key-value workload generators and more complex real-life workloads. KVBench supports a wide range of operations, including point queries, range queries, inserts, updates, deletes, range deletes, and among these options, inserts, queries, and updates can be customized by different distributions. Compared to state-of-the-art key-value workload generators, KVBench offers a richer array of knobs, including the proportion of empty point queries, customized distributions for updates and queries, and range deletes with specific selectivity, constituting a significantly flexible framework that can better emulate real-world workloads.},
+  pdf       = {KVBench_A_Key-Value_Benchmarking_Suite.pdf},
+  selected  = {true}
+}
+
+@article{DBLP:journals/tods/SarkarPSZA23,
   author    = {Subhadeep Sarkar and Tarikul Islam Papon and Zichen Zhu and Dimitris Staratzis and Manos Athanassoulis},
   title     = {Enabling Timely and Persistent Deletion in {LSM-E}ngines},
   journal   = {ACM Transactions on Database Systems},
@@ -11,6 +42,7 @@
   year      = {2023},
   abbr      = {TODS},
   url       = {https://doi.org/10.1145/3612919},
+  doi       = {10.1145/3612919},
   abstract  = {Data-intensive applications have fueled the evolution of log-structured merge (LSM) based key-value engines that employ the out-of-place paradigm to support high ingestion rates with low read/write interference. These benefits, however, come at the cost of treating deletes as second-class citizens. A delete operation inserts a tombstone that invalidates older instances of the deleted key. State-of-the-art LSM-engines do not provide guarantees as to how fast a tombstone will propagate to persist the deletion. 
                
                <br>Further, LSM-engines only support deletion on the sort key. To delete on another attribute (e.g., timestamp), the entire tree is read and re-written, leading to undesired latency spikes and increasing the overall operational cost of a database. Efficient and persistent deletion is key to support: (i) streaming systems operating on a window of data, (ii) privacy with latency guarantees on data deletion, and (iii) en masse cloud deployment of data systems. Further, we document that LSM-based key-value engines perform suboptimally in presence of deletes in a workload. Tombstone-driven logical deletes, by design, are unable to purge the deleted entries in a timely manner, and retaining the invalidated entries perpetually affects the overall performance of LSM-engines in terms of space amplification, write amplification, and read performance. Moreover, the potentially unbounded latency for persistent deletes brings in critical privacy concerns in light of the data privacy protection regulations, such as the right to be forgotten in EU's GDPR, the right to delete in California's CCPA and CPRA, and deletion right in Virginia's VCDPA. Toward this, we introduce the delete design space for LSM-trees and highlight the performance implications of the different classes of delete operations.
@@ -175,10 +207,10 @@
   selected = {true}
 }
 
-@article{DBLP:conf/sigmod/SarkarPSA20,
+@inproceedings{DBLP:conf/sigmod/SarkarPSA20,
   title     = {Lethe: {A} Tunable Delete-Aware {LSM} Engine},
   author    = {Sarkar, Subhadeep and Papon, Tarikul Islam and Staratzis, Dimitris and Athanassoulis, Manos},
-  journal   = {Proceedings of the {ACM SIGMOD} International Conference on Management of Data},
+  booktitle   = {Proceedings of the {ACM SIGMOD} International Conference on Management of Data},
   pages     = {893--908},
   year      = {2020},
   publisher = {ACM},
@@ -225,7 +257,7 @@
 @article{DBLP:journals/sj/MisraBS21,
   author   = {Sudip Misra and Subhadeep Sarkar and Subarna Chatterjee},
   title    = {Sensors, Cloud, and Fog: The Enabling Technologies for the Internet of Things},
-  book     = {{CRC} Press, Taylor & Francis Group},
+  journal     = {{CRC} Press, Taylor & Francis Group},
   year     = {2019},
   url      = {https://www.routledge.com/Sensors-Cloud-and-Fog-The-Enabling-Technologies-for-the-Internet-of-Things/Misra-Sarkar-Chatterjee/p/book/9780367196127},
   abbr     = {CRC Press},

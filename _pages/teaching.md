@@ -24,7 +24,7 @@ nav_order: 4
             <picture>
               <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/al-folio/assets/img/1-480.webp">
               <!-- Fallback to the original file -->
-              <img src="/assets/img/DBMS.jpg" class="img-fluid z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+              <img src="/assets/img/pp.png" class="img-fluid z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
             </picture>
         </figure>
       </div>
@@ -35,7 +35,7 @@ nav_order: 4
         <span style="font-size: 30px;"><a href="https://ssd-brandeis.github.io/COSI-127B/">Database Management Systems</a> <span style="color: #2b2b2b;"><b>|</b> </span></span>
         <span style="font-size: 18px;"><span style="color: #808080;">code: </span><span style="color: #5e5e5e;"><b>COSI 127B |</b> </span>
         <span style="color: #808080;">term: </span><span style="color: #5e5e5e;"><b>Spring 2024 |</b> </span>
-        <span style="color: #808080;"><span style="color: #5e5e5e;"><b>ongoing ... </b> </span></span>
+        <span style="color: #808080;">students: <span style="color: #5e5e5e;"><b>60</b> </span></span>
         <!-- <span style="color: #808080;">students: <span style="color: #5e5e5e;"><b>-</b> </span></span> -->
         </span>
         <br>
@@ -62,7 +62,7 @@ nav_order: 4
             <picture>
               <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/al-folio/assets/img/1-480.webp">
               <!-- Fallback to the original file -->
-              <img src="/assets/img/DSA.jpg" class="img-fluid z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+              <img src="/assets/img/px.png" class="img-fluid z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
             </picture>
         </figure>
       </div>
@@ -79,21 +79,22 @@ nav_order: 4
       </div>
   </td>
   </tr>
+  
   <tr>
     <td>
-      <div style="width: 100%; float:left; margin-top: 20px; margin-bottom: 0px;">
+      <div style="width: 100%; float:left; margin-top: 80px; margin-bottom: 0px;">
         <figure>
           <picture>
             <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/al-folio/assets/img/1-480.webp">
             <!-- Fallback to the original file -->
-            <img src="/assets/img/FCS.jpg" class="img-fluid z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+            <img src="/assets/img/py.png" class="img-fluid z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
           </picture>
         </figure>
       </div>
     </td>
     <td></td>
     <td>
-        <div style="width: 100%; float:right; margin-top: 0px; margin-bottom: 0px;">
+        <div style="width: 100%; float:right; margin-top: 40px; margin-bottom: 0px;">
           <span style="font-size: 30px;"><a href="https://cs-people.bu.edu/ssarkar1/cs350/courses/cs350/">Fundamentals of Computing Systems</a> <span style="color: #2b2b2b;"><b>|</b> </span></span>
           <span style="font-size: 18px;"><span style="color: #808080;">code: </span><span style="color: #5e5e5e;"><b>CS 350 |</b> </span>
           <span style="color: #808080;">term: </span><span style="color: #5e5e5e;"><b>Spring 2020 |</b> </span>
