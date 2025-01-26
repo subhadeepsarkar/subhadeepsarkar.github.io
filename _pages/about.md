@@ -41,6 +41,8 @@ Before joining Brandeis, I was a post-doctoral associate at Boston University in
 <br>For PhD applicants, here are some links that you may find useful: [[PhD@Brandeis](https://www.brandeis.edu/computer-science/phd/index.html)] [[FAQs](https://www.brandeis.edu/gsas/admissions/apply/faq.html#general-application-questions)] [[Application Fee Waiver](https://www.brandeis.edu/gsas/admissions/apply/fees.html)]. 
 <br>If you are looking for a post-doctoral position, drop me an [email](mailto:subhadeep@brandeis.edu,subhadeepsarkarybs@gmail.com). 
 
+<h5><b>Undergraduate and graduate research</b></h5>
+If you are a Brandeis undergraduate or graduate student, interested in doing research in the lab, taking COSI 127B (and, preferably, COSI 167A) is the first step!
 
 
   <!-- <div class="col-lg-10">
