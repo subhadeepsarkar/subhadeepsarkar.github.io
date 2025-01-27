@@ -42,7 +42,7 @@ Before joining Brandeis, I was a post-doctoral associate at Boston University in
 <br>If you are looking for a post-doctoral position, drop me an [email](mailto:subhadeep@brandeis.edu,subhadeepsarkarybs@gmail.com). 
 
 <h5><b>Undergraduate and graduate research</b></h5>
-If you are a Brandeis undergraduate or graduate student, interested in doing research in the lab, taking COSI 127B (and, preferably, COSI 167A) is the first step!
+If you are a Brandeis undergraduate or graduate student, interested in doing research in the lab, taking [COSI 127B](https://ssd-brandeis.github.io/COSI-127B/) (and, preferably, [COSI 167A](https://ssd-brandeis.github.io/COSI-167A/)) is the first step!
 
 
   <!-- <div class="col-lg-10">
