@@ -16,6 +16,7 @@ nav_order: 5
   <div style="width: 100%; float:left; margin-top: -20px; margin-bottom: 0px;">
     <br> 
     <ul>
+      <li><i>General Chair</i>, North-East DataBase (<b>NEDB</b>) Day, 2025</li>
       <li><i>Proceedings Chair</i>, Proceedings of International Conference on Very Large Data Bases (<b>PVLDB</b>), 2024-2025</li>
       <li><i>Program Chair</i>, North-East Database Day (<b>NEDB Day</b>), 2024</li>
       <li><i>Poster Chair</i>, ACM Symposium on Cloud Computing (<b>SoCC</b>), 2023</li>
