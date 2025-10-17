@@ -1,3 +1,25 @@
+@inproceedings{DBLP:conf/tpctc/OttKCS25,
+  author    = {Alexander H. Ott and Shubham Kaushik and Boao Chen and Subhadeep Sarkar},
+  editor    = {Raghunath Nambiar and Meikel Poess},
+  title     = {Tectonic: Bridging Synthetic and Real-World Workloads for Key-Value Benchmarking},
+  booktitle = {Performance Evaluation and Benchmarking {TPC} Technology Conference ({TPCTC})},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {TBA},
+  pages     = {TBA},
+  publisher = {Springer},
+  year      = {2025},
+  url       = {TBA},
+  doi       = {TBA},
+  abbr      = {TPCTC},
+  abstract  = {Key-value stores are the backbone of many modern SQLand NoSQL-based data systems, serving a variety of real-world applications. Despite their widespread adoption, existing key-value benchmarks fall short across multiple dimensions when accurately replicating complex and dynamic real-world workloads. For instance, state-of-the-art key-value benchmarks, such as YCSB, KVBench, and db_bench, are unable to (i) emulate dynamic workloads where the workload composition and distribution changes arbitrarily over time; (ii) generate composite keys with different prefix distributions; and (iii) generate workloads with varied degrees of data sortedness. These limitations result in inaccurate performance evaluations and limit the ability to understand how a commercial key-value store performs under dynamically shifting workloads. 
+  
+  <br> In this paper, we introduce Tectonic, a highly configurable and resource-efficient Rust-based key-value workload generator designed to model the temporal, structural, and dynamic properties of real-world workloads. Tectonic offers (i) fine-grained control over data access patterns for inserts, updates, merges, point and range queries, and point and range deletes; (ii) configurable composite key generation/selection strategies; (iii) dynamic workload generation where the workload properties change over time; and (iv) generation of workloads with user-specified data sortedness. Tectonic does so (v) at a 2&times higher throughput than the state-of-the-art, (vi) while recording up to 84% lower main memory footprint. By bridging the gap between synthetic and production workloads, Tectonic enables in-depth analysis of key-value data systems under conditions that better reflect the demands of real-world applications. We benchmark Tectonic's performance against YCSB and KVBench in terms of latency, resource utilization, and ability to emulate production workloads. The code for Tectonic is available at: https://github.com/SSDBrandeis/tectonic.},
+  pdf       = {Tectonic_Bridging_Synthetic_and_Real-World_Workloads_for_Key-Value_Benchmarking.pdf},
+  selected  = {true}
+}
+
+
+
 @inproceedings{DBLP:conf/edbt/RamanKXOSA25,
   author    = {Aneesh Raman and Konstantinos Karatsenidis and Shaolin Xie and Matthaios Olma and Subhadeep Sarkar and Manos Athanassoulis},
   title     = {QuIT your B<sup>+</sup>-tree for the Quick Insertion Tree},

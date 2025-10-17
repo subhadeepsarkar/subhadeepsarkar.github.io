@@ -16,8 +16,9 @@ nav_order: 5
   <div style="width: 100%; float:left; margin-top: -20px; margin-bottom: 0px;">
     <br> 
     <ul>
+      <li><i>Proceedings Chair</i>, Proceedings of International Conference on Very Large Data Bases (<b>PVLDB</b>), 2024-2026</li>
+      <li><i>General Chair</i>, North-East DataBase (<b>NEDB</b>) Day, 2026</li>
       <li><i>General Chair</i>, North-East DataBase (<b>NEDB</b>) Day, 2025</li>
-      <li><i>Proceedings Chair</i>, Proceedings of International Conference on Very Large Data Bases (<b>PVLDB</b>), 2024-2025</li>
       <li><i>Program Chair</i>, North-East Database Day (<b>NEDB Day</b>), 2024</li>
       <li><i>Poster Chair</i>, ACM Symposium on Cloud Computing (<b>SoCC</b>), 2023</li>
       <li><i>Web Chair</i>, ACM <b>SIGMOD</b> International Conference on Management of Data <b>Availability & Reproducibility</b>, 2023</li>
@@ -71,9 +72,10 @@ nav_order: 5
   <div style="width: 100%; float:left; margin-top: -20px; margin-bottom: 20px;">
     <br> 
     <ul>
+      <li>ACM Transactions on Storage (<b>TOS</b>)</li>
       <li>International Journal on Very Large Data Bases (<b>VLDBJ</b>)</li>
       <li>ACM Transactions on Database Systems (<b>TODS</b>)</li>
-      <li>Journal of Systems Architecture(<b>JSA</b>), Elsevier </li>
+      <li>Journal of Systems Architecture (<b>JSA</b>), Elsevier </li>
       <li>IEEE Transactions on Parallel and Distributed Systems (<b>TPDS</b>)</li>
       <li>IEEE Transactions on Mobile Computing (<b>TMC</b>)</li>
       <li>IEEE Transactions on Cloud Computing (<b>TCC</b>)</li>
