@@ -589,9 +589,6 @@ footer.sticky-bottom {
   color: var(--global-text-color);
   border-bottom: 1px dashed var(--global-text-color);
 }
-.publications ol.bibliography li .links {
-  margin-bottom: -1rem;
-}
 .publications ol.bibliography li .links a.btn {
   color: var(--global-text-color);
   border: 1px solid var(--global-text-color);
@@ -604,6 +601,9 @@ footer.sticky-bottom {
 .publications ol.bibliography li .links a.btn:hover {
   color: var(--global-theme-color);
   border-color: var(--global-theme-color);
+}
+.publications ol.bibliography li .links {
+  margin-bottom: -1rem;
 }
 .publications ol.bibliography li .badges {
   padding-bottom: 0.5rem;

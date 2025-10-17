@@ -114,7 +114,46 @@
             <!-- _pages/publications.md -->
 <div class="publications">
   <h2 class="year">2025</h2>
-  <ol class="bibliography"><li>
+  <ol class="bibliography">
+<li>
+<!-- _layouts/bib.html -->
+<div class="row">
+    <div class="col-sm-2 abbr"><abbr class="badge">TPCTC</abbr></div>
+
+    <!-- Entry bib key -->
+    <div id="DBLP:conf/tpctc/OttKCS25" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">
+            <h5>Tectonic: Bridging Synthetic and Real-World Workloads for Key-Value Benchmarking</h5>
+        </div>
+        <!-- Author -->
+        <div class="author">
+             Alexander H. Ott, Shubham Kaushik, Boao Chen, and <em>Subhadeep Sarkar</em>
+</div>
+
+    <!-- Journal/Book title and date -->
+      <div class="periodical">
+<em>In Performance Evaluation and Benchmarking TPC Technology Conference (TPCTC)</em>, 2025</div>
+    <div class="periodical"></div>
+
+    <!-- Links/Buttons -->
+    <div class="links">
+      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a href="/assets/fulltext/Tectonic_Bridging_Synthetic_and_Real-World_Workloads_for_Key-Value_Benchmarking.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
+    </div>
+    
+    <div class="badges">
+      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="TBA"></span>
+            <span class="__dimensions_badge_embed__" data-doi="TBA" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px"></span>
+        </div> <!-- Hidden abstract block -->
+        <div class="abstract hidden">
+            <p>Key-value stores are the backbone of many modern SQLand NoSQL-based data systems, serving a variety of real-world applications. Despite their widespread adoption, existing key-value benchmarks fall short across multiple dimensions when accurately replicating complex and dynamic real-world workloads. For instance, state-of-the-art key-value benchmarks, such as YCSB, KVBench, and db_bench, are unable to (i) emulate dynamic workloads where the workload composition and distribution changes arbitrarily over time; (ii) generate composite keys with different prefix distributions; and (iii) generate workloads with varied degrees of data sortedness. These limitations result in inaccurate performance evaluations and limit the ability to understand how a commercial key-value store performs under dynamically shifting workloads. 
+  
+  <br> In this paper, we introduce Tectonic, a highly configurable and resource-efficient Rust-based key-value workload generator designed to model the temporal, structural, and dynamic properties of real-world workloads. Tectonic offers (i) fine-grained control over data access patterns for inserts, updates, merges, point and range queries, and point and range deletes; (ii) configurable composite key generation/selection strategies; (iii) dynamic workload generation where the workload properties change over time; and (iv) generation of workloads with user-specified data sortedness. Tectonic does so (v) at a 2&amp;times higher throughput than the state-of-the-art, (vi) while recording up to 84% lower main memory footprint. By bridging the gap between synthetic and production workloads, Tectonic enables in-depth analysis of key-value data systems under conditions that better reflect the demands of real-world applications. We benchmark Tectonic’s performance against YCSB and KVBench in terms of latency, resource utilization, and ability to emulate production workloads. The code for Tectonic is available at: https://github.com/SSDBrandeis/tectonic.</p>
+        </div>
+    </div>
+</div>
+</li>
+<li>
 <!-- _layouts/bib.html -->
 <div class="row">
     <div class="col-sm-2 abbr"><abbr class="badge">EDBT</abbr></div>
@@ -150,7 +189,8 @@
         </div>
     </div>
 </div>
-</li></ol>
+</li>
+</ol>
 
   <h2 class="year">2024</h2>
   <ol class="bibliography">
