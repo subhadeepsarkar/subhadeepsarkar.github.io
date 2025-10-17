@@ -34,8 +34,14 @@ nav_order: 5
   <h2 class="category" style="margin-top: -40px;">program committee member</h2>
   <div style="width: 100%; float:left; margin-top: -20px; margin-bottom: 20px;">
     <br> 
-    <ul>
+    <ul>   
+      <li>ACM <b>SIGMOD</b> International Conference on Management of Data, 2026</li>
+      <li>IEEE International Conference on Data Engineering (<b>ICDE</b>) <b>Demo</b>, 2026</li>
+      <li>ACM <b>SIGMOD</b> International Conference on Management of Data <b>Demo</b>, 2026</li>
       <li>International Conference on Very Large Data Bases (<b>VLDB</b>), 2026</li>
+      <li>IEEE International Conference on Big Data (<b>BigData</b>), 2025</li>
+      <li>International Workshop on Accelerating Analytics and Data Management Systems Using Modern Processor and Storage Architectures (<b>ADMS</b>), 2025</li>
+      <li>International Conference on Very Large Data Bases (<b>VLDB</b>), 2025</li>
       <li>International Conference on Very Large Data Bases (<b>VLDB</b>) <b>Demo</b>, 2025</li>
       <li>ACM <b>SIGMOD</b> International Conference on Management of Data <b>Demo</b>, 2025</li>
       <li>International Conference on Very Large Data Bases (<b>VLDB</b>), 2025</li>
@@ -72,6 +78,7 @@ nav_order: 5
   <div style="width: 100%; float:left; margin-top: -20px; margin-bottom: 20px;">
     <br> 
     <ul>
+      <li>ACM Computing Surveys (<b>CSUR</b>)</li>
       <li>ACM Transactions on Storage (<b>TOS</b>)</li>
       <li>International Journal on Very Large Data Bases (<b>VLDBJ</b>)</li>
       <li>ACM Transactions on Database Systems (<b>TODS</b>)</li>
