@@ -36,6 +36,7 @@ nav_order: 5
     <br> 
     <ul>   
       <li>International Conference on Extending Database Technology (<b>EDBT</b>), 2027</li>
+      <li>International Conference on Very Large Data Bases (<b>VLDB</b>) <b>Demo</b>, 2026</li>
       <li>ACM <b>SIGMOD</b> International Conference on Management of Data, 2026</li>
       <li>IEEE International Conference on Data Engineering (<b>ICDE</b>) <b>Demo</b>, 2026</li>
       <li>ACM <b>SIGMOD</b> International Conference on Management of Data <b>Demo</b>, 2026</li>

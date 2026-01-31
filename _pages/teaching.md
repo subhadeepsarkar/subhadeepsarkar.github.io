@@ -133,7 +133,7 @@ nav_order: 4
       <span style="color: #808080;">rating: <span style="color: #5e5e5e;"><b>4.36</b> </span></span>
       </span>
       <br>
-      <span style="font-size: 15px;"><span style="color: #5e5e5e; ">This graduate seminar course focuses on how to design data systems for the new hardware, workloads, and performance requirements. The students will learn about the internal design and workflow of several data management areas including relational systems, distributed database systems, key-value stores, newSQL and NoSQL systems, data systems for machine learning (and machine learning for data systems), interactive analytics, and data management as a service. In a fast moving industry and research landscape, these skills and the knowledge of state-of-the-art data systems are essential for any engineer/researcher.</span></span>
+      <span style="font-size: 15px;"><span style="color: #5e5e5e; ">This course is intended to provide students with a baggage of fundamental notions in systems. In this context, the concept of system is willfully generic, as one of the main objectives of this course is to cover reasoning approaches, mathematical tools, and modeling techniques that can be applied to a multitude of system instances. As such, by the end of the course, students who take the course will develop the ability to map new problems onto existing solutions, or at the very least onto existing approaches towards a solution. In fact, this course will help the careful student realize that many system instances have a common denominator of challenges and issues that can be approached using well established techniques and abstractions.</span></span>
     </td>
   </tr>
 </tbody>
