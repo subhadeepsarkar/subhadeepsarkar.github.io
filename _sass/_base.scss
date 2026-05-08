@@ -573,15 +573,42 @@ footer.sticky-bottom {
         max-width: 200px;
       }
 
+      .col-sm-2.abbr {
+        padding-right: 0;
+        flex: 0 0 auto;
+        width: auto;
+      }
+
+      .col-sm-8 {
+        padding-left: 3.25rem;
+        flex: 0 0 70%;
+        max-width: 70%;
+      }
+
       .abbr {
-        height: 2rem;
+        height: auto;
         margin-bottom: 0rem;
+        position: relative;
+
+        img.pdf-preview {
+          width: 80px;
+          height: 110px;
+          object-fit: cover;
+          object-position: top;
+          display: block;
+          margin-left: 1rem;
+        }
 
         abbr {
           display: inline-block;
           background-color: var(--global-theme-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
+          padding-left: 0.35rem;
+          padding-right: 0.35rem;
+          text-align: center;
+          position: absolute;
+          top: 88px;
+          left: calc(12px + 1rem);
+          transform: translateY(-50%);
 
           a {
             color: white;
@@ -596,6 +623,14 @@ footer.sticky-bottom {
           color: var(--global-theme-color) !important;
           border: 1px solid var(--global-theme-color);
         }
+      }
+
+      .abstract {
+        margin-bottom: 1rem;
+      }
+
+      .abstract-toggle-block {
+        cursor: pointer;
       }
 
       .title {
@@ -633,6 +668,74 @@ footer.sticky-bottom {
       }
 
       .links {
+        .pub-icon {
+          display: inline-block;
+          position: relative;
+          width: 1.4rem;
+          height: 1.4rem;
+          vertical-align: middle;
+          color: #4d4944;
+          font-size: 1.4rem;
+          margin-right: 0.2rem;
+          text-decoration: none;
+
+          .pub-svg-icon {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+          }
+        }
+
+        a.pub-icon {
+          cursor: pointer;
+
+          &[title="Local PDF"],          &[data-original-title="Local PDF"]          { color: #a8473c; }
+          &[title="Slides"],             &[data-original-title="Slides"]             { color: #5d779b; }
+          &[title="Poster"],             &[data-original-title="Poster"]             { color: #876c8a; }
+          &[title="Video Presentation"], &[data-original-title="Video Presentation"] { color: #a96860; }
+          &[title="Project Website"],    &[data-original-title="Project Website"]    { color: #4f8095; }
+          &[title="BibTeX"],             &[data-original-title="BibTeX"]             { color: #5d4b30; }
+          &[title="HTML"],               &[data-original-title="HTML"]               { color: #5d8a78; }
+          &[title="Supplementary"],      &[data-original-title="Supplementary"]      { color: #9b8550; }
+          &[title="Blog"],               &[data-original-title="Blog"]               { color: #6e5d7e; }
+          &[title="Code"],               &[data-original-title="Code"]               { color: #5d8462; }
+          &[title="Purchase"],           &[data-original-title="Purchase"]           { color: #b07a3d; }
+
+          &:hover {
+            color: var(--global-theme-color);
+          }
+        }
+
+        a.pub-icon.code-static-icon,
+        a.pub-icon.code-static-icon[title="Code"],
+        a.pub-icon.code-static-icon[data-original-title="Code"] {
+          color: #7e8590;
+          margin-right: -0.05rem;
+        }
+
+        a.pub-icon.arxiv-icon {
+          line-height: 1;
+          margin-left: -0.2rem;
+
+          .arxiv-mark-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 1.15rem;
+            width: 1.15rem;
+            object-fit: contain;
+            pointer-events: none;
+            transition: opacity 0.15s ease-in-out;
+          }
+
+          &:hover .arxiv-mark-img {
+            opacity: 0.7;
+          }
+        }
+
         a.btn {
           color: var(--global-text-color);
           border: 1px solid var(--global-text-color);
@@ -648,6 +751,57 @@ footer.sticky-bottom {
           }
         }
         margin-bottom: -1rem;
+
+        .scholar-badge {
+          display: inline-block;
+          text-decoration: none;
+          vertical-align: middle;
+          position: relative;
+          top: -0.1rem;
+          margin-left: 0.4rem;
+
+          img {
+            height: 20px;
+            border: 1px solid #d0d0d0;
+            border-radius: 3px;
+          }
+
+          .scholar-citation-count {
+            position: relative;
+            display: inline-block;
+            color: #222;
+            font-size: 0.75rem;
+            font-weight: 400;
+            line-height: 1;
+            padding: 2px 5px;
+            border: 1px solid #bbb;
+            border-radius: 1px;
+            vertical-align: middle;
+            margin-left: 4px;
+
+            &::before {
+              content: '';
+              position: absolute;
+              left: -4px;
+              top: 50%;
+              transform: translateY(-50%);
+              border-width: 3px 4px 3px 0;
+              border-style: solid;
+              border-color: transparent #bbb transparent transparent;
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              left: -2px;
+              top: 50%;
+              transform: translateY(-50%);
+              border-width: 3px 3px 3px 0;
+              border-style: solid;
+              border-color: transparent #fff transparent transparent;
+            }
+          }
+        }
       }
 
       .badges {
@@ -663,18 +817,13 @@ footer.sticky-bottom {
             text-decoration: underline;
           }
         }
+
       }
 
       .hidden {
         font-size: 0.875rem;
-        max-height: 0px;
         overflow: hidden;
         text-align: justify;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
-        transition: all 0.15s ease;
 
         p {
           line-height: 1.4em;
@@ -688,22 +837,6 @@ footer.sticky-bottom {
         }
       }
 
-      .hidden.open {
-        max-height: 100em;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
-        transition: all 0.15s ease;
-      }
-
-      div.abstract.hidden {
-        border: dashed 1px var(--global-bg-color);
-      }
-
-      div.abstract.hidden.open {
-        border-color: var(--global-text-color);
-      }
     }
   }
 }

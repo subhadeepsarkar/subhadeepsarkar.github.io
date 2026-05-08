@@ -4,3 +4,14 @@
 
 "PhysRev":
   url: https://journals.aps.org/
+
+"HPTS":
+  url: https://hpts.ws/
+  color: "#7a7a7a"
+
+"Patent":
+  color: "#7a5d8a"
+
+"Thesis":
+  url: http://www.idr.iitkgp.ac.in/xmlui/handle/123456789/8373
+  color: "#3f3f3f"

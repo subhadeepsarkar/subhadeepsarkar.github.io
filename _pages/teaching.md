@@ -32,16 +32,23 @@ nav_order: 4
     <td>
       <span style="font-size: 30px;"><a href="https://ssd-brandeis.github.io/COSI-127B/" style="color: #1a73e8; text-decoration: underline; text-decoration-thickness: 2px;">Database Management Systems</a> <span style="color: #2b2b2b;"><b>|</b> </span></span>
       <span style="font-size: 20px;"><span style="color: #5e5e5e;"><b>COSI 127B |</b> </span></span>
-      <span style="font-size: 18px;"><span style="color: #808080;">current offering: </span><span style="color: #5e5e5e;"><b>Spring 2025 
+      <span style="font-size: 18px;"><span style="color: #808080;">current offering: </span><span style="color: #5e5e5e;"><b>Spring 2026 
       |</b> </span>
-      <span style="color: #808080;">students: <span style="color: #5e5e5e;"><b>46</b> </span></span>
+      <span style="color: #808080;">students: <span style="color: #5e5e5e;"><b>50</b> </span></span>
       </span>
       <br>
       <span style="font-size: 15px;"><span style="color: #5e5e5e; ">This class presents a comprehensive introduction to the fundamental concepts of database systems. We start by discussing the classical approaches to database design and the fundamental building blocks and operating principles of database systems. The primary focus of the course is on the core concepts of the internals of database systems, covering entity-relationship and relational data models, commercial relational query languages (SQL and relational algebra), file organization, storage and memory management, indexing and hashing, query optimization, query processing, transaction processing, concurrency control, and recovery. Finally, we discuss the new trends in data management in the era of big data and data management in the cloud to highlight the evolution of database systems over the years.</span></span>
       <div style="margin-bottom: 3mm;"></div>
-      <span style="font-size: 18px;"><span style="color: #808080;"><b>Past offering:</b> </span><span style="color: #5e5e5e;"><b><a href="https://ssd-brandeis.github.io/COSI-127B/2024/" style="color: rgb(35, 90, 161); text-decoration: underline; text-decoration-thickness: 2px;">Spring 2024</a> | </b> </span>
-      <span style="color: #808080;">students: <span style="color: #5e5e5e;"><b>60 | </b> </span></span>
-      <span style="color: #808080;">course rating: <span style="color: #5e5e5e;"><b>4.74</b> </span></span>
+        <span style="font-size: 18px;"><span style="color: #808080;"><b>Past offerings:</b> </span><span style="color: #5e5e5e;"><b><a href="https://ssd-brandeis.github.io/COSI-127B/2025/" style="color: rgb(35, 90, 161); text-decoration: underline; text-decoration-thickness: 2px;">Spring 2025</a> | </b> </span>
+        <span style="color: #808080;">students: <span style="color: #5e5e5e;"><b>46 | </b> </span></span>
+        <span style="color: #808080;">course rating: <span style="color: #5e5e5e;"><b>4.64</b> </span></span>
+      
+      <br>
+      <p style="text-indent: 120px;">
+        <span style="color: #5e5e5e;"><b><a href="https://ssd-brandeis.github.io/COSI-127B/2024/" style="color: rgb(35, 90, 161); text-decoration: underline; text-decoration-thickness: 2px;">Spring 2024</a> | </b> </span>
+        <span style="color: #808080;">students: <span style="color: #5e5e5e;"><b>60 | </b> </span></span>
+        <span style="color: #808080;">course rating: <span style="color: #5e5e5e;"><b>4.74</b> </span></span>
+      </p>
       </span>
     </td>
   </tr>
@@ -62,7 +69,7 @@ nav_order: 4
     <td>
       <span style="font-size: 30px;"><a href="https://ssd-brandeis.github.io/COSI-167A/" style="color: #1a73e8; text-decoration: underline; text-decoration-thickness: 2px;">Advanced Data Systems</a> <span style="color: #2b2b2b;"><b>|</b> </span></span>
       <span style="font-size: 20px;"><span style="color: #5e5e5e;"><b>COSI 167A |</b> </span></span>
-      <span style="font-size: 18px;"><span style="color: #808080;">next offering: </span><span style="color: #5e5e5e;"><b>TBD 
+      <span style="font-size: 18px;"><span style="color: #808080;">next offering: </span><span style="color: #5e5e5e;"><b>Spring 2028 
       </b> </span>
       </span>
       <br>

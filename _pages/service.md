@@ -35,6 +35,7 @@ nav_order: 5
   <div style="width: 100%; float:left; margin-top: -20px; margin-bottom: 20px;">
     <br> 
     <ul>   
+      <li>International Conference on Very Large Data Bases (<b>VLDB</b>), 2027</li>
       <li>International Conference on Extending Database Technology (<b>EDBT</b>), 2027</li>
       <li>International Conference on Very Large Data Bases (<b>VLDB</b>) <b>Demo</b>, 2026</li>
       <li>ACM <b>SIGMOD</b> International Conference on Management of Data, 2026</li>
@@ -43,7 +44,6 @@ nav_order: 5
       <li>International Conference on Very Large Data Bases (<b>VLDB</b>), 2026</li>
       <li>IEEE International Conference on Big Data (<b>BigData</b>), 2025</li>
       <li>International Workshop on Accelerating Analytics and Data Management Systems Using Modern Processor and Storage Architectures (<b>ADMS</b>), 2025</li>
-      <li>International Conference on Very Large Data Bases (<b>VLDB</b>), 2025</li>
       <li>International Conference on Very Large Data Bases (<b>VLDB</b>) <b>Demo</b>, 2025</li>
       <li>ACM <b>SIGMOD</b> International Conference on Management of Data <b>Demo</b>, 2025</li>
       <li>International Conference on Very Large Data Bases (<b>VLDB</b>), 2025</li>

@@ -285,6 +285,7 @@ scholar:
 badges: # Display different badges for your publications
   altmetric_badge: true # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
   dimensions_badge: true # Dimensions badge (https://badge.dimensions.ai/)
+  gscholars_badge: true # Google Scholar badge (uses 'scholar' bib field for cluster ID) (https://scholar.google.com/)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords:
@@ -304,6 +305,7 @@ filtered_bibtex_keywords:
     website,
     preview,
     altmetric,
+    scholar,
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
