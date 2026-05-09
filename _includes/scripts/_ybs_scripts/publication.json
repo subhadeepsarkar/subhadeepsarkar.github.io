@@ -173,7 +173,7 @@
     "pdf": "RangeReduce_Query-Driven_LSM_Compactions.pdf",
     "video": "https://www.youtube.com/watch?v=xgJ2g_CLjSQ",
     "slides": "RangeReduce_ICDE.pdf",
-    "poster": "",
+    "poster": "RangeReduce",
     "code_repo": "https://github.com/SSD-Brandeis/RangeReduce",
     "purchase": "",
     "selected": true,

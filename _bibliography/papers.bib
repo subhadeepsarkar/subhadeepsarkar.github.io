@@ -53,8 +53,9 @@
   <br> In this paper, we introduce RangeReduce, an RQ-optimized LSM-engine that uses RQs as a hint to compact data that is already read into memory as part of the query, and thereby, improves the overall performance of the storage engine. The key intuition is to take advantage of the I/Os and CPU cycles spent on reading and merging data from slow storage during RQs and write the RQ-qualifying data back as part of a single sorted run. Such RQ-driven compactions enable RangeReduce to (i) read less data from fewer sorted runs for subsequent RQs, (ii) reduce overall data movement (reads and writes) due to RQs and compactions, and (iii) improve space amplification, while (iv) significantly reducing compaction debt. Experiments show that RangeReduce offers up to 90% lower compaction debt, 12% less data movement, and 20% lower space amplification while improving average RQ latency by up to 18%.},
   pdf         = {RangeReduce_Query-Driven_LSM_Compactions.pdf},
   slides      = {RangeReduce_ICDE.pdf},
+  poster      = {RangeReduce.pdf},
   code_repo   = {https://github.com/SSD-Brandeis/RangeReduce},
-  video        = {https://www.youtube.com/watch?v=xgJ2g_CLjSQ},
+  video       = {https://www.youtube.com/watch?v=xgJ2g_CLjSQ},
   selected    = {true},
   bibtex_show = {true}
 }
