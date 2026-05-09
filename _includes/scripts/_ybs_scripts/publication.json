@@ -34,83 +34,6 @@
   //   "dblp_citation_verified": false
   // },
   {
-    "key": "Sarkar_PhD_IITKgp17",
-    "type": "phdthesis",
-    "title": "Analysis of Delay in Wireless Communication for Healthcare Systems",
-    "authors": [
-      "Subhadeep Sarkar"
-    ],
-    "editor": [],
-    "year": 2017,
-    "month": "",
-    "school": "Indian Institute of Technology Kharagpur",
-    "venue_short": "Thesis",
-    "url": "http://www.idr.iitkgp.ac.in/xmlui/handle/123456789/8373",
-    "abstract": "Recently, the IEEE 802.15.6 Task Group introduced a new set of physical layer and medium access control sublayer protocols for wireless communication involving wireless body area networks (WBANs). The IEEE 802.15.6 standard is designed specifically to support short-range (within 10 m), ultra-low power wireless communications with very high data rate (up to 10 Mbps) within or in the vicinity of human body. The fundamental changes proposed through the standard are introduction of eight user priorities (UPs) based on the traffic designation, and the corresponding sets of minimum and maximum values for the contention window. However, one of the most important changes introduced through the standard is the work-flow of the IEEE 802.15.6 CSMA/CA MAC protocol, where a transmitting node may lock its backoff counter under certain conditions and unlock the same upon the resumption of favorable conditions, which is unlike any previously known CSMA/CA protocol. <br>The thesis investigates the impact of the backoff counter locking mechanism on the transmission latency in the IEEE 802.15.6 CSMA/CA protocol and proposes a solution to the problem. As a first step, a discrete-time Markov chain (DTMC) is designed to model the different states of a node operating in the standard. The thesis proposes the Fair and Latency-aware backOff cOunter Decrement (FLOOD) algorithm, which optimizes the delay incurred during frame transmission. The thesis also proposes the Priority-based Allocation of Time-Slots (PATS) algorithm, a context-aware frame transmission algorithm based on the constant model hawk-dove evolutionary game, which ensures prioritized transmission of data frames based on the criticality of the transmitting WBAN. Together, FLOOD and PATS lead to transmission of data frames with minimum delay incurred while ensuring prioritized transmission for critical WBANs.",
-    "selected": true,
-    "bibtex_show": true,
-    "dblp_citation_verified": true,
-    "pdf": "PhD_Thesis_Abstract.pdf"
-  },
-  {
-    "key": "Sarkar_IndianPatent16",
-    "type": "patent",
-    "title": "A Privacy-Aware Ambulatory Healthcare System Using Wireless Body Area Networks (WBANs)",
-    "authors": [
-      "Subhadeep Sarkar",
-      "Subarna Chatterjee",
-      "Sudip Misra",
-      "Ezaj A. Ansari",
-      "Dipayan Ghatak",
-      "Saurav Sarkar"
-    ],
-    "editor": [],
-    "year": 2016,
-    "month": "jan",
-    "venue_short": "Patent",
-    "howpublished": "Indian Patent, File no.\\ 201631000214",
-    "abstract": "The proposed invention relates to the development of a Wireless Body Area Network (WBAN)-equipped \"blind\" cloud system to enhance the existing ambulatory healthcare system without having extensive infrastructural dependence. As per the traditional healthcare techniques of the country, the diagnosis of a patient commences only after s/he is admitted to a medical unit or hospital. Thus, in cases of extreme criticality or medical emergency, the patient often undergoes tremendous inconvenience which may even be fatal. The proposed invention aims at introducing a novel ambulatory healthcare system coupled with the recent technological advancements. The idea behind this invention is to provide majorly unmanned, automated, pervasive, remote, real-time ambulatory healthcare services. After getting into an ambulance, a patient would be made to wear a set of easy, light-weighted, and convenient wireless body sensor nodes which would form a WBAN, and would instantaneously initiate the capturing the patient's physiological data. These data would be fed to remote cloud servers in real time from where it would undergo a perfunctory analysis. To enhance the precision of the analytics, the invention envisions gathering a real-time medical history of the patient through a simple, form-based interface (with assistance from a paramedic). Based on the data criticality and medical history, voice or text-based feedback directives will be delivered at the patient's end and will be executed by the paramedic within the ambulance. The invention is strongly dependent on cloud computing technology as the cloud servers serve as the primary hubs of storage and computation of the system. However, to address the issues related to security, data confidentiality, and vulnerability of cloud computing, the invention proposes to develop a completely \"blind\" cloud platform. The goal is to take advantage of the enormous computing and storage abilities of the cloud servers by maintaining data anonymity simultaneously. To preserve the privacy of the medical data, we propose an intelligent method to mask the identity of the patients, i.e., the users of the system, and thereby, obtaining unidentified data for storage and analysis. We also propose a parallel method to be executed within the non-cloud servers for efficient and lossless identity management and retrieval.",
-    "selected": true,
-    "bibtex_show": true,
-    "dblp_citation_verified": true,
-    "pdf": "IN-Patent-Certificate.pdf"
-  },
-  {
-    "key": "Sarkar_HPTS22",
-    "type": "inproceedings",
-    "title": "Toward Building Deletion Compliant Data Systems",
-    "authors": [
-      "Subhadeep Sarkar"
-    ],
-    "editor": [],
-    "year": 2022,
-    "month": "oct",
-    "venue_long": "International Workshop on High Performance Transaction Systems ({HPTS})",
-    "venue_short": "HPTS",
-    "pages": "",
-    "volume": "",
-    "number": "",
-    "series": "",
-    "publisher": "",
-    "isbn": "",
-    "issn": "",
-    "doi": "",
-    "url": "",
-    "abstract": "Modern data systems are designed around the silent underlying assumption of perpetual data retention. Systems are designed to offer high performance for data ingestion and queries, while deletion of data is realized by simply logically invalidating the target entries (instead of modifying them in place). This has severe implications on the privacy front, especially, in light of the newly enforced privacy regulations which are aimed toward enabling the users to express their preferences about the deletion of their data. In this paper, we present our vision of enabling privacy-through-deletion as a design element in modern data systems empowering them with the ability to ensure timely and persistent deletion of data, and we envision doing so without hurting performance or increasing operational cost.",
-    "pdf": "Toward_Building_Deletion_Compliant_Data_Systems.pdf",
-    "preview": "",
-    "arxiv": "",
-    "website": "",
-    "video": "",
-    "slides": "HPTS.pdf",
-    "poster": "",
-    "code_repo": "",
-    "purchase": "",
-    "selected": true,
-    "bibtex_show": true,
-    "dblp_citation_verified": true
-  },
-  {
     "key": "Farhan_damon",
     "type": "inproceedings",
     "title": "{ZARC}: Re-inventing Zone Allocation for LSMs on ZNS SSD",
@@ -541,6 +464,41 @@
     "dblp_citation_verified": true
   },
   {
+    "key": "Sarkar_HPTS22",
+    "type": "inproceedings",
+    "title": "Toward Building Deletion Compliant Data Systems",
+    "authors": [
+      "Subhadeep Sarkar"
+    ],
+    "editor": [],
+    "year": 2022,
+    "month": "oct",
+    "venue_long": "International Workshop on High Performance Transaction Systems ({HPTS})",
+    "venue_short": "HPTS",
+    "pages": "",
+    "volume": "",
+    "number": "",
+    "series": "",
+    "publisher": "",
+    "isbn": "",
+    "issn": "",
+    "doi": "",
+    "url": "",
+    "abstract": "Modern data systems are designed around the silent underlying assumption of perpetual data retention. Systems are designed to offer high performance for data ingestion and queries, while deletion of data is realized by simply logically invalidating the target entries (instead of modifying them in place). This has severe implications on the privacy front, especially, in light of the newly enforced privacy regulations which are aimed toward enabling the users to express their preferences about the deletion of their data. In this paper, we present our vision of enabling privacy-through-deletion as a design element in modern data systems empowering them with the ability to ensure timely and persistent deletion of data, and we envision doing so without hurting performance or increasing operational cost.",
+    "pdf": "Toward_Building_Deletion_Compliant_Data_Systems.pdf",
+    "preview": "",
+    "arxiv": "",
+    "website": "",
+    "video": "",
+    "slides": "HPTS.pdf",
+    "poster": "",
+    "code_repo": "",
+    "purchase": "",
+    "selected": true,
+    "bibtex_show": true,
+    "dblp_citation_verified": true
+  },
+  {
     "key": "DBLP:journals/pvldb/SarkarSZA21",
     "type": "article",
     "title": "Constructing and Analyzing the {LSM} Compaction Design Space",
@@ -691,6 +649,25 @@
     "dblp_citation_verified": true
   },
   {
+    "key": "Sarkar_PhD_IITKgp17",
+    "type": "phdthesis",
+    "title": "Analysis of Delay in Wireless Communication for Healthcare Systems",
+    "authors": [
+      "Subhadeep Sarkar"
+    ],
+    "editor": [],
+    "year": 2017,
+    "month": "",
+    "school": "Indian Institute of Technology Kharagpur",
+    "venue_short": "Thesis",
+    "url": "http://www.idr.iitkgp.ac.in/xmlui/handle/123456789/8373",
+    "abstract": "Recently, the IEEE 802.15.6 Task Group introduced a new set of physical layer and medium access control sublayer protocols for wireless communication involving wireless body area networks (WBANs). The IEEE 802.15.6 standard is designed specifically to support short-range (within 10 m), ultra-low power wireless communications with very high data rate (up to 10 Mbps) within or in the vicinity of human body. The fundamental changes proposed through the standard are introduction of eight user priorities (UPs) based on the traffic designation, and the corresponding sets of minimum and maximum values for the contention window. However, one of the most important changes introduced through the standard is the work-flow of the IEEE 802.15.6 CSMA/CA MAC protocol, where a transmitting node may lock its backoff counter under certain conditions and unlock the same upon the resumption of favorable conditions, which is unlike any previously known CSMA/CA protocol. <br>The thesis investigates the impact of the backoff counter locking mechanism on the transmission latency in the IEEE 802.15.6 CSMA/CA protocol and proposes a solution to the problem. As a first step, a discrete-time Markov chain (DTMC) is designed to model the different states of a node operating in the standard. The thesis proposes the Fair and Latency-aware backOff cOunter Decrement (FLOOD) algorithm, which optimizes the delay incurred during frame transmission. The thesis also proposes the Priority-based Allocation of Time-Slots (PATS) algorithm, a context-aware frame transmission algorithm based on the constant model hawk-dove evolutionary game, which ensures prioritized transmission of data frames based on the criticality of the transmitting WBAN. Together, FLOOD and PATS lead to transmission of data frames with minimum delay incurred while ensuring prioritized transmission for critical WBANs.",
+    "selected": true,
+    "bibtex_show": true,
+    "dblp_citation_verified": true,
+    "pdf": "PhD_Thesis_Abstract.pdf"
+  },
+  {
     "key": "DBLP:journals/cn/BhavathankarSM17",
     "type": "article",
     "title": "Optimal decision rule-based ex-ante frequency hopping for jamming\n                  avoidance in wireless sensor networks",
@@ -799,6 +776,29 @@
     "pdf": "From_Micro_to_Nano_The_Evolution_of_Wireless_Sensor-Based_Health_Care.pdf",
     "bibtex_show": true,
     "dblp_citation_verified": true
+  },
+  {
+    "key": "Sarkar_IndianPatent16",
+    "type": "patent",
+    "title": "A Privacy-Aware Ambulatory Healthcare System Using Wireless Body Area Networks (WBANs)",
+    "authors": [
+      "Subhadeep Sarkar",
+      "Subarna Chatterjee",
+      "Sudip Misra",
+      "Ezaj A. Ansari",
+      "Dipayan Ghatak",
+      "Saurav Sarkar"
+    ],
+    "editor": [],
+    "year": 2016,
+    "month": "jan",
+    "venue_short": "Patent",
+    "howpublished": "Indian Patent, File no.\\ 201631000214",
+    "abstract": "The proposed invention relates to the development of a Wireless Body Area Network (WBAN)-equipped \"blind\" cloud system to enhance the existing ambulatory healthcare system without having extensive infrastructural dependence. As per the traditional healthcare techniques of the country, the diagnosis of a patient commences only after s/he is admitted to a medical unit or hospital. Thus, in cases of extreme criticality or medical emergency, the patient often undergoes tremendous inconvenience which may even be fatal. The proposed invention aims at introducing a novel ambulatory healthcare system coupled with the recent technological advancements. The idea behind this invention is to provide majorly unmanned, automated, pervasive, remote, real-time ambulatory healthcare services. After getting into an ambulance, a patient would be made to wear a set of easy, light-weighted, and convenient wireless body sensor nodes which would form a WBAN, and would instantaneously initiate the capturing the patient's physiological data. These data would be fed to remote cloud servers in real time from where it would undergo a perfunctory analysis. To enhance the precision of the analytics, the invention envisions gathering a real-time medical history of the patient through a simple, form-based interface (with assistance from a paramedic). Based on the data criticality and medical history, voice or text-based feedback directives will be delivered at the patient's end and will be executed by the paramedic within the ambulance. The invention is strongly dependent on cloud computing technology as the cloud servers serve as the primary hubs of storage and computation of the system. However, to address the issues related to security, data confidentiality, and vulnerability of cloud computing, the invention proposes to develop a completely \"blind\" cloud platform. The goal is to take advantage of the enormous computing and storage abilities of the cloud servers by maintaining data anonymity simultaneously. To preserve the privacy of the medical data, we propose an intelligent method to mask the identity of the patients, i.e., the users of the system, and thereby, obtaining unidentified data for storage and analysis. We also propose a parallel method to be executed within the non-cloud servers for efficient and lossless identity management and retrieval.",
+    "selected": true,
+    "bibtex_show": true,
+    "dblp_citation_verified": true,
+    "pdf": "IN-Patent-Certificate.pdf"
   },
   {
     "key": "DBLP:conf/icc/ChatterjeeSM15",
