@@ -15,7 +15,12 @@
   --global-distill-app-color: #{$grey-color};
   --global-divider-color: rgba(27, 52, 107, 0.695);
   --global-card-bg-color: #{$white-color};
-  --nav-bar-light-color: rgb(223, 223, 223);
+  --nav-bar-color: rgb(223, 223, 223);
+  --scholar-badge-border-color: #bbb;
+  --global-category-color: var(--global-divider-color);
+  --teaching-color-separator: #2b2b2b;
+  --teaching-color-primary: #5e5e5e;
+  --teaching-color-secondary: #808080;
 
   .fa-sun {
     display : none;
@@ -30,6 +35,20 @@
     display: block;
   }
   .repo-img-dark {
+    display: none;
+  }
+
+  .arxiv-mark-light {
+    display: block;
+  }
+  .arxiv-mark-dark {
+    display: none;
+  }
+
+  .citations-badge-light {
+    display: inline;
+  }
+  .citations-badge-dark {
     display: none;
   }
 }
@@ -47,6 +66,26 @@ html[data-theme='dark'] {
   --global-distill-app-color: #{$grey-color-light};
   --global-divider-color: #424246;
   --global-card-bg-color: #{$grey-900};
+  --nav-bar-color: #{$grey-900};
+  --scholar-badge-border-color: #4a4a4e;
+  --global-category-color: #909090;
+  --teaching-color-separator: var(--global-text-color);
+  --teaching-color-primary: var(--global-text-color);
+  --teaching-color-secondary: var(--global-text-color);
+
+  .arxiv-mark-light {
+    display: none;
+  }
+  .arxiv-mark-dark {
+    display: block;
+  }
+
+  .citations-badge-light {
+    display: none;
+  }
+  .citations-badge-dark {
+    display: inline;
+  }
 
   .fa-sun {
     padding-left: 10px;

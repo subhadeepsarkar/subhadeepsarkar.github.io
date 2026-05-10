@@ -165,7 +165,11 @@
         ><img
           src="{{ '/assets/img/arxiv-mark.png' | relative_url }}"
           alt="arXiv"
-          class="arxiv-mark-img"
+          class="arxiv-mark-img arxiv-mark-light"
+      /><img
+          src="{{ '/assets/img/arxiv-mark-dark.png' | relative_url }}"
+          alt="arXiv"
+          class="arxiv-mark-img arxiv-mark-dark"
       /></a>
       {%- endif %} {%- if entry.slides %} {%- capture slides_svg -%}
       <svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"/><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3 4h18M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4m-8 12v4m-3 0h6"/><path d="m8 12l3-3l2 2l3-3"/></g></svg>
@@ -254,7 +258,7 @@
            rel="noopener noreferrer"
            class="scholar-badge"
            title="View on Google Scholar">
-          <img src="https://img.shields.io/badge/Citations-white?style=flat&logo=googlescholar&logoColor=4285F4" alt="Citations">{%- if citation_count %}<span class="scholar-citation-count">{{ citation_count }}</span>{%- endif %}
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&logo=googlescholar&logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&logo=googlescholar&logoColor=4285F4" alt="Citations" class="citations-badge-dark">{%- if citation_count %}<span class="scholar-citation-count">{{ citation_count }}</span>{%- endif %}
         </a>
         {%- endif %}
       {%- endif %}

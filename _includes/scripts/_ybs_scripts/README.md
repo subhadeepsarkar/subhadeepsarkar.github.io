@@ -122,6 +122,78 @@ library are needed.
 
 ---
 
+## `service.json` + `_populate_service.py`
+
+**Description.** `service.json` is the single source of truth for the
+`/service/` page. `_populate_service.py` reads it and regenerates
+`_pages/service.md` (preserving the YAML front matter) so Jekyll can
+render the page. The user never edits `service.md` directly.
+
+**`service.json` schema.** Top-level object with four arrays:
+
+| array | description |
+| --- | --- |
+| `organization` | Roles held in conference/workshop organization |
+| `pc_member` | Program committee memberships |
+| `journal_reviewer` | Journals reviewed for (selected list) |
+| `external_reviewer` | External reviewer credits, grouped by venue with a year list |
+
+**Entry fields by array:**
+
+*`organization`*
+
+| field | required | notes |
+| --- | --- | --- |
+| `role` | yes | e.g. `"Proceedings Chair"` — rendered in `<i>` |
+| `venue_long` | yes | Full venue name, plain text |
+| `venue_short` | | Abbreviation. If it appears as a whole word in `venue_long` it is bolded inline; otherwise appended as `(<b>abbr</b>)` |
+| `venue_html` | | Raw HTML override for the full venue string — use when the abbreviation sits mid-name alongside other bold terms |
+| `track` | | Track or sub-series name; rendered as `<b>track</b>` after the venue |
+| `year` | yes | Integer or string (e.g. `"2024-2026"` for multi-year spans) |
+
+*`pc_member`*
+
+| field | required | notes |
+| --- | --- | --- |
+| `venue_long` | yes | |
+| `venue_short` | | Same inline-vs-appended logic as above |
+| `venue_html` | | Raw HTML override |
+| `track` | | e.g. `"Demo"`, `"Reproducibility"` — rendered `<b>track</b>` |
+| `year` | yes | Integer |
+| `note` | | Rendered as `({note})` after the year; accepts raw HTML for mixed-italic phrases like `"Track Co-Chair: <i>RF System...</i>"` |
+
+*`journal_reviewer`*
+
+| field | required | notes |
+| --- | --- | --- |
+| `venue_long` | yes | |
+| `venue_short` | | |
+| `venue_html` | | Raw HTML override |
+| `publisher` | | e.g. `"Elsevier"` — appended as `, publisher` |
+
+*`external_reviewer`*
+
+| field | required | notes |
+| --- | --- | --- |
+| `venue_long` | yes | |
+| `venue_short` | | |
+| `venue_html` | | Raw HTML override |
+| `years` | yes | Array of integers, rendered as `[2021, 2017]` |
+
+**`venue_html` override.** Most venues render correctly via the automatic
+logic. Use `venue_html` only for entries where the abbreviation appears
+embedded in the name *and* additional terms must also be bolded, e.g.
+`"ACM <b>MobiCom</b> workshop ... (<b>FICN</b>)"` or
+`"North-East DataBase (<b>NEDB</b>) Day"`.
+
+**Flags.**
+
+- `--dry-run` — print the generated `service.md` to stdout without writing.
+
+**Prerequisites.** Python 3.8+. No packages outside the standard library.
+
+---
+
 ## Typical usage
 
 ```bash
@@ -131,6 +203,10 @@ library are needed.
 # Routine: edit publication.json, then sync:
 ./_populate_papers.py              # interactive
 ./_populate_papers.py --dry-run    # see what would happen
+
+# Routine: edit service.json, then regenerate service.md:
+./_populate_service.py             # write _pages/service.md
+./_populate_service.py --dry-run   # preview output without writing
 
 # After adding a new publication PDF + bib entry (legacy script — populate
 # papers handles previews automatically):

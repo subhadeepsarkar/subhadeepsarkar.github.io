@@ -7,7 +7,8 @@ nav: true
 nav_order: 1
 ---
 
-My research interests include storage engines, access methods, and data management systems. I am also interested in understanding the performance vs. privacy trade-offs in modern data systems and building end-to-end privacy-compliant data systems. Here is my <a href="/assets/resources/research_statement.pdf" target="_blank">latest research statement</a>. <br><br><br>
+My research interests include storage engines, access methods, and data management systems. I am also interested in understanding the performance vs. privacy trade-offs in modern data systems and building end-to-end privacy-compliant data systems. 
+<!-- Here is my <a href="/assets/resources/research_statement.pdf" target="_blank">latest research statement</a>. <br><br><br> -->
 
 <div class="projects">
   <!-- Display categorized projects -->

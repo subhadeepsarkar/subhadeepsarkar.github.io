@@ -8,8 +8,6 @@ nav_order: 5
 ---
 
 
-<!-- My research interests include storage engines, access methods, and data management systems. I am also interested in understanding the performance vs. privacy tradeoffs in modern data systems and building end-to-end privacy compliant data systems. Here is my <a href="/assets/resources/research_statement.pdf" target="_blank">latest research statement</a>. <br><br><br> -->
-
 <div class="projects">
   <!-- Display categorized projects -->
   <h2 class="category" style="margin-top: -40px;">organization</h2>
@@ -34,7 +32,7 @@ nav_order: 5
   <h2 class="category" style="margin-top: -40px;">program committee member</h2>
   <div style="width: 100%; float:left; margin-top: -20px; margin-bottom: 20px;">
     <br> 
-    <ul>   
+    <ul>
       <li>International Conference on Very Large Data Bases (<b>VLDB</b>), 2027</li>
       <li>International Conference on Extending Database Technology (<b>EDBT</b>), 2027</li>
       <li>International Conference on Very Large Data Bases (<b>VLDB</b>) <b>Demo</b>, 2026</li>
@@ -73,7 +71,6 @@ nav_order: 5
 </div>
 
 
-
 <div class="projects">
   <!-- Display categorized projects -->
   <h2 class="category" style="margin-top: -40px;">journal reviewer (selected)</h2>
@@ -84,14 +81,14 @@ nav_order: 5
       <li>ACM Transactions on Storage (<b>TOS</b>)</li>
       <li>International Journal on Very Large Data Bases (<b>VLDBJ</b>)</li>
       <li>ACM Transactions on Database Systems (<b>TODS</b>)</li>
-      <li>Journal of Systems Architecture (<b>JSA</b>), Elsevier </li>
+      <li>Journal of Systems Architecture (<b>JSA</b>), Elsevier</li>
       <li>IEEE Transactions on Parallel and Distributed Systems (<b>TPDS</b>)</li>
       <li>IEEE Transactions on Mobile Computing (<b>TMC</b>)</li>
       <li>IEEE Transactions on Cloud Computing (<b>TCC</b>)</li>
       <li>IEEE Transactions on Vehicular Technology (<b>TVT</b>)</li>
       <li>IEEE Transactions on Big Data (<b>TBD</b>)</li>
       <li>IEEE Transactions on Green Communications and Networking (<b>TGCN</b>)</li>
-      <li>IEEE Transactions on Industrial Informatics  (<b>TII</b>)</li>
+      <li>IEEE Transactions on Industrial Informatics (<b>TII</b>)</li>
       <li>IEEE Systems Journal (<b>SJ</b>)</li>
       <li>IEEE Communications Letters (<b>CL</b>)</li>
       <li>IEEE Wireless Communications Letters (<b>WCL</b>)</li>
@@ -101,7 +98,6 @@ nav_order: 5
     </ul>
   </div>
 </div>
-
 
 
 <div class="projects">
@@ -124,6 +120,4 @@ nav_order: 5
     </ul>
   </div>
 </div>
-
-
 

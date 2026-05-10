@@ -166,12 +166,12 @@ blockquote {
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--nav-bar-light-color);
+  background-color: var(--nav-bar-color);
   opacity: 0.95;
 }
 
 .navbar .dropdown-menu {
-  background-color: var(--nav-bar-light-color);
+  background-color: var(--nav-bar-color);
   border: 1px solid var(--global-divider-color);
 
   a:not(.active) {
@@ -192,7 +192,7 @@ blockquote {
 
   &:hover {
     color: var(--global-hover-color);
-    background-color: var(--nav-bar-light-color);
+    background-color: var(--nav-bar-color);
   }
 }
 
@@ -517,8 +517,8 @@ footer.sticky-bottom {
   }
 
   h2.category {
-    color: var(--global-divider-color);
-    border-bottom: 1px solid var(--global-divider-color);
+    color: var(--global-category-color);
+    border-bottom: 1px solid var(--global-category-color);
     padding-top: 0.5rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -549,8 +549,8 @@ footer.sticky-bottom {
   }
 
   h2.year {
-    color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
+    color: var(--global-category-color);
+    border-top: 1px solid var(--global-category-color);
     padding-top: -2rem;
     margin-top: 0.25rem;
     margin-bottom: 0rem;
@@ -597,6 +597,7 @@ footer.sticky-bottom {
           object-position: top;
           display: block;
           margin-left: 1rem;
+          background-color: #ffffff;
         }
 
         abbr {
@@ -696,7 +697,7 @@ footer.sticky-bottom {
           &[title="Poster"],             &[data-original-title="Poster"]             { color: #876c8a; }
           &[title="Video Presentation"], &[data-original-title="Video Presentation"] { color: #a96860; }
           &[title="Project Website"],    &[data-original-title="Project Website"]    { color: #4f8095; }
-          &[title="BibTeX"],             &[data-original-title="BibTeX"]             { color: #5d4b30; }
+          &[title="BibTeX"],             &[data-original-title="BibTeX"]             { color: #5d4b30; html[data-theme='dark'] & { color: #c9a060; } }
           &[title="HTML"],               &[data-original-title="HTML"]               { color: #5d8a78; }
           &[title="Supplementary"],      &[data-original-title="Supplementary"]      { color: #9b8550; }
           &[title="Blog"],               &[data-original-title="Blog"]               { color: #6e5d7e; }
@@ -762,19 +763,20 @@ footer.sticky-bottom {
 
           img {
             height: 20px;
-            border: 1px solid #d0d0d0;
+            border: 1px solid var(--scholar-badge-border-color);
             border-radius: 3px;
           }
 
           .scholar-citation-count {
             position: relative;
             display: inline-block;
-            color: #222;
+            color: var(--global-text-color);
+            html[data-theme='dark'] & { border-color: #a0a0a0; }
             font-size: 0.75rem;
             font-weight: 400;
             line-height: 1;
             padding: 2px 5px;
-            border: 1px solid #bbb;
+            border: 1px solid var(--scholar-badge-border-color);
             border-radius: 1px;
             vertical-align: middle;
             margin-left: 4px;
@@ -787,7 +789,8 @@ footer.sticky-bottom {
               transform: translateY(-50%);
               border-width: 3px 4px 3px 0;
               border-style: solid;
-              border-color: transparent #bbb transparent transparent;
+              border-color: transparent var(--scholar-badge-border-color) transparent transparent;
+              html[data-theme='dark'] & { border-color: transparent #a0a0a0 transparent transparent; }
             }
 
             &::after {
@@ -798,8 +801,9 @@ footer.sticky-bottom {
               transform: translateY(-50%);
               border-width: 3px 3px 3px 0;
               border-style: solid;
-              border-color: transparent #fff transparent transparent;
+              border-color: transparent var(--global-bg-color) transparent transparent;
             }
+
           }
         }
       }
