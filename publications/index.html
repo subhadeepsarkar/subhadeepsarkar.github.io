@@ -53,6 +53,13 @@
       <!-- Nav Bar -->
       <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
         <div class="container">
+          <!-- Toggle theme mode (extreme left) -->
+          <div class="toggle-container">
+            <button id="light-toggle" title="Change theme">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+            </button>
+          </div>
           <a class="navbar-brand title font-weight-lighter" href="/"><h4><span class="font-weight-bold">Subhadeep Sarkar</span></h4></a>
           <!-- Navbar Toggle -->
           <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,9 +86,6 @@
               <li class="nav-item ">
                 <a class="nav-link" href="/cv/"></a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/projects/">Research</a>
-              </li>
               <li class="nav-item active">
                 <a class="nav-link" href="/publications/">Publications<span class="sr-only">(current)</span></a>
               </li>
@@ -91,14 +95,14 @@
               <li class="nav-item ">
                 <a class="nav-link" href="/service/">Service</a>
               </li>
-
-              <!-- Toogle theme mode -->
-              <li class="toggle-container">
-                <button id="light-toggle" title="Change theme">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
-                </button>
+<!-- SSD Lab -->
+              <li class="nav-item">
+                <a class="nav-link ssd-lab-link" href="https://ssd-brandeis.github.io/" target="_blank" rel="noopener noreferrer">
+                  <img src="/assets/img/SSD%20lab-logo-light.png" alt="SSD Lab" class="ssd-lab-logo ssd-lab-logo-light">
+                  <img src="/assets/img/SSD%20lab-logo.png" alt="SSD Lab" class="ssd-lab-logo ssd-lab-logo-dark">
+                </a>
               </li>
+
             </ul>
           </div>
         </div>
@@ -487,7 +491,7 @@
       <a href="https://github.com/BU-DiSC/kv-bench" class="pub-icon code-static-icon" target="_blank" rel="noopener noreferrer" title="Code"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"></path><path d="M14.333 19v-1.863c.025-.31-.018-.62-.126-.913a2.2 2.2 0 0 0-.5-.781c2.093-.227 4.293-1 4.293-4.544a3.48 3.48 0 0 0-1-2.434a3.2 3.2 0 0 0-.06-2.448s-.787-.227-2.607.961a9.15 9.15 0 0 0-4.666 0c-1.82-1.188-2.607-.96-2.607-.96A3.2 3.2 0 0 0 7 8.464a3.48 3.48 0 0 0-1 2.453c0 3.519 2.2 4.291 4.293 4.544a2.2 2.2 0 0 0-.496.773a2.1 2.1 0 0 0-.13.902V19"></path><path d="M9.667 17.702c-2 .631-3.667 0-4.667-1.948"></path></g></svg></a>
       <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
         <a href="https://scholar.google.com/scholar?q=kvbench%3A+a+key-value+benchmarking+suite" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
-          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">13</span>
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">12</span>
         </a>
     </div>
     
@@ -508,10 +512,10 @@
   <span class="na">title</span> <span class="p">=</span> <span class="s">{KVBench: {A} Key-Value Benchmarking Suite}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the International Workshop on Testing Database Systems ({DBT}est)}</span><span class="p">,</span>
   <span class="na">pages</span> <span class="p">=</span> <span class="s">{9--15}</span><span class="p">,</span>
-  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{{ACM}}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
-  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1145/3662165.3662765}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{{ACM}}</span><span class="p">,</span>
   <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1145/3662165.3662765}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1145/3662165.3662765}</span><span class="p">,</span>
   <span class="na">timestamp</span> <span class="p">=</span> <span class="s">{Fri, 31 May 2024 21:05:30 +0200}</span><span class="p">,</span>
   <span class="na">biburl</span> <span class="p">=</span> <span class="s">{https://dblp.org/rec/conf/dbtest-ws/ZhuSAS24.bib}</span><span class="p">,</span>
   <span class="na">bibsource</span> <span class="p">=</span> <span class="s">{dblp computer science bibliography, https://dblp.org}</span><span class="p">,</span>
@@ -556,7 +560,7 @@
     <div class="links"> <a href="/assets/fulltext/Enabling_Timely_and_Persistent_Deletion_in_LSM-Engines.pdf" class="pub-icon pdf-icon" target="_blank" rel="noopener noreferrer" title="Local PDF"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M5 12V5a2 2 0 0 1 2-2h7l5 5v4M5 18h1.5a1.5 1.5 0 0 0 0-3H5v6m12-3h2m1-3h-3v6m-6-6v6h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z"></path></g></svg></a>
       <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
         <a href="https://scholar.google.com/scholar?q=enabling+timely+and+persistent+deletion+in+lsm-engines" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
-          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">10</span>
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">9</span>
         </a>
     </div>
     
@@ -583,8 +587,8 @@
   <span class="na">number</span> <span class="p">=</span> <span class="s">{3}</span><span class="p">,</span>
   <span class="na">pages</span> <span class="p">=</span> <span class="s">{8:1--8:40}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
-  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1145/3599724}</span><span class="p">,</span>
   <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1145/3599724}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1145/3599724}</span><span class="p">,</span>
   <span class="na">timestamp</span> <span class="p">=</span> <span class="s">{Fri, 27 Oct 2023 20:40:00 +0200}</span><span class="p">,</span>
   <span class="na">biburl</span> <span class="p">=</span> <span class="s">{https://dblp.org/rec/journals/tods/SarkarPSZA23.bib}</span><span class="p">,</span>
   <span class="na">bibsource</span> <span class="p">=</span> <span class="s">{dblp computer science bibliography, https://dblp.org}</span><span class="p">,</span>
@@ -758,7 +762,7 @@
       <a href="https://github.com/BU-DiSC/sware" class="pub-icon code-static-icon" target="_blank" rel="noopener noreferrer" title="Code"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"></path><path d="M14.333 19v-1.863c.025-.31-.018-.62-.126-.913a2.2 2.2 0 0 0-.5-.781c2.093-.227 4.293-1 4.293-4.544a3.48 3.48 0 0 0-1-2.434a3.2 3.2 0 0 0-.06-2.448s-.787-.227-2.607.961a9.15 9.15 0 0 0-4.666 0c-1.82-1.188-2.607-.96-2.607-.96A3.2 3.2 0 0 0 7 8.464a3.48 3.48 0 0 0-1 2.453c0 3.519 2.2 4.291 4.293 4.544a2.2 2.2 0 0 0-.496.773a2.1 2.1 0 0 0-.13.902V19"></path><path d="M9.667 17.702c-2 .631-3.667 0-4.667-1.948"></path></g></svg></a>
       <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
         <a href="https://scholar.google.com/scholar?q=indexing+for+near-sorted+data" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
-          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">11</span>
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">10</span>
         </a>
     </div>
     
@@ -1193,7 +1197,7 @@
 <!-- _layouts/bib.html -->
 <div class="row">
     <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#EB5959">PVLDB</abbr><a href="/assets/fulltext/Constructing_and_Analyzing_the_LSM_Compaction_Design_Space.pdf" target="_blank" rel="noopener noreferrer">
+<abbr class="badge" style="background-color:#4f9a6d"><a href="https://vldb.org/" rel="external nofollow noopener" target="_blank">VLDB</a></abbr><a href="/assets/fulltext/Constructing_and_Analyzing_the_LSM_Compaction_Design_Space.pdf" target="_blank" rel="noopener noreferrer">
                 <img src="/assets/img/publication_preview/Constructing_and_Analyzing_the_LSM_Compaction_Design_Space.png" class="pdf-preview z-depth-1 rounded" alt="Preview">
               </a>
 </div>
@@ -1224,7 +1228,7 @@
       <a href="https://github.com/BU-DiSC/LSM-Compaction-Analysis" class="pub-icon code-static-icon" target="_blank" rel="noopener noreferrer" title="Code"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"></path><path d="M14.333 19v-1.863c.025-.31-.018-.62-.126-.913a2.2 2.2 0 0 0-.5-.781c2.093-.227 4.293-1 4.293-4.544a3.48 3.48 0 0 0-1-2.434a3.2 3.2 0 0 0-.06-2.448s-.787-.227-2.607.961a9.15 9.15 0 0 0-4.666 0c-1.82-1.188-2.607-.96-2.607-.96A3.2 3.2 0 0 0 7 8.464a3.48 3.48 0 0 0-1 2.453c0 3.519 2.2 4.291 4.293 4.544a2.2 2.2 0 0 0-.496.773a2.1 2.1 0 0 0-.13.902V19"></path><path d="M9.667 17.702c-2 .631-3.667 0-4.667-1.948"></path></g></svg></a>
       <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
         <a href="https://scholar.google.com/scholar?q=constructing+and+analyzing+the+lsm+compaction+design+space" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
-          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">91</span>
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">90</span>
         </a>
     </div>
     
@@ -1360,7 +1364,7 @@
       <a href="http://disc-projects.bu.edu/lethe/" class="pub-icon" target="_blank" rel="noopener noreferrer" title="Project Website"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"></path></svg></a>
       <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
         <a href="https://scholar.google.com/scholar?q=lethe%3A+a+tunable+delete-aware+lsm+engine" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
-          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">105</span>
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">104</span>
         </a>
     </div>
     
@@ -1591,7 +1595,7 @@
 <!-- _layouts/bib.html -->
 <div class="row">
     <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#3f3f3f"><a href="http://www.idr.iitkgp.ac.in/xmlui/handle/123456789/8373" rel="external nofollow noopener" target="_blank">Thesis</a></abbr><img src="/assets/img/publication_preview/PhD_Thesis_Abstract.png" class="pdf-preview z-depth-1 rounded" alt="Preview">
+<abbr class="badge" style="background-color:#4f9a6d">PhD Thesis</abbr><img src="/assets/img/publication_preview/PhD_Thesis_Abstract.png" class="pdf-preview z-depth-1 rounded" alt="Preview">
 </div>
 
     <!-- Entry bib key -->
@@ -1827,8 +1831,8 @@
   <span class="na">month</span> <span class="p">=</span> <span class="nv">jan</span><span class="p">,</span>
   <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Institute of Electrical and Electronics Engineers ({IEEE})}</span><span class="p">,</span>
   <span class="na">issn</span> <span class="p">=</span> <span class="s">{2154-2287}</span><span class="p">,</span>
-  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1109/MPUL.2015.2498498}</span><span class="p">,</span>
   <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1109/MPUL.2015.2498498}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1109/MPUL.2015.2498498}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure>
         </div>
     </div>
@@ -1979,7 +1983,7 @@
 
     <!-- Journal/Book title and date -->
       <div class="periodical">
-<em>Indian Patent, File no. 201631000214</em>, 2016</div>
+<em>Indian Patent, File no.: 201631000214</em>, 2016</div>
     <div class="periodical"></div>
         </div>
 <!-- end abstract-toggle-block -->
@@ -2004,7 +2008,7 @@
   <span class="na">title</span> <span class="p">=</span> <span class="s">{A Privacy-Aware Ambulatory Healthcare System Using Wireless Body Area Networks (WBANs)}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2016}</span><span class="p">,</span>
   <span class="na">month</span> <span class="p">=</span> <span class="nv">jan</span><span class="p">,</span>
-  <span class="na">howpublished</span> <span class="p">=</span> <span class="s">{Indian Patent, File no.\ 201631000214}</span><span class="p">,</span>
+  <span class="na">howpublished</span> <span class="p">=</span> <span class="s">{Indian Patent, File no.: 201631000214}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure>
         </div>
     </div>

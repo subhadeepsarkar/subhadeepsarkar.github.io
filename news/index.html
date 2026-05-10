@@ -53,6 +53,13 @@
       <!-- Nav Bar -->
       <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
         <div class="container">
+          <!-- Toggle theme mode (extreme left) -->
+          <div class="toggle-container">
+            <button id="light-toggle" title="Change theme">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+            </button>
+          </div>
           <a class="navbar-brand title font-weight-lighter" href="/"><h4><span class="font-weight-bold">Subhadeep Sarkar</span></h4></a>
           <!-- Navbar Toggle -->
           <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,9 +87,6 @@
                 <a class="nav-link" href="/cv/"></a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="/projects/">Research</a>
-              </li>
-              <li class="nav-item ">
                 <a class="nav-link" href="/publications/">Publications</a>
               </li>
               <li class="nav-item ">
@@ -91,14 +95,14 @@
               <li class="nav-item ">
                 <a class="nav-link" href="/service/">Service</a>
               </li>
-
-              <!-- Toogle theme mode -->
-              <li class="toggle-container">
-                <button id="light-toggle" title="Change theme">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
-                </button>
+<!-- SSD Lab -->
+              <li class="nav-item">
+                <a class="nav-link ssd-lab-link" href="https://ssd-brandeis.github.io/" target="_blank" rel="noopener noreferrer">
+                  <img src="/assets/img/SSD%20lab-logo-light.png" alt="SSD Lab" class="ssd-lab-logo ssd-lab-logo-light">
+                  <img src="/assets/img/SSD%20lab-logo.png" alt="SSD Lab" class="ssd-lab-logo ssd-lab-logo-dark">
+                </a>
               </li>
+
             </ul>
           </div>
         </div>
@@ -183,6 +187,7 @@
         <th><h6>Our paper <a href="https://subhadeep.net/assets/fulltext/Tectonic_Bridging_Synthetic_and_Real-World_Workloads_for_Key-Value_Benchmarking.pdf" target="_blank" rel="external nofollow noopener">"Tectonic: Bridging Synthetic and Real-World Workloads for Key-Value Benchmarking"</a> is <b>accepted for publication</b> in <a href="https://www.tpc.org/tpctc/tpctc2025/default5.asp?lang=cn" target="_blank" rel="external nofollow noopener">TPCTC 2025</a>.</h6></th>
       </tr>
       
+      <tbody id="news-extra">
       <tr>
         <th><h6><b>Jul 2025</b></h6></th>
         <th><h6>I will serve as the <b>Proceedings Chair</b> of <a href="https://vldb.org/2026/?officers" target="_blank" rel="external nofollow noopener">PVLDB 2025 - 2026</a>.</h6></th>
@@ -248,96 +253,137 @@
         <th><h6>I will serve in the <b>Program Committee</b> of <a href="https://www.vldb.org/pvldb/volumes/18/review-board" target="_blank" rel="external nofollow noopener">VLDB 2025</a>.</h6></th>
       </tr>
       
-      <!-- <tr>
-        <th><h6><b>Oct 2023</th></b>
-        <th><h6>I will serve in the <b>Program Committee</b> of <a href="https://sea-data.ml/" target="_blank">SEA Graph 2024</a>.</th>
+      <tr>
+        <th><h6><b>Oct 2023</b></h6></th>
+        <th><h6>I will serve in the <b>Program Committee</b> of <a href="https://sea-data.ml/" target="_blank" rel="external nofollow noopener">SEA Graph 2024</a>.</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>Aug 2023</th></b>
-        <th><h6>I will serve as the <b>Poster Chair</b> of <a href="https://acmsocc.org/2023/officers.html" target="_blank">ACM SoCC 2023</a>.</th>
+        <th><h6><b>Aug 2023</b></h6></th>
+        <th><h6>I will serve as the <b>Poster Chair</b> of <a href="https://acmsocc.org/2023/officers.html" target="_blank" rel="external nofollow noopener">ACM SoCC 2023</a>.</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>Apr 2023</th></b>
-        <th><h6>Our paper <a href="assets/fulltext/Enabling_Timely_and_Persistent_Deletion_in_LSM-Engines.pdf" target="_blank">"Enabling Timely and Persistent Deletion in LSM-Engines"</a> is <b>accepted for publication</b> in <a href="https://dl.acm.org/doi/full/10.1145/3599724" target="_blank">ACM TODS</a>.</th>
+        <th><h6><b>Apr 2023</b></h6></th>
+        <th><h6>Our paper <a href="assets/fulltext/Enabling_Timely_and_Persistent_Deletion_in_LSM-Engines.pdf" target="_blank">"Enabling Timely and Persistent Deletion in LSM-Engines"</a> is <b>accepted for publication</b> in <a href="https://dl.acm.org/doi/full/10.1145/3599724" target="_blank" rel="external nofollow noopener">ACM TODS</a>.</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>Mar 2023</th></b>
-        <th><h6>I am excited to announce that <b>I will be joining Brandeis University as an Assistant Professor of Computer Science</b> in Fall 2023.</th>
+        <th><h6><b>Mar 2023</b></h6></th>
+        <th><h6>I am excited to announce that <b>I will be joining Brandeis University as an Assistant Professor of Computer Science</b> in Fall 2023.</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>Mar 2023</th></b>
-        <th><h6>Our demonstration paper <a href="assets/fulltext/Acheron_Persisting_Tombstones_in_LSM_Engines.pdf" target="_blank">"Acheron: Persisting Tombstones in LSM Engines"</a> is <b>accepted for publication</b> in <a href="https://dl.acm.org/doi/10.1145/3555041.3589719" target="_blank">SIGMOD 2023</a>. <b><a href="https://disc-projects.bu.edu/acheron/" target="_blank">[Demo]</a></b></th>
+        <th><h6><b>Mar 2023</b></h6></th>
+        <th><h6>Our demonstration paper <a href="assets/fulltext/Acheron_Persisting_Tombstones_in_LSM_Engines.pdf" target="_blank">"Acheron: Persisting Tombstones in LSM Engines"</a> is <b>accepted for publication</b> in <a href="https://dl.acm.org/doi/10.1145/3555041.3589719" target="_blank" rel="external nofollow noopener">SIGMOD 2023</a>. <b><a href="https://disc-projects.bu.edu/acheron/" target="_blank" rel="external nofollow noopener">[Demo]</a></b>
+</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>Mar 2023</th></b>
-        <th><h6>I will serve in the <b>Program Committee</b> of <a href="https://vldb.org/2022/?call-for-demonstrations" target="_blank"> VLDB Demo 2023</a>.</th>
+        <th><h6><b>Mar 2023</b></h6></th>
+        <th><h6>I will serve in the <b>Program Committee</b> of <a href="https://vldb.org/2022/?call-for-demonstrations" target="_blank" rel="external nofollow noopener"> VLDB Demo 2023</a>.</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>Feb 2023</th></b>
-        <th><h6>I will serve in the <b>Program Committee</b> of <a href="http://bigdataieee.org/BigData2023/index.html" target="_blank">IEEE BigData 2023</a>.</th>
+        <th><h6><b>Feb 2023</b></h6></th>
+        <th><h6>I will serve in the <b>Program Committee</b> of <a href="http://bigdataieee.org/BigData2023/index.html" target="_blank" rel="external nofollow noopener">IEEE BigData 2023</a>.</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>Jan 2023</th></b>
-        <th><h6>Our tutorial on <a href="assets/fulltext/The_LSM_Design_Space_and_its_Read_Optimizations.pdf" target="_blank">"The LSM Design Space and its Read Optimizations"</a> is <b>accepted for publication</b> in <a href="https://ieeexplore.ieee.org/document/10184626" target="_blank">ICDE 2023</a>.</th>
-      </tr> -->
-
-      <!-- <tr>
-        <th><h6><b>Dec 2022</th></b>
-        <th><h6>Our paper <a href="assets/fulltext/Indexing_for_Near-Sorted_Data.pdf" target="_blank">"Indexing for Near-Sorted Data"</a> is <b>accepted for publication</b> in <a href="https://ieeexplore.ieee.org/document/10184781" target="_blank">ICDE 2023</a>.</th>
+        <th><h6><b>Jan 2023</b></h6></th>
+        <th><h6>Our tutorial on <a href="assets/fulltext/The_LSM_Design_Space_and_its_Read_Optimizations.pdf" target="_blank">"The LSM Design Space and its Read Optimizations"</a> is <b>accepted for publication</b> in <a href="https://ieeexplore.ieee.org/document/10184626" target="_blank" rel="external nofollow noopener">ICDE 2023</a>.</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>Nov 2022</th></b>
-        <th><h6>I will be <b>delivering a talk</b> on "Constructing and Analyzing the LSM Compaction Design Space" at <b>MongoDB</b>.</th>
+        <th><h6><b>Dec 2022</b></h6></th>
+        <th><h6>Our paper <a href="assets/fulltext/Indexing_for_Near-Sorted_Data.pdf" target="_blank">"Indexing for Near-Sorted Data"</a> is <b>accepted for publication</b> in <a href="https://ieeexplore.ieee.org/document/10184781" target="_blank" rel="external nofollow noopener">ICDE 2023</a>.</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>Oct 2022</th></b>
-        <th><h6>I will be <b>delivering an invited talk</b> on <a href="assets/fulltext/Toward_Building_Deletion_Compliant_Data_Systems.pdf" target="_blank">"Toward Building Deletion-Compliant Data Systems"</a> at <a href="http://hpts.ws/agenda.html" target="_blank">HPTS 2022</a>. <b><a href="resources/HPTS.pdf" target="_blank">[Slides]</a></b></th>
+        <th><h6><b>Nov 2022</b></h6></th>
+        <th><h6>I will be <b>delivering a talk</b> on "Constructing and Analyzing the LSM Compaction Design Space" at <b>MongoDB</b>.</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>Aug 2022</th></b>
-        <th><h6>Our paper <a href="assets/fulltext/BODS_A_Benchmark_on_Data_Sortedness.pdf" target="_blank"> "BoDS: A Benchmark on Data Sortedness"</a> is <b>accepted for publication</b> in <a href="https://link.springer.com/chapter/10.1007/978-3-031-29576-8_2" target="_blank">TPCTC 2022</a>.</th>
+        <th><h6><b>Oct 2022</b></h6></th>
+        <th><h6>I will be <b>delivering an invited talk</b> on <a href="assets/fulltext/Toward_Building_Deletion_Compliant_Data_Systems.pdf" target="_blank">"Toward Building Deletion-Compliant Data Systems"</a> at <a href="http://hpts.ws/agenda.html" target="_blank" rel="external nofollow noopener">HPTS 2022</a>. <b><a href="resources/HPTS.pdf" target="_blank">[Slides]</a></b>
+</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>May 2022</th></b>
-        <th><h6>I will serve as the <b>Sponsorship Chair</b> and in the <b>Program Committee</b> of <a href="https://acmsocc.org/2022/officers.html" target="_blank">ACM SoCC 2022</a>.</th>
+        <th><h6><b>Aug 2022</b></h6></th>
+        <th><h6>Our paper <a href="assets/fulltext/BODS_A_Benchmark_on_Data_Sortedness.pdf" target="_blank"> "BoDS: A Benchmark on Data Sortedness"</a> is <b>accepted for publication</b> in <a href="https://link.springer.com/chapter/10.1007/978-3-031-29576-8_2" target="_blank" rel="external nofollow noopener">TPCTC 2022</a>.</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>Apr 2022</th></b>
-        <th><h6>I will serve in the <b>Program Committee</b> of <a href="http://edbticdt2023.cs.uoi.gr/?contents=EDBT_Committee.html" target="_blank">EDBT 2023</a>.</th>
+        <th><h6><b>May 2022</b></h6></th>
+        <th><h6>I will serve as the <b>Sponsorship Chair</b> and in the <b>Program Committee</b> of <a href="https://acmsocc.org/2022/officers.html" target="_blank" rel="external nofollow noopener">ACM SoCC 2022</a>.</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>Mar 2022</th></b>
-        <th><h6>Our demonstration paper <a href="assets/fulltext/Compactionary-A_Dictionary_for_LSM_Compactions.pdf" target="_blank">"Compactionary: A Dictionary for LSM Compactions"</a> is <b>accepted for publication</b> in <a href="https://dl.acm.org/doi/10.1145/3514221.3520169" target="_blank">SIGMOD 2022</a>. <b><a href="https://disc-projects.bu.edu/compactionary/#interactiveDemo" target="_blank">[Demo]</a></b></h6></th>
+        <th><h6><b>Apr 2022</b></h6></th>
+        <th><h6>I will serve in the <b>Program Committee</b> of <a href="http://edbticdt2023.cs.uoi.gr/?contents=EDBT_Committee.html" target="_blank" rel="external nofollow noopener">EDBT 2023</a>.</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>Mar 2022</th></b>
-        <th><h6>Our tutorial on <a href="assets/fulltext/Dissecting_Designing_and_Optimizing_LSM-based_Data_Stores.pdf" target="_blank">"Dissecting, Designing, and Optimizing LSM-based Data Stores"</a> is <b>accepted for publication</b> in <a href="https://dl.acm.org/doi/10.1145/3514221.3522563" target="_blank">SIGMOD 2022</a>. <b><a href="https://www.youtube.com/watch?v=Al3krW4Sh3Q" target="_blank">[Talk]</a></b></th>
+        <th><h6><b>Mar 2022</b></h6></th>
+        <th><h6>Our demonstration paper <a href="assets/fulltext/Compactionary-A_Dictionary_for_LSM_Compactions.pdf" target="_blank">"Compactionary: A Dictionary for LSM Compactions"</a> is <b>accepted for publication</b> in <a href="https://dl.acm.org/doi/10.1145/3514221.3520169" target="_blank" rel="external nofollow noopener">SIGMOD 2022</a>. <b><a href="https://disc-projects.bu.edu/compactionary/#interactiveDemo" target="_blank" rel="external nofollow noopener">[Demo]</a></b>
+</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>Mar 2022</th></b>
-        <th><h6>Our <i>invited paper</i> on "<a href="assets/fulltext/Building_Deletion-Compliant_Data_Systems.pdf" target="_blank">Building Deletion-Compliant Data Systems</a>" is now <b>published</b> in <a href="http://sites.computer.org/debull/A22mar/issue1.htm" target="_blank">IEEE Data Engineering Bulletin</a>.</th>
+        <th><h6><b>Mar 2022</b></h6></th>
+        <th><h6>Our tutorial on <a href="assets/fulltext/Dissecting_Designing_and_Optimizing_LSM-based_Data_Stores.pdf" target="_blank">"Dissecting, Designing, and Optimizing LSM-based Data Stores"</a> is <b>accepted for publication</b> in <a href="https://dl.acm.org/doi/10.1145/3514221.3522563" target="_blank" rel="external nofollow noopener">SIGMOD 2022</a>. <b><a href="https://www.youtube.com/watch?v=Al3krW4Sh3Q" target="_blank" rel="external nofollow noopener">[Talk]</a></b>
+</h6></th>
       </tr>
 
       <tr>
-        <th><h6><b>Feb 2022</th></b>
-        <th><h6>Our paper <a href="assets/fulltext/Query_Language_Support_for_Timely_Data_Deletion.pdf" target="_blank">"Query Language Support for Timely Data Deletion"</a> is <b>accepted for publication</b> in <a href="https://conferences.inf.ed.ac.uk/edbticdt2022/?contents=accepted-papers-research-track.html" target="_blank">EDBT 2022</a>. <b><a href="https://www.youtube.com/watch?v=aUZ_SCPOtWo" target="_blank">[Talk]</a></b></th> -->
-      
+        <th><h6><b>Mar 2022</b></h6></th>
+        <th><h6>Our <i>invited paper</i> on "<a href="assets/fulltext/Building_Deletion-Compliant_Data_Systems.pdf" target="_blank">Building Deletion-Compliant Data Systems</a>" is now <b>published</b> in <a href="http://sites.computer.org/debull/A22mar/issue1.htm" target="_blank" rel="external nofollow noopener">IEEE Data Engineering Bulletin</a>.</h6></th>
+      </tr>
+
+      <tr>
+        <th><h6><b>Feb 2022</b></h6></th>
+        <th><h6>Our paper <a href="assets/fulltext/Query_Language_Support_for_Timely_Data_Deletion.pdf" target="_blank">"Query Language Support for Timely Data Deletion"</a> is <b>accepted for publication</b> in <a href="https://conferences.inf.ed.ac.uk/edbticdt2022/?contents=accepted-papers-research-track.html" target="_blank" rel="external nofollow noopener">EDBT 2022</a>. <b><a href="https://www.youtube.com/watch?v=aUZ_SCPOtWo" target="_blank" rel="external nofollow noopener">[Talk]</a></b>
+</h6></th> 
+      </tr>
+      </tbody>
     </table>
+    <div class="news-toggle-wrap">
+      <button id="news-more-btn" class="news-toggle-btn" type="button">Show more</button>
+      <button id="news-less-btn" class="news-toggle-btn news-btn-hidden" type="button">Show less</button>
+    </div>
+    <script>
+    (function() {
+      var extra    = document.getElementById('news-extra');
+      var moreBtn  = document.getElementById('news-more-btn');
+      var lessBtn  = document.getElementById('news-less-btn');
+      var rows     = Array.from(extra.querySelectorAll('tr'));
+      var shown    = 0;
+      var step     = 10;
+
+      rows.forEach(function(r) { r.style.display = 'none'; });
+
+      function update() {
+        moreBtn.classList.toggle('news-btn-hidden', shown >= rows.length);
+        lessBtn.classList.toggle('news-btn-hidden', shown === 0);
+      }
+
+      moreBtn.addEventListener('click', function() {
+        var end = Math.min(shown + step, rows.length);
+        for (var i = shown; i < end; i++) rows[i].style.display = '';
+        shown = end;
+        update();
+      });
+
+      lessBtn.addEventListener('click', function() {
+        var start = Math.max(shown - step, 0);
+        for (var i = start; i < shown; i++) rows[i].style.display = 'none';
+        shown = start;
+        update();
+      });
+    })();
+    </script>
     <br>
   </div>
 </div>
