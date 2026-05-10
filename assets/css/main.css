@@ -18,7 +18,12 @@
   --global-distill-app-color: #828282;
   --global-divider-color: rgba(27, 52, 107, 0.695);
   --global-card-bg-color: #ffffff;
-  --nav-bar-light-color: rgb(223, 223, 223);
+  --nav-bar-color: rgb(223, 223, 223);
+  --scholar-badge-border-color: #bbb;
+  --global-category-color: var(--global-divider-color);
+  --teaching-color-separator: #2b2b2b;
+  --teaching-color-primary: #5e5e5e;
+  --teaching-color-secondary: #808080;
 }
 :root .fa-sun {
   display: none;
@@ -32,6 +37,18 @@
   display: block;
 }
 :root .repo-img-dark {
+  display: none;
+}
+:root .arxiv-mark-light {
+  display: block;
+}
+:root .arxiv-mark-dark {
+  display: none;
+}
+:root .citations-badge-light {
+  display: inline;
+}
+:root .citations-badge-dark {
   display: none;
 }
 
@@ -48,6 +65,24 @@ html[data-theme=dark] {
   --global-distill-app-color: #e8e8e8;
   --global-divider-color: #424246;
   --global-card-bg-color: #212529;
+  --nav-bar-color: #212529;
+  --scholar-badge-border-color: #4a4a4e;
+  --global-category-color: #909090;
+  --teaching-color-separator: var(--global-text-color);
+  --teaching-color-primary: var(--global-text-color);
+  --teaching-color-secondary: var(--global-text-color);
+}
+html[data-theme=dark] .arxiv-mark-light {
+  display: none;
+}
+html[data-theme=dark] .arxiv-mark-dark {
+  display: block;
+}
+html[data-theme=dark] .citations-badge-light {
+  display: none;
+}
+html[data-theme=dark] .citations-badge-dark {
+  display: inline;
 }
 html[data-theme=dark] .fa-sun {
   padding-left: 10px;
@@ -234,12 +269,12 @@ blockquote {
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--nav-bar-light-color);
+  background-color: var(--nav-bar-color);
   opacity: 0.95;
 }
 
 .navbar .dropdown-menu {
-  background-color: var(--nav-bar-light-color);
+  background-color: var(--nav-bar-color);
   border: 1px solid var(--global-divider-color);
 }
 .navbar .dropdown-menu a:not(.active) {
@@ -257,7 +292,7 @@ blockquote {
 }
 .dropdown-item:hover {
   color: var(--global-hover-color);
-  background-color: var(--nav-bar-light-color);
+  background-color: var(--nav-bar-color);
 }
 
 .navbar.navbar-light a:hover {
@@ -496,8 +531,8 @@ footer.sticky-bottom {
   margin-bottom: 10px;
 }
 .projects h2.category {
-  color: var(--global-divider-color);
-  border-bottom: 1px solid var(--global-divider-color);
+  color: var(--global-category-color);
+  border-bottom: 1px solid var(--global-category-color);
   padding-top: 0.5rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -521,8 +556,8 @@ footer.sticky-bottom {
   font-size: 1.5rem;
 }
 .publications h2.year {
-  color: var(--global-divider-color);
-  border-top: 1px solid var(--global-divider-color);
+  color: var(--global-category-color);
+  border-top: 1px solid var(--global-category-color);
   padding-top: -2rem;
   margin-top: 0.25rem;
   margin-bottom: 0rem;
@@ -565,6 +600,7 @@ footer.sticky-bottom {
   object-position: top;
   display: block;
   margin-left: 1rem;
+  background-color: #ffffff;
 }
 .publications ol.bibliography li .abbr abbr {
   display: inline-block;
@@ -658,6 +694,9 @@ footer.sticky-bottom {
 .publications ol.bibliography li .links a.pub-icon[title=BibTeX], .publications ol.bibliography li .links a.pub-icon[data-original-title=BibTeX] {
   color: #5d4b30;
 }
+html[data-theme=dark] .publications ol.bibliography li .links a.pub-icon[title=BibTeX], html[data-theme=dark] .publications ol.bibliography li .links a.pub-icon[data-original-title=BibTeX] {
+  color: #c9a060;
+}
 .publications ol.bibliography li .links a.pub-icon[title=HTML], .publications ol.bibliography li .links a.pub-icon[data-original-title=HTML] {
   color: #5d8a78;
 }
@@ -726,18 +765,23 @@ footer.sticky-bottom {
 }
 .publications ol.bibliography li .links .scholar-badge img {
   height: 20px;
-  border: 1px solid #d0d0d0;
+  border: 1px solid var(--scholar-badge-border-color);
   border-radius: 3px;
 }
 .publications ol.bibliography li .links .scholar-badge .scholar-citation-count {
   position: relative;
   display: inline-block;
-  color: #222;
+  color: var(--global-text-color);
+}
+html[data-theme=dark] .publications ol.bibliography li .links .scholar-badge .scholar-citation-count {
+  border-color: #a0a0a0;
+}
+.publications ol.bibliography li .links .scholar-badge .scholar-citation-count {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1;
   padding: 2px 5px;
-  border: 1px solid #bbb;
+  border: 1px solid var(--scholar-badge-border-color);
   border-radius: 1px;
   vertical-align: middle;
   margin-left: 4px;
@@ -750,7 +794,10 @@ footer.sticky-bottom {
   transform: translateY(-50%);
   border-width: 3px 4px 3px 0;
   border-style: solid;
-  border-color: transparent #bbb transparent transparent;
+  border-color: transparent var(--scholar-badge-border-color) transparent transparent;
+}
+html[data-theme=dark] .publications ol.bibliography li .links .scholar-badge .scholar-citation-count::before {
+  border-color: transparent #a0a0a0 transparent transparent;
 }
 .publications ol.bibliography li .links .scholar-badge .scholar-citation-count::after {
   content: "";
@@ -760,7 +807,7 @@ footer.sticky-bottom {
   transform: translateY(-50%);
   border-width: 3px 3px 3px 0;
   border-style: solid;
-  border-color: transparent #fff transparent transparent;
+  border-color: transparent var(--global-bg-color) transparent transparent;
 }
 .publications ol.bibliography li .badges {
   padding-bottom: 0.5rem;

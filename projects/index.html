@@ -37,6 +37,11 @@
 
 <!-- Dark Mode -->
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+<script src="/assets/js/theme.js"></script>
+<script src="/assets/js/dark_mode.js"></script>
+
   </head>
 
   <!-- Body -->
@@ -86,6 +91,14 @@
               <li class="nav-item ">
                 <a class="nav-link" href="/service/">Service</a>
               </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -111,7 +124,8 @@
           </header>
 
           <article>
-            <p>My research interests include storage engines, access methods, and data management systems. I am also interested in understanding the performance vs. privacy trade-offs in modern data systems and building end-to-end privacy-compliant data systems. Here is my <a href="/assets/resources/research_statement.pdf" target="_blank">latest research statement</a>. <br><br><br></p>
+            <p>My research interests include storage engines, access methods, and data management systems. I am also interested in understanding the performance vs. privacy trade-offs in modern data systems and building end-to-end privacy-compliant data systems. 
+<!-- Here is my <a href="/assets/resources/research_statement.pdf" target="_blank">latest research statement</a>. <br><br><br> --></p>
 
 <div class="projects">
   <!-- Display categorized projects -->
