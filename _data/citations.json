@@ -1,9 +1,9 @@
 {
   "profile": {
     "name": "Subhadeep Sarkar",
-    "citedby": 2286,
+    "citedby": 2281,
     "hindex": 17,
-    "i10index": 22
+    "i10index": 21
   },
   "publications": [
     {
@@ -52,7 +52,7 @@
       "year": 2020,
       "venue": "",
       "abstract": "",
-      "cited_by": 105,
+      "cited_by": 104,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:SeFeTyx0c_EC",
       "eprint": ""
     },
@@ -62,7 +62,7 @@
       "year": 2021,
       "venue": "",
       "abstract": "",
-      "cited_by": 91,
+      "cited_by": 90,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:5Ul4iDaHHb8C",
       "eprint": ""
     },
@@ -177,16 +177,6 @@
       "eprint": ""
     },
     {
-      "title": "KVBench: A Key-Value Benchmarking Suite",
-      "authors": "Z Zhu, A Saha, M Athanassoulis, S Sarkar",
-      "year": 2024,
-      "venue": "",
-      "abstract": "",
-      "cited_by": 13,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:HE397vMXCloC",
-      "eprint": ""
-    },
-    {
       "title": "Optimal decision rule-based ex-ante frequency hopping for jamming avoidance in wireless sensor networks",
       "authors": "P Bhavathankar, S Sarkar, S Misra",
       "year": 2017,
@@ -197,23 +187,23 @@
       "eprint": ""
     },
     {
+      "title": "KVBench: A Key-Value Benchmarking Suite",
+      "authors": "Z Zhu, A Saha, M Athanassoulis, S Sarkar",
+      "year": 2024,
+      "venue": "",
+      "abstract": "",
+      "cited_by": 12,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:HE397vMXCloC",
+      "eprint": ""
+    },
+    {
       "title": "Indexing for Near-Sorted Data",
       "authors": "A Raman, S Sarkar, M Olma, M Athanassoulis",
       "year": 2023,
       "venue": "",
       "abstract": "",
-      "cited_by": 11,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:eflP2zaiRacC",
-      "eprint": ""
-    },
-    {
-      "title": "Enabling timely and persistent deletion in lsm-engines",
-      "authors": "S Sarkar, TI Papon, D Staratzis, Z Zhu, M Athanassoulis",
-      "year": 2023,
-      "venue": "",
-      "abstract": "",
       "cited_by": 10,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:t6usbXjVLHcC",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:eflP2zaiRacC",
       "eprint": ""
     },
     {
@@ -224,6 +214,16 @@
       "abstract": "",
       "cited_by": 10,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:e5wmG9Sq2KIC",
+      "eprint": ""
+    },
+    {
+      "title": "Enabling timely and persistent deletion in lsm-engines",
+      "authors": "S Sarkar, TI Papon, D Staratzis, Z Zhu, M Athanassoulis",
+      "year": 2023,
+      "venue": "",
+      "abstract": "",
+      "cited_by": 9,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:t6usbXjVLHcC",
       "eprint": ""
     },
     {

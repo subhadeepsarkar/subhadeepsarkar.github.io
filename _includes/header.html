@@ -4,6 +4,15 @@
       <!-- Nav Bar -->
       <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}">
         <div class="container">
+          {%- if site.enable_darkmode %}
+          <!-- Toggle theme mode (extreme left) -->
+          <div class="toggle-container">
+            <button id="light-toggle" title="Change theme">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+            </button>
+          </div>
+          {%- endif %}
           {% if page.permalink != '/' -%}
           <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
             {%- if site.title == "blank" -%}
@@ -94,16 +103,15 @@
               {%- endif -%}
               {%- endif -%}
               {% endfor -%}
-              {%- if site.enable_darkmode %}
 
-              <!-- Toogle theme mode -->
-              <li class="toggle-container">
-                <button id="light-toggle" title="Change theme">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
-                </button>
+              <!-- SSD Lab -->
+              <li class="nav-item">
+                <a class="nav-link ssd-lab-link" href="https://ssd-brandeis.github.io/" target="_blank" rel="noopener noreferrer">
+                  <img src="{{ '/assets/img/SSD lab-logo-light.png' | relative_url }}" alt="SSD Lab" class="ssd-lab-logo ssd-lab-logo-light">
+                  <img src="{{ '/assets/img/SSD lab-logo.png' | relative_url }}" alt="SSD Lab" class="ssd-lab-logo ssd-lab-logo-dark">
+                </a>
               </li>
-              {%- endif %}
+
             </ul>
           </div>
         </div>

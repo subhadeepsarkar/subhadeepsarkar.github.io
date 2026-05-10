@@ -12,10 +12,10 @@
   
   <br> In this paper, we introduce RangeReduce, an RQ-optimized LSM-engine that uses RQs as a hint to compact data that is already read into memory as part of the query, and thereby, improves the overall performance of the storage engine. The key intuition is to take advantage of the I/Os and CPU cycles spent on reading and merging data from slow storage during RQs and write the RQ-qualifying data back as part of a single sorted run. Such RQ-driven compactions enable RangeReduce to (i) read less data from fewer sorted runs for subsequent RQs, (ii) reduce overall data movement (reads and writes) due to RQs and compactions, and (iii) improve space amplification, while (iv) significantly reducing compaction debt. Experiments show that RangeReduce offers up to 90% lower compaction debt, 12% less data movement, and 20% lower space amplification while improving average RQ latency by up to 18%.},
   pdf         = {RangeReduce_Query-Driven_LSM_Compactions.pdf},
+  video       = {https://www.youtube.com/watch?v=xgJ2g_CLjSQ},
   slides      = {RangeReduce_ICDE.pdf},
   poster      = {RangeReduce.pdf},
   code_repo   = {https://github.com/SSD-Brandeis/RangeReduce},
-  video       = {https://www.youtube.com/watch?v=xgJ2g_CLjSQ},
   selected    = {true},
   bibtex_show = {true}
 }
@@ -117,58 +117,49 @@
   slides       = {LSMMemoryBuffer_TPCTC.pdf}
 }
 @inproceedings{DBLP:conf/dbtest-ws/ZhuSAS24,
-  author       = {Zichen Zhu and
-                  Arpita Saha and
-                  Manos Athanassoulis and
-                  Subhadeep Sarkar},
-  title        = {KVBench: {A} Key-Value Benchmarking Suite},
-  booktitle    = {Proceedings of the International Workshop on Testing Database Systems ({DBT}est)},
-  pages        = {9--15},
-  publisher    = {{ACM}},
-  year         = {2024},
-  url          = {https://doi.org/10.1145/3662165.3662765},
-  doi          = {10.1145/3662165.3662765},
-  timestamp    = {Fri, 31 May 2024 21:05:30 +0200},
-  biburl       = {https://dblp.org/rec/conf/dbtest-ws/ZhuSAS24.bib},
-  bibsource    = {dblp computer science bibliography, https://dblp.org},
-  abbr         = {DBTest},
-  abstract     = {Key-value stores are at the core of several modern NoSQL-based data systems, and thus, a comprehensive benchmark tool is of paramount importance in evaluating their performance under different workloads. Prior research reveals that real-world workloads have a diverse range of characteristics, such as the fraction of point queries that target non-existing keys, point and range deletes, as well as, different distributions for queries and updates, all of which have very different performance implications. State-of-the-art key-value workload generators, such as YCSB and db_bench, fail to generate workloads that emulate these practical workloads, limiting the dimensions on which we can benchmark the systems' performance.
+  author      = {Zichen Zhu and Arpita Saha and Manos Athanassoulis and Subhadeep Sarkar},
+  title       = {KVBench: {A} Key-Value Benchmarking Suite},
+  booktitle   = {Proceedings of the International Workshop on Testing Database Systems ({DBT}est)},
+  pages       = {9--15},
+  year        = {2024},
+  publisher   = {{ACM}},
+  doi         = {10.1145/3662165.3662765},
+  url         = {https://doi.org/10.1145/3662165.3662765},
+  timestamp   = {Fri, 31 May 2024 21:05:30 +0200},
+  biburl      = {https://dblp.org/rec/conf/dbtest-ws/ZhuSAS24.bib},
+  bibsource   = {dblp computer science bibliography, https://dblp.org},
+  abbr        = {DBTest},
+  abstract    = {Key-value stores are at the core of several modern NoSQL-based data systems, and thus, a comprehensive benchmark tool is of paramount importance in evaluating their performance under different workloads. Prior research reveals that real-world workloads have a diverse range of characteristics, such as the fraction of point queries that target non-existing keys, point and range deletes, as well as, different distributions for queries and updates, all of which have very different performance implications. State-of-the-art key-value workload generators, such as YCSB and db_bench, fail to generate workloads that emulate these practical workloads, limiting the dimensions on which we can benchmark the systems' performance.
                
   <br>In this paper, we present KVBench, a novel synthetic workload generator that fills the gap between classical key-value workload generators and more complex real-life workloads. KVBench supports a wide range of operations, including point queries, range queries, inserts, updates, deletes, range deletes, and among these options, inserts, queries, and updates can be customized by different distributions. Compared to state-of-the-art key-value workload generators, KVBench offers a richer array of knobs, including the proportion of empty point queries, customized distributions for updates and queries, and range deletes with specific selectivity, constituting a significantly flexible framework that can better emulate real-world workloads.},
-  pdf          = {KVBench_A_Key-Value_Benchmarking_Suite.pdf},
-  selected     = {true},
-  bibtex_show  = {true},
-  code_repo    = {https://github.com/BU-DiSC/kv-bench},
-  slides       = {KVBench_TPCTC.pdf}
+  pdf         = {KVBench_A_Key-Value_Benchmarking_Suite.pdf},
+  slides      = {KVBench_TPCTC.pdf},
+  code_repo   = {https://github.com/BU-DiSC/kv-bench},
+  bibtex_show = {true}
 }
 
 @article{DBLP:journals/tods/SarkarPSZA23,
-  author       = {Subhadeep Sarkar and
-                  Tarikul Islam Papon and
-                  Dimitris Staratzis and
-                  Zichen Zhu and
-                  Manos Athanassoulis},
-  title        = {Enabling Timely and Persistent Deletion in LSM-Engines},
-  journal      = {ACM Transactions on Database Systems},
-  volume       = {48},
-  number       = {3},
-  pages        = {8:1--8:40},
-  year         = {2023},
-  url          = {https://doi.org/10.1145/3599724},
-  doi          = {10.1145/3599724},
-  timestamp    = {Fri, 27 Oct 2023 20:40:00 +0200},
-  biburl       = {https://dblp.org/rec/journals/tods/SarkarPSZA23.bib},
-  bibsource    = {dblp computer science bibliography, https://dblp.org},
-  abbr         = {TODS},
-  abstract     = {Data-intensive applications have fueled the evolution of log-structured merge (LSM) based key-value engines that employ the out-of-place paradigm to support high ingestion rates with low read/write interference. These benefits, however, come at the cost of treating deletes as second-class citizens. A delete operation inserts a tombstone that invalidates older instances of the deleted key. State-of-the-art LSM-engines do not provide guarantees as to how fast a tombstone will propagate to persist the deletion. 
+  author      = {Subhadeep Sarkar and Tarikul Islam Papon and Dimitris Staratzis and Zichen Zhu and Manos Athanassoulis},
+  title       = {Enabling Timely and Persistent Deletion in LSM-Engines},
+  journal     = {ACM Transactions on Database Systems},
+  volume      = {48},
+  number      = {3},
+  pages       = {8:1--8:40},
+  year        = {2023},
+  doi         = {10.1145/3599724},
+  url         = {https://doi.org/10.1145/3599724},
+  timestamp   = {Fri, 27 Oct 2023 20:40:00 +0200},
+  biburl      = {https://dblp.org/rec/journals/tods/SarkarPSZA23.bib},
+  bibsource   = {dblp computer science bibliography, https://dblp.org},
+  abbr        = {TODS},
+  abstract    = {Data-intensive applications have fueled the evolution of log-structured merge (LSM) based key-value engines that employ the out-of-place paradigm to support high ingestion rates with low read/write interference. These benefits, however, come at the cost of treating deletes as second-class citizens. A delete operation inserts a tombstone that invalidates older instances of the deleted key. State-of-the-art LSM-engines do not provide guarantees as to how fast a tombstone will propagate to persist the deletion. 
                
   <br>Further, LSM-engines only support deletion on the sort key. To delete on another attribute (e.g., timestamp), the entire tree is read and re-written, leading to undesired latency spikes and increasing the overall operational cost of a database. Efficient and persistent deletion is key to support: (i) streaming systems operating on a window of data, (ii) privacy with latency guarantees on data deletion, and (iii) en masse cloud deployment of data systems. Further, we document that LSM-based key-value engines perform suboptimally in presence of deletes in a workload. Tombstone-driven logical deletes, by design, are unable to purge the deleted entries in a timely manner, and retaining the invalidated entries perpetually affects the overall performance of LSM-engines in terms of space amplification, write amplification, and read performance. Moreover, the potentially unbounded latency for persistent deletes brings in critical privacy concerns in light of the data privacy protection regulations, such as the right to be forgotten in EU's GDPR, the right to delete in California's CCPA and CPRA, and deletion right in Virginia's VCDPA. Toward this, we introduce the delete design space for LSM-trees and highlight the performance implications of the different classes of delete operations.
                
   <br>To address these challenges, in this article, we build a new key-value storage engine, Lethe+, that uses a very small amount of additional metadata, a set of new delete-aware compaction policies, and a new physical data layout that weaves the sort and the delete key order. We show that Lethe+ supports any user-defined threshold for the delete persistence latency offering higher read throughput (1.17&times;-1.4&times;) and lower space amplification (2.1&times;-9.8&times;), with a modest increase in write amplification (between 4% and 25%) that can be further amortized to less than 1%. In addition, Lethe+ supports efficient range deletes on a secondary delete key by dropping entire data pages without sacrificing read performance or employing a costly full tree merge.
                },
-  pdf          = {Enabling_Timely_and_Persistent_Deletion_in_LSM-Engines.pdf},
-  selected     = {true},
-  bibtex_show  = {true}
+  pdf         = {Enabling_Timely_and_Persistent_Deletion_in_LSM-Engines.pdf},
+  bibtex_show = {true}
 }
 
 @inproceedings{DBLP:conf/sigmod/ZhuSA23,
@@ -396,11 +387,10 @@
   booktitle   = {International Workshop on High Performance Transaction Systems ({HPTS})},
   year        = {2022},
   month       = {Oct},
-  abbr        = {HPTS},
+  abbr        = {{HPTS}},
   abstract    = {Modern data systems are designed around the silent underlying assumption of perpetual data retention. Systems are designed to offer high performance for data ingestion and queries, while deletion of data is realized by simply logically invalidating the target entries (instead of modifying them in place). This has severe implications on the privacy front, especially, in light of the newly enforced privacy regulations which are aimed toward enabling the users to express their preferences about the deletion of their data. In this paper, we present our vision of enabling privacy-through-deletion as a design element in modern data systems empowering them with the ability to ensure timely and persistent deletion of data, and we envision doing so without hurting performance or increasing operational cost.},
   pdf         = {Toward_Building_Deletion_Compliant_Data_Systems.pdf},
   slides      = {HPTS.pdf},
-  selected    = {false},
   bibtex_show = {true}
 }
 
@@ -420,7 +410,7 @@
   timestamp    = {Sat, 30 Sep 2023 10:24:10 +0200},
   biburl       = {https://dblp.org/rec/journals/pvldb/SarkarSZA21.bib},
   bibsource    = {dblp computer science bibliography, https://dblp.org},
-  abbr         = {PVLDB},
+  abbr         = {VLDB},
   abstract     = {Log-structured merge (LSM) trees offer efficient ingestion by appending incoming data, and thus, are widely used as the storage layer of production NoSQL data stores. To enable competitive read performance, LSM-trees periodically re-organize data to form a tree with levels of exponentially increasing capacity, through iterative compactions. Compactions fundamentally influence the performance of an LSM-engine in terms of write amplification, write throughput, point and range lookup performance, space amplification, and delete performance. Hence, choosing the appropriate compaction strategy is crucial and, at the same time, hard as the LSM compaction design space is vast, largely unexplored, and has not been formally defined in the literature. As a result, most LSM-based engines use a fixed compaction strategy, typically hand-picked by an engineer, which decides how and when to compact data.
               
   <br>In this paper, we present the design space of LSM-compactions, and evaluate state-of-the-art compaction strategies with respect to key performance metrics. Toward this goal, our first contribution is to introduce a set of four design primitives that can formally define any compaction strategy: (i) the compaction trigger, (ii) the data layout, (iii) the compaction granularity, and (iv) the data movement policy. Together, these primitives can synthesize both existing and completely new compaction strategies. Our second contribution is to experimentally analyze 10 compaction strategies. We present 12 observations and 7 high-level takeaway messages, which show how LSM systems can navigate the compaction design space.},
@@ -553,10 +543,9 @@
   school      = {Indian Institute of Technology Kharagpur},
   year        = {2017},
   url         = {http://www.idr.iitkgp.ac.in/xmlui/handle/123456789/8373},
-  abbr        = {Thesis},
+  abbr        = {PhD Thesis},
   abstract    = {Recently, the IEEE 802.15.6 Task Group introduced a new set of physical layer and medium access control sublayer protocols for wireless communication involving wireless body area networks (WBANs). The IEEE 802.15.6 standard is designed specifically to support short-range (within 10 m), ultra-low power wireless communications with very high data rate (up to 10 Mbps) within or in the vicinity of human body. The fundamental changes proposed through the standard are introduction of eight user priorities (UPs) based on the traffic designation, and the corresponding sets of minimum and maximum values for the contention window. However, one of the most important changes introduced through the standard is the work-flow of the IEEE 802.15.6 CSMA/CA MAC protocol, where a transmitting node may lock its backoff counter under certain conditions and unlock the same upon the resumption of favorable conditions, which is unlike any previously known CSMA/CA protocol. <br>The thesis investigates the impact of the backoff counter locking mechanism on the transmission latency in the IEEE 802.15.6 CSMA/CA protocol and proposes a solution to the problem. As a first step, a discrete-time Markov chain (DTMC) is designed to model the different states of a node operating in the standard. The thesis proposes the Fair and Latency-aware backOff cOunter Decrement (FLOOD) algorithm, which optimizes the delay incurred during frame transmission. The thesis also proposes the Priority-based Allocation of Time-Slots (PATS) algorithm, a context-aware frame transmission algorithm based on the constant model hawk-dove evolutionary game, which ensures prioritized transmission of data frames based on the criticality of the transmitting WBAN. Together, FLOOD and PATS lead to transmission of data frames with minimum delay incurred while ensuring prioritized transmission for critical WBANs.},
   pdf         = {PhD_Thesis_Abstract.pdf},
-  selected    = {false},
   bibtex_show = {true}
 }
 
@@ -604,22 +593,22 @@
 }
 
 @article{journals/pulse/SarkarM16,
-  author    = {Subhadeep Sarkar and Sudip Misra},
-  title     = {From Micro to Nano: The Evolution of Wireless Sensor-Based Health Care},
-  journal   = {{IEEE} Pulse},
-  volume    = {7},
-  number    = {1},
-  pages     = {21--25},
-  year      = {2016},
-  month     = jan,
-  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
-  issn      = {2154-2287},
-  url       = {https://doi.org/10.1109/MPUL.2015.2498498},
-  doi       = {10.1109/MPUL.2015.2498498},
-  abbr      = {Pulse},
-  abstract = {Over the past decade, embedded systems and microelectromechanical systems have evolved in a radical way, redefining our standard of living and enhancing the quality of life. Health care, among various other fields, has benefited vastly from this technological development. The concept of using sensors for health care purposes originated in the late 1980s when sensors were developed to measure certain physiological parameters associated with the human body. In traditional sensor nodes, the signal sources are mostly different environmental phenomena (such as temperature, vibration, and luminosity) or man-made events (such as intrusion and mobile target tracking), whereas in case of the physiological sensors, the signal source is living human tissue. These sensor nodes, as their primary sensing element, have a diaphragm that converts pressure into displacement. This displacement, in turn, is subsequently transformed into an electrical signal. The concept of wireless physiological sensor nodes, however, gained popularity in the mid-2000s, with the sensed data from the nodes transmitted to the hub via a wireless medium. The network formed by this heterogeneous set of wireless body sensor nodes is termed a wireless body-area network (WBAN). Each WBAN is essentially a composition of multiple wireless body sensor nodes and a single hub. The hub is primarily responsible for acquisition of the raw sensed data from all the component sensor nodes and first-level aggregation of the data before transmitting the aggregated data for further analysis to a remote data acquisition center. Here, we outline the evolution of WBANs in the context of modern health care and its convergence with nanotechnology.},
-  pdf      = {From_Micro_to_Nano_The_Evolution_of_Wireless_Sensor-Based_Health_Care.pdf},
-  bibtex_show  = {true}
+  author      = {Subhadeep Sarkar and Sudip Misra},
+  title       = {From Micro to Nano: The Evolution of Wireless Sensor-Based Health Care},
+  journal     = {{IEEE} Pulse},
+  volume      = {7},
+  number      = {1},
+  pages       = {21--25},
+  year        = {2016},
+  month       = {Jan},
+  publisher   = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  issn        = {2154-2287},
+  doi         = {10.1109/MPUL.2015.2498498},
+  url         = {https://doi.org/10.1109/MPUL.2015.2498498},
+  abbr        = {Pulse},
+  abstract    = {Over the past decade, embedded systems and microelectromechanical systems have evolved in a radical way, redefining our standard of living and enhancing the quality of life. Health care, among various other fields, has benefited vastly from this technological development. The concept of using sensors for health care purposes originated in the late 1980s when sensors were developed to measure certain physiological parameters associated with the human body. In traditional sensor nodes, the signal sources are mostly different environmental phenomena (such as temperature, vibration, and luminosity) or man-made events (such as intrusion and mobile target tracking), whereas in case of the physiological sensors, the signal source is living human tissue. These sensor nodes, as their primary sensing element, have a diaphragm that converts pressure into displacement. This displacement, in turn, is subsequently transformed into an electrical signal. The concept of wireless physiological sensor nodes, however, gained popularity in the mid-2000s, with the sensed data from the nodes transmitted to the hub via a wireless medium. The network formed by this heterogeneous set of wireless body sensor nodes is termed a wireless body-area network (WBAN). Each WBAN is essentially a composition of multiple wireless body sensor nodes and a single hub. The hub is primarily responsible for acquisition of the raw sensed data from all the component sensor nodes and first-level aggregation of the data before transmitting the aggregated data for further analysis to a remote data acquisition center. Here, we outline the evolution of WBANs in the context of modern health care and its convergence with nanotechnology.},
+  pdf         = {From_Micro_to_Nano_The_Evolution_of_Wireless_Sensor-Based_Health_Care.pdf},
+  bibtex_show = {true}
 }
 
 @article{DBLP:journals/iet-net/SarkarM16,
@@ -668,12 +657,11 @@
   author       = {Subhadeep Sarkar and Subarna Chatterjee and Sudip Misra and Ezaj A. Ansari and Dipayan Ghatak and Saurav Sarkar},
   title        = {A Privacy-Aware Ambulatory Healthcare System Using Wireless Body Area Networks (WBANs)},
   year         = {2016},
-  month        = {jan},
-  howpublished = {Indian Patent, File no.\ 201631000214},
+  month        = {Jan},
+  howpublished = {Indian Patent, File no.: 201631000214},
   abbr         = {Patent},
   abstract     = {The proposed invention relates to the development of a Wireless Body Area Network (WBAN)-equipped "blind" cloud system to enhance the existing ambulatory healthcare system without having extensive infrastructural dependence. As per the traditional healthcare techniques of the country, the diagnosis of a patient commences only after s/he is admitted to a medical unit or hospital. Thus, in cases of extreme criticality or medical emergency, the patient often undergoes tremendous inconvenience which may even be fatal. The proposed invention aims at introducing a novel ambulatory healthcare system coupled with the recent technological advancements. The idea behind this invention is to provide majorly unmanned, automated, pervasive, remote, real-time ambulatory healthcare services. After getting into an ambulance, a patient would be made to wear a set of easy, light-weighted, and convenient wireless body sensor nodes which would form a WBAN, and would instantaneously initiate the capturing the patient's physiological data. These data would be fed to remote cloud servers in real time from where it would undergo a perfunctory analysis. To enhance the precision of the analytics, the invention envisions gathering a real-time medical history of the patient through a simple, form-based interface (with assistance from a paramedic). Based on the data criticality and medical history, voice or text-based feedback directives will be delivered at the patient's end and will be executed by the paramedic within the ambulance. The invention is strongly dependent on cloud computing technology as the cloud servers serve as the primary hubs of storage and computation of the system. However, to address the issues related to security, data confidentiality, and vulnerability of cloud computing, the invention proposes to develop a completely "blind" cloud platform. The goal is to take advantage of the enormous computing and storage abilities of the cloud servers by maintaining data anonymity simultaneously. To preserve the privacy of the medical data, we propose an intelligent method to mask the identity of the patients, i.e., the users of the system, and thereby, obtaining unidentified data for storage and analysis. We also propose a parallel method to be executed within the non-cloud servers for efficient and lossless identity management and retrieval.},
   pdf          = {IN-Patent-Certificate.pdf},
-  selected     = {false},
   bibtex_show  = {true}
 }
 

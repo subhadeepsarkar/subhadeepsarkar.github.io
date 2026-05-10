@@ -5,6 +5,10 @@
 "PhysRev":
   url: https://journals.aps.org/
 
+"VLDB":
+  url: https://vldb.org/
+  color: "#4f9a6d"
+
 "HPTS":
   url: https://hpts.ws/
   color: "#7a7a7a"

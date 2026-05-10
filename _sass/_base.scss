@@ -168,6 +168,8 @@ blockquote {
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--nav-bar-color);
   opacity: 0.95;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .navbar .dropdown-menu {
@@ -205,6 +207,10 @@ blockquote {
 
   .navbar-brand {
     color: var(--global-text-color);
+
+    h4 {
+      margin: 0;
+    }
   }
 
   .navbar-nav .nav-item .nav-link {
@@ -212,6 +218,22 @@ blockquote {
 
     &:hover {
       color: var(--global-hover-color);
+    }
+  }
+
+  .navbar-nav .nav-item .nav-link.ssd-lab-link {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .ssd-lab-logo {
+      height: 22px;
+      width: auto;
+      vertical-align: middle;
+      margin-top: 6px;
+    }
+
+    .ssd-lab-logo-light {
+      filter: brightness(0.85) contrast(1.6) saturate(1.4);
     }
   }
 
@@ -283,6 +305,13 @@ blockquote {
   .bottom-bar {
     transform: rotate(0);
   }
+}
+
+.toggle-container {
+  position: relative;
+  top: -7px;
+  margin-right: 8px;
+  margin-left: -33px;
 }
 
 #light-toggle {
@@ -999,5 +1028,46 @@ pre {
   &:hover .copy {
     color: var(--global-hover-color);
     opacity: 1;
+  }
+}
+
+
+a.selected-pubs-full-list {
+  font-size: 0.75rem;
+  font-weight: 400;
+  vertical-align: bottom;
+  position: relative;
+  bottom: 5.5px;
+  margin-left: 0.5rem;
+  color: var(--global-theme-color);
+
+  &:hover {
+    color: var(--global-hover-color);
+    text-decoration: underline;
+  }
+}
+
+.news-btn-hidden {
+  display: none;
+}
+
+.news-toggle-wrap {
+  text-align: left;
+  margin-top: 0.4rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.news-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--global-theme-color);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0;
+
+  &:hover {
+    color: var(--global-hover-color);
+    text-decoration: underline;
   }
 }

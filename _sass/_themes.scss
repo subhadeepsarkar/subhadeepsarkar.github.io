@@ -51,6 +51,13 @@
   .citations-badge-dark {
     display: none;
   }
+
+  .ssd-lab-logo-light {
+    display: inline;
+  }
+  .ssd-lab-logo-dark {
+    display: none;
+  }
 }
 
 html[data-theme='dark'] {
@@ -84,6 +91,13 @@ html[data-theme='dark'] {
     display: none;
   }
   .citations-badge-dark {
+    display: inline;
+  }
+
+  .ssd-lab-logo-light {
+    display: none;
+  }
+  .ssd-lab-logo-dark {
     display: inline;
   }
 

@@ -59,6 +59,7 @@
         <th><h6>Our paper <a href="https://subhadeep.net/assets/fulltext/Tectonic_Bridging_Synthetic_and_Real-World_Workloads_for_Key-Value_Benchmarking.pdf" target="_blank">"Tectonic: Bridging Synthetic and Real-World Workloads for Key-Value Benchmarking"</a> is <b>accepted for publication</b> in <a href="https://www.tpc.org/tpctc/tpctc2025/default5.asp?lang=cn" target="_blank">TPCTC 2025</a>.</h6></th>
       </tr>
       
+      </tbody><tbody id="news-extra">
       <tr>
         <th><h6><b>Jul 2025</th></b>
         <th><h6>I will serve as the <b>Proceedings Chair</b> of <a href="https://vldb.org/2026/?officers" target="_blank">PVLDB 2025 - 2026</a>.</th>
@@ -124,7 +125,7 @@
         <th><h6>I will serve in the <b>Program Committee</b> of <a href="https://www.vldb.org/pvldb/volumes/18/review-board" target="_blank">VLDB 2025</a>.</th>
       </tr>
       
-      <!-- <tr>
+      <tr>
         <th><h6><b>Oct 2023</th></b>
         <th><h6>I will serve in the <b>Program Committee</b> of <a href="https://sea-data.ml/" target="_blank">SEA Graph 2024</a>.</th>
       </tr>
@@ -162,9 +163,9 @@
       <tr>
         <th><h6><b>Jan 2023</th></b>
         <th><h6>Our tutorial on <a href="assets/fulltext/The_LSM_Design_Space_and_its_Read_Optimizations.pdf" target="_blank">"The LSM Design Space and its Read Optimizations"</a> is <b>accepted for publication</b> in <a href="https://ieeexplore.ieee.org/document/10184626" target="_blank">ICDE 2023</a>.</th>
-      </tr> -->
+      </tr>
 
-      <!-- <tr>
+      <tr>
         <th><h6><b>Dec 2022</th></b>
         <th><h6>Our paper <a href="assets/fulltext/Indexing_for_Near-Sorted_Data.pdf" target="_blank">"Indexing for Near-Sorted Data"</a> is <b>accepted for publication</b> in <a href="https://ieeexplore.ieee.org/document/10184781" target="_blank">ICDE 2023</a>.</th>
       </tr>
@@ -211,9 +212,45 @@
 
       <tr>
         <th><h6><b>Feb 2022</th></b>
-        <th><h6>Our paper <a href="assets/fulltext/Query_Language_Support_for_Timely_Data_Deletion.pdf" target="_blank">"Query Language Support for Timely Data Deletion"</a> is <b>accepted for publication</b> in <a href="https://conferences.inf.ed.ac.uk/edbticdt2022/?contents=accepted-papers-research-track.html" target="_blank">EDBT 2022</a>. <b><a href="https://www.youtube.com/watch?v=aUZ_SCPOtWo" target="_blank">[Talk]</a></b></th> -->
+        <th><h6>Our paper <a href="assets/fulltext/Query_Language_Support_for_Timely_Data_Deletion.pdf" target="_blank">"Query Language Support for Timely Data Deletion"</a> is <b>accepted for publication</b> in <a href="https://conferences.inf.ed.ac.uk/edbticdt2022/?contents=accepted-papers-research-track.html" target="_blank">EDBT 2022</a>. <b><a href="https://www.youtube.com/watch?v=aUZ_SCPOtWo" target="_blank">[Talk]</a></b></th> 
       </tr>
+      </tbody>
     </table>
+    <div class="news-toggle-wrap">
+      <button id="news-more-btn" class="news-toggle-btn" type="button">Show more</button>
+      <button id="news-less-btn" class="news-toggle-btn news-btn-hidden" type="button">Show less</button>
+    </div>
+    <script>
+    (function() {
+      var extra    = document.getElementById('news-extra');
+      var moreBtn  = document.getElementById('news-more-btn');
+      var lessBtn  = document.getElementById('news-less-btn');
+      var rows     = Array.from(extra.querySelectorAll('tr'));
+      var shown    = 0;
+      var step     = 10;
+
+      rows.forEach(function(r) { r.style.display = 'none'; });
+
+      function update() {
+        moreBtn.classList.toggle('news-btn-hidden', shown >= rows.length);
+        lessBtn.classList.toggle('news-btn-hidden', shown === 0);
+      }
+
+      moreBtn.addEventListener('click', function() {
+        var end = Math.min(shown + step, rows.length);
+        for (var i = shown; i < end; i++) rows[i].style.display = '';
+        shown = end;
+        update();
+      });
+
+      lessBtn.addEventListener('click', function() {
+        var start = Math.max(shown - step, 0);
+        for (var i = start; i < shown; i++) rows[i].style.display = 'none';
+        shown = start;
+        update();
+      });
+    })();
+    </script>
     <br>
   </div>
   {%- else -%}
