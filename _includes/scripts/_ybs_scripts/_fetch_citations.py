@@ -3,12 +3,10 @@
 _fetch_citations.py — scrape Google Scholar for fresh citation data and write
 the JSON the site reads via `site.data.citations`.
 
-Replaces the old `fetch_citations.sh` which merely copied a (potentially stale)
-JSON from Dropbox. This version goes straight to the user's Scholar profile,
-parses it, and writes the same JSON structure to:
+Fetches the user's Scholar profile directly, parses it, and writes the same
+JSON structure to:
 
   - _data/citations.json                                      (consumed by site)
-  - _includes/scripts/_ybs_scripts/citations.json             (local snapshot)
 
 Output schema (matches what bib.html expects):
 
@@ -51,7 +49,6 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[2]
 OUTPUTS = [
     REPO_ROOT / "_data" / "citations.json",
-    SCRIPT_DIR / "citations.json",
 ]
 
 

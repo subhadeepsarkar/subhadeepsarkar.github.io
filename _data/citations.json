@@ -1,9 +1,9 @@
 {
   "profile": {
     "name": "Subhadeep Sarkar",
-    "citedby": 2281,
+    "citedby": 2296,
     "hindex": 17,
-    "i10index": 21
+    "i10index": 22
   },
   "publications": [
     {
@@ -12,7 +12,7 @@
       "year": 2018,
       "venue": "",
       "abstract": "",
-      "cited_by": 859,
+      "cited_by": 860,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:tOudhMTPpwUC",
       "eprint": ""
     },
@@ -22,7 +22,7 @@
       "year": 2016,
       "venue": "",
       "abstract": "",
-      "cited_by": 480,
+      "cited_by": 481,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:O3NaXMp0MMsC",
       "eprint": ""
     },
@@ -32,7 +32,7 @@
       "year": 2015,
       "venue": "",
       "abstract": "",
-      "cited_by": 158,
+      "cited_by": 159,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:u5HHmVD_uO8C",
       "eprint": ""
     },
@@ -42,7 +42,7 @@
       "year": 2016,
       "venue": "",
       "abstract": "",
-      "cited_by": 115,
+      "cited_by": 117,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:r0BpntZqJG4C",
       "eprint": ""
     },
@@ -52,7 +52,7 @@
       "year": 2020,
       "venue": "",
       "abstract": "",
-      "cited_by": 104,
+      "cited_by": 106,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:SeFeTyx0c_EC",
       "eprint": ""
     },
@@ -62,7 +62,7 @@
       "year": 2021,
       "venue": "",
       "abstract": "",
-      "cited_by": 90,
+      "cited_by": 93,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:5Ul4iDaHHb8C",
       "eprint": ""
     },
@@ -92,7 +92,7 @@
       "year": 2022,
       "venue": "",
       "abstract": "",
-      "cited_by": 38,
+      "cited_by": 39,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:fQNAKQ3IYiAC",
       "eprint": ""
     },
@@ -112,7 +112,7 @@
       "year": 2022,
       "venue": "",
       "abstract": "",
-      "cited_by": 28,
+      "cited_by": 29,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:VOx2b1Wkg3QC",
       "eprint": ""
     },
@@ -157,6 +157,16 @@
       "eprint": ""
     },
     {
+      "title": "Query Language Support for Timely Data Deletion",
+      "authors": "S Sarkar, M Athanassoulis",
+      "year": 2022,
+      "venue": "",
+      "abstract": "",
+      "cited_by": 21,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:LPZeul_q3PIC",
+      "eprint": ""
+    },
+    {
       "title": "Privacy-aware blind cloud framework for advanced healthcare",
       "authors": "S Sarkar, S Chatterjee, S Misra, R Kudupudi",
       "year": 2017,
@@ -167,13 +177,13 @@
       "eprint": ""
     },
     {
-      "title": "Query Language Support for Timely Data Deletion",
-      "authors": "S Sarkar, M Athanassoulis",
-      "year": 2022,
+      "title": "KVBench: A Key-Value Benchmarking Suite",
+      "authors": "Z Zhu, A Saha, M Athanassoulis, S Sarkar",
+      "year": 2024,
       "venue": "",
       "abstract": "",
-      "cited_by": 20,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:LPZeul_q3PIC",
+      "cited_by": 13,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:HE397vMXCloC",
       "eprint": ""
     },
     {
@@ -187,13 +197,13 @@
       "eprint": ""
     },
     {
-      "title": "KVBench: A Key-Value Benchmarking Suite",
-      "authors": "Z Zhu, A Saha, M Athanassoulis, S Sarkar",
-      "year": 2024,
+      "title": "Enabling timely and persistent deletion in lsm-engines",
+      "authors": "S Sarkar, TI Papon, D Staratzis, Z Zhu, M Athanassoulis",
+      "year": 2023,
       "venue": "",
       "abstract": "",
-      "cited_by": 12,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:HE397vMXCloC",
+      "cited_by": 10,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:t6usbXjVLHcC",
       "eprint": ""
     },
     {
@@ -214,16 +224,6 @@
       "abstract": "",
       "cited_by": 10,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:e5wmG9Sq2KIC",
-      "eprint": ""
-    },
-    {
-      "title": "Enabling timely and persistent deletion in lsm-engines",
-      "authors": "S Sarkar, TI Papon, D Staratzis, Z Zhu, M Athanassoulis",
-      "year": 2023,
-      "venue": "",
-      "abstract": "",
-      "cited_by": 9,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lKxl5G4AAAAJ&pagesize=100&citation_for_view=lKxl5G4AAAAJ:t6usbXjVLHcC",
       "eprint": ""
     },
     {

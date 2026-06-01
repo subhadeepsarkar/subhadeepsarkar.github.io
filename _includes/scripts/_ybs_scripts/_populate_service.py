@@ -29,7 +29,7 @@ from typing import Any, Dict, List, Optional
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[2]
-SERVICE_JSON = SCRIPT_DIR / "service.json"
+SERVICE_JSON = Path.home() / "Dropbox" / "_control" / "service.json"
 SERVICE_MD = REPO_ROOT / "_pages" / "service.md"
 
 FRONT_MATTER_RE = re.compile(r"^(---\n.*?\n---\n)", re.DOTALL)
@@ -222,11 +222,13 @@ def main() -> int:
     SERVICE_MD.write_text(output, encoding="utf-8")
     print(f"  wrote {SERVICE_MD.relative_to(REPO_ROOT)}")
 
-    try:
-        subprocess.run(["bundle", "exec", "jekyll", "build"], cwd=REPO_ROOT, check=True)
-        print("  site rebuilt")
-    except (FileNotFoundError, subprocess.CalledProcessError) as e:
-        print(f"  WARN: jekyll build failed: {e}")
+    ans = input("rebuild the site? [y/N] ").strip().lower()
+    if ans in ("y", "yes"):
+        try:
+            subprocess.run(["bundle", "exec", "jekyll", "build"], cwd=REPO_ROOT, check=True)
+            print("  site rebuilt")
+        except (FileNotFoundError, subprocess.CalledProcessError) as e:
+            print(f"  WARN: jekyll build failed: {e}")
 
     return 0
 

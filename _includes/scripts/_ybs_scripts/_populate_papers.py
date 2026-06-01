@@ -4,6 +4,7 @@ _populate_papers.py — keep `_bibliography/papers.bib` and the publications pag
 in sync with a curated `publication.json`.
 
 Workflow on each invocation:
+  0. Sync artifact folders from ~/Dropbox/_control/ to assets/ (_fetch_artifacts.py).
   1. (First run only) Bootstrap publication.json from the existing papers.bib.
   2. Compare each JSON record to its papers.bib counterpart; interactively
      apply diffs.
@@ -12,7 +13,7 @@ Workflow on each invocation:
   4. For records flagged `dblp_citation_verified: false` and a paper age <= 3
      years, retry DBLP — capture canonical data and flip the flag if found.
   5. Generate PDF preview thumbnails for any new local PDFs.
-  6. Ask whether to refresh Google Scholar citations (runs fetch_citations.sh).
+  6. Ask whether to refresh Google Scholar citations (runs _fetch_citations.py).
   7. Ask whether to rebuild the site (`bundle exec jekyll build`).
 
 Usage:
@@ -46,12 +47,13 @@ from typing import Any, Dict, List, Optional, Tuple
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[2]                      # site root
-PUB_JSON = SCRIPT_DIR / "publication.json"
+PUB_JSON = Path.home() / "Dropbox" / "_control" / "publication.json"
 PAPERS_BIB = REPO_ROOT / "_bibliography" / "papers.bib"
 PUB_PAGE = REPO_ROOT / "_pages" / "publications.md"
 FULLTEXT_DIR = REPO_ROOT / "assets" / "fulltext"
 PREVIEW_DIR = REPO_ROOT / "assets" / "img" / "publication_preview"
-FETCH_CITATIONS_SH = SCRIPT_DIR / "fetch_citations.sh"
+FETCH_CITATIONS_PY = SCRIPT_DIR / "_fetch_citations.py"
+FETCH_ARTIFACTS_PY = SCRIPT_DIR / "_fetch_artifacts.py"
 
 # DBLP-recheck cutoff: paper must be at most this many years old
 DBLP_RECHECK_AGE_YEARS = 3
@@ -335,7 +337,7 @@ def render_bib_entry(rec: Dict[str, Any], dblp_extras: Optional[Dict[str, str]] 
         out.append(("author", render_authors(rec["authors"])))
     if rec.get("editor"):
         out.append(("editor", render_authors(rec["editor"])))
-    out.append(("title", rec["title"]))
+    out.append(("title", rec.get("title", "")))
 
     if rec["type"] in ("inproceedings", "incollection") and rec.get("venue_long"):
         out.append(("booktitle", rec["venue_long"]))
@@ -520,6 +522,9 @@ def field_diff(rec_json: Dict[str, Any], rec_bib: Dict[str, Any]) -> List[Tuple[
         jv = _norm(rec_json.get(f))
         bv = _norm(bib_view.get(f))
         if jv == bv:
+            continue
+        # "patent" in JSON renders as "misc" in bib — treat as equivalent.
+        if f == "type" and TYPE_TO_BIB.get(str(jv)) == bv:
             continue
         diffs.append((f, bib_view.get(f), rec_json.get(f)))
     return diffs
@@ -826,6 +831,12 @@ def recheck_dblp_missing(rec: Dict[str, Any], bib_text: str,
 def main() -> int:
     args = parse_args()
 
+    # 0. Sync artifact folders from Dropbox/_control/ to assets/
+    if FETCH_ARTIFACTS_PY.exists():
+        subprocess.run(["python3", str(FETCH_ARTIFACTS_PY)], check=False)
+    else:
+        info(f"WARN: {FETCH_ARTIFACTS_PY.name} not found, skipping artifact sync")
+
     # 1. Bootstrap if missing
     if args.bootstrap or not PUB_JSON.exists():
         bootstrap(args)
@@ -907,14 +918,14 @@ def main() -> int:
     # 7. Optionally refresh citations (skip prompt under --yes or --dry-run)
     if not args.yes and not args.dry_run \
             and ask("refresh Google Scholar citations now?", default=False):
-        if FETCH_CITATIONS_SH.exists():
-            subprocess.run(["bash", str(FETCH_CITATIONS_SH)], check=False)
+        if FETCH_CITATIONS_PY.exists():
+            subprocess.run(["python3", str(FETCH_CITATIONS_PY)], check=False)
             info("citations refreshed")
         else:
-            info(f"WARN: {FETCH_CITATIONS_SH.name} not found")
+            info(f"WARN: {FETCH_CITATIONS_PY.name} not found")
 
-    # 8. Rebuild the site (unless --dry-run)
-    if not args.dry_run:
+    # 8. Rebuild the site (optional)
+    if not args.yes and not args.dry_run and ask("rebuild the site?", default=False):
         try:
             subprocess.run(["bundle", "exec", "jekyll", "build"], cwd=REPO_ROOT, check=True)
             info("site rebuilt")
