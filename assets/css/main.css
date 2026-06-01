@@ -260,10 +260,15 @@ blockquote {
 
 @media (min-width: 576px) {
   .profile {
-    width: 15%;
+    width: 30%;
   }
   .profile .address p {
     display: block;
+  }
+}
+@media (min-width: 992px) {
+  .profile {
+    width: 15%;
   }
 }
 .post-description {
