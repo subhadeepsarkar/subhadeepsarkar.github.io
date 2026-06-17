@@ -21,7 +21,7 @@ profile:
     <p>
       <a href="https://scholar.google.com/citations?user=lKxl5G4AAAAJ&hl=en&authuser=1" target="_blank"><i class="ai ai-google-scholar" style="font-size: 1.75em;"></i></a>
       <a href="https://www.linkedin.com/in/sarkarsubhadeep" target="_blank"><i class="fa fa-linkedin" style="font-size: 1.5em;"></i></a>
-      <a href="http://dblp.org/pers/hd/s/Sarkar:Subhadeep" target="_blank"><i class="ai ai-dblp" style="font-size: 1.7em;"></i></a>
+      <a href="https://dblp.org/pid/158/4862.html" target="_blank"><i class="ai ai-dblp" style="font-size: 1.7em;"></i></a>
       <a href="https://www.semanticscholar.org/author/Subhadeep-Sarkar/31934672" target="_blank"><i class="ai ai-semantic-scholar" style="font-size: 1.75em;"></i></a>
       <a href="/assets/resources/CV_SUBHADEEP_SARKAR.pdf" target="_blank"><i class="ai ai-cv" style="font-size: 1.75em;"></i></a>
     </span></p><br>
