@@ -39,6 +39,8 @@
             {%- assign preview_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
             <img src="{{ preview_path | relative_url }}" class="pdf-preview z-depth-1 rounded" alt="Preview">
           {%- endif -%}
+        {%- else -%}
+          <img src="{{ '/assets/img/publication_preview/placeholder.png' | relative_url }}" class="pdf-preview z-depth-1 rounded" alt="PDF coming soon">
         {%- endif -%}
     </div>
 
@@ -244,12 +246,14 @@
         ><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"/></svg></a>
       {%- endif %} {%- if site.badges.gscholars_badge %}
         {%- assign citation_count = nil %}
-        {%- assign entry_title = entry.title | strip_html | strip | downcase %}
+        {%- assign entry_title = entry.title | strip_html | normalize_whitespace | strip | downcase %}
         {%- for pub in site.data.citations.publications %}
-          {%- assign pub_title = pub.title | downcase %}
+          {%- assign pub_title = pub.title | normalize_whitespace | strip | downcase %}
+          {%- comment %} Scholar may list a paper twice; show the larger count. {% endcomment %}
           {%- if pub_title == entry_title %}
-            {%- assign citation_count = pub.cited_by %}
-            {%- break %}
+            {%- if citation_count == nil or pub.cited_by > citation_count %}
+              {%- assign citation_count = pub.cited_by %}
+            {%- endif %}
           {%- endif %}
         {%- endfor %}
         {%- if citation_count and citation_count > 0 %}

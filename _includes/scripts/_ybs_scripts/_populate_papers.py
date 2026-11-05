@@ -4,7 +4,8 @@ _populate_papers.py — keep `_bibliography/papers.bib` and the publications pag
 in sync with a curated `publication.json`.
 
 Workflow on each invocation:
-  0. Sync artifact folders from ~/Dropbox/_control/ to assets/ (_fetch_artifacts.py).
+  0. Sync artifact folders from ~/Dropbox/_control/ to assets/ (_fetch_artifacts.py);
+     skipped under --dry-run.
   1. (First run only) Bootstrap publication.json from the existing papers.bib.
   2. Compare each JSON record to its papers.bib counterpart; interactively
      apply diffs.
@@ -12,6 +13,10 @@ Workflow on each invocation:
      is a DBLP key, fetch canonical metadata first and cross-verify.
   4. For records flagged `dblp_citation_verified: false` and a paper age <= 3
      years, retry DBLP — capture canonical data and flip the flag if found.
+     The DBLP key is the `dblp` field, or the record key minus `DBLP:`.
+  4b. Set each record's `status`: "consolidated" once backed by a verified DBLP
+     entry, else "open"; report open papers, flagging any older than 2 years,
+     and records older than 3 years (aged out of publication.json; delete them).
   5. Generate PDF preview thumbnails for any new local PDFs.
   6. Ask whether to refresh Google Scholar citations (runs _fetch_citations.py).
   7. Ask whether to rebuild the site (`bundle exec jekyll build`).
@@ -36,6 +41,7 @@ import re
 import subprocess
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
@@ -57,6 +63,15 @@ FETCH_ARTIFACTS_PY = SCRIPT_DIR / "_fetch_artifacts.py"
 
 # DBLP-recheck cutoff: paper must be at most this many years old
 DBLP_RECHECK_AGE_YEARS = 3
+
+# Policy: every paper should be consolidated (backed by a verified DBLP entry)
+# within this many years of publication; older open records are flagged.
+CONSOLIDATE_WITHIN_YEARS = 2
+
+# publication.json (shared with the SSD Lab site) holds papers at most this many
+# years old (year >= current year - WINDOW_YEARS); older papers live only in
+# each site's papers.bib. Aged-out records are flagged for removal.
+WINDOW_YEARS = 3
 
 # Field name → display column width for diff
 FIELDS_TO_COMPARE = (
@@ -94,10 +109,13 @@ LOCAL_ONLY_FIELDS = {
 TEMPLATE_RECORD: Dict[str, Any] = {
     "_comment": ("TEMPLATE — copy this object and replace fields when adding a "
                  "new paper. The script skips any entry whose key starts with an "
-                 "underscore. Required: key, type, title, authors, year. Set "
-                 "dblp_citation_verified=false for new manual entries so the "
-                 "script can verify against DBLP on the next run."),
+                 "underscore. Required: key, type, title, authors, year. Leave "
+                 "`dblp` empty until the paper is on DBLP; then set it to the "
+                 "DBLP key (e.g. conf/sigmod/SarkarPSA20) with "
+                 "dblp_citation_verified=false. `status` is set by the script."),
     "key": "_TEMPLATE_NEW_ENTRY",
+    "status": "open",
+    "dblp": "",
     "type": "inproceedings",
     "title": "",
     "authors": [],
@@ -131,14 +149,70 @@ TEMPLATE_RECORD: Dict[str, Any] = {
 }
 
 
+# Header kept at the top of publication.json. Re-emitted on every rewrite.
+HEADER_LINES = [
+    "publication.json — shared source of truth for recent papers: those at most "
+    f"{WINDOW_YEARS} years old",
+    f"(year >= current year - {WINDOW_YEARS}). Read by subhadeep.net "
+    "(_populate_papers.py) and the SSD Lab site (_populate_lab_papers.py).",
+    "Older papers live only in each site's _bibliography/papers.bib. When a paper "
+    "ages out, the script",
+    "says so; then delete its record here (it stays on both sites).",
+    "",
+    "status (set by the script on every run; don't edit it by hand):",
+    '  "open"         — no verified DBLP entry yet; metadata may still change.',
+    '  "consolidated" — backed by a verified DBLP entry (a `DBLP:` key or the '
+    "`dblp` field, plus",
+    "                   dblp_citation_verified: true); metadata is final.",
+    "Every paper should be consolidated within "
+    f"{CONSOLIDATE_WITHIN_YEARS} years of publication.",
+    "See README.md in this folder.",
+]
+
+
+def in_window(rec: Dict[str, Any]) -> bool:
+    """True if the paper is recent enough to belong in publication.json."""
+    year = str(rec.get("year", ""))
+    return year.isdigit() and current_year() - int(year) <= WINDOW_YEARS
+
+
+def dblp_key_of(rec: Dict[str, Any]) -> str:
+    """The record's DBLP key: the `dblp` field, else the key minus `DBLP:`."""
+    if rec.get("dblp"):
+        return rec["dblp"]
+    key = rec.get("key", "")
+    return key[len("DBLP:"):] if key.startswith("DBLP:") else ""
+
+
+def derive_status(rec: Dict[str, Any]) -> str:
+    """`consolidated` once backed by a verified DBLP entry, else `open`."""
+    if dblp_key_of(rec) and rec.get("dblp_citation_verified"):
+        return "consolidated"
+    return "open"
+
+
+def _with_status(rec: Dict[str, Any]) -> Dict[str, Any]:
+    """Copy of `rec` with an up-to-date `status` placed right after `key`."""
+    out: Dict[str, Any] = {}
+    for k, v in rec.items():
+        if k == "status":
+            continue
+        out[k] = v
+        if k == "key":
+            out["status"] = derive_status(rec)
+    return out
+
+
 def write_publication_json(records: List[Dict[str, Any]]) -> None:
-    """Serialise records to publication.json, with TEMPLATE_RECORD re-prepended
-    as a JSONC `//`-commented block so it always stays at the top."""
-    body = json.dumps(records, indent=2, ensure_ascii=False)
+    """Serialise records to publication.json, with HEADER_LINES and
+    TEMPLATE_RECORD re-prepended as JSONC `//` comments so they always stay at
+    the top."""
+    body = json.dumps([_with_status(r) for r in records], indent=2, ensure_ascii=False)
+    header = "\n".join(("  // " + ln).rstrip() for ln in HEADER_LINES)
     tpl_text = json.dumps(TEMPLATE_RECORD, indent=2, ensure_ascii=False)
     tpl_block = "\n".join("  // " + ln for ln in tpl_text.split("\n")) + ","
     if body.startswith("[\n"):
-        out = "[\n" + tpl_block + "\n" + body[2:]
+        out = "[\n" + header + "\n  //\n" + tpl_block + "\n" + body[2:]
     else:
         out = body
     PUB_JSON.write_text(out + "\n")
@@ -448,8 +522,7 @@ def bib_to_record(entry: Dict[str, Any]) -> Dict[str, Any]:
         rec["bibtex_show"] = True
     # Default the flag — bootstrap assumes existing entries are already in
     # whatever state they are; user can flip to false to force re-verify.
-    rec["dblp_citation_verified"] = entry["key"].startswith("DBLP:") and "biburl" in f \
-                                    or not entry["key"].startswith("DBLP:")
+    rec["dblp_citation_verified"] = entry["key"].startswith("DBLP:") and "biburl" in f
     return rec
 
 
@@ -460,7 +533,8 @@ def bootstrap(args: argparse.Namespace) -> None:
         info(f"overwriting existing {PUB_JSON.name}")
     heading("Bootstrapping publication.json from papers.bib")
     bib = load_bib_entries(PAPERS_BIB)
-    records = [bib_to_record(e) for e in bib.values()]
+    # Only recent papers (see WINDOW_YEARS) belong in publication.json.
+    records = [r for r in (bib_to_record(e) for e in bib.values()) if in_window(r)]
     # sort by year desc, then key
     records.sort(key=lambda r: (-(r.get("year") or 0), r.get("key", "")))
     if args.dry_run:
@@ -474,23 +548,139 @@ def bootstrap(args: argparse.Namespace) -> None:
 # DBLP fetch
 # ---------------------------------------------------------------------------
 
+class DBLPError(Exception):
+    """DBLP could not be asked, so whether it has the record is unknown."""
+
+
+def _http_get(url: str) -> str:
+    req = urllib.request.Request(url, headers={"User-Agent": "populate_papers/1.0"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.read().decode("utf-8")
+
+
 def fetch_dblp_record(dblp_key: str) -> Optional[Dict[str, Any]]:
-    """Fetch DBLP bibtex for a key like 'conf/sigmod/SarkarPSA20'.
-    Returns parsed entry dict, or None if not found / network failure.
+    """Fetch DBLP's BibTeX entry for a key like 'conf/sigmod/SarkarPSA20'.
+    dblp.org puts its .bib export behind a bot check (Anubis), so when that
+    fails the entry is rebuilt from DBLP's SPARQL endpoint, which is meant for
+    scripts. Returns the parsed entry, or None if DBLP has no such record;
+    raises DBLPError with the cause if neither source answers.
     """
-    url = f"https://dblp.org/rec/{dblp_key}.bib"
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "populate_papers/1.0"})
-        with urllib.request.urlopen(req, timeout=20) as r:
-            text = r.read().decode("utf-8")
-    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError):
+        text = _http_get(f"https://dblp.org/rec/{dblp_key}.bib")
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return None
+        problem = f"HTTP {e.code} {e.reason}"
+    except (urllib.error.URLError, TimeoutError) as e:
+        problem = f"network error: {getattr(e, 'reason', e)}"
+    else:
+        m = re.search(r"@\w+\{", text)
+        if m:
+            return parse_bib_entry_block(text, m.start())[0]
+        problem = ("blocked by dblp.org's bot check" if "not a bot" in text
+                   else "the response had no BibTeX entry")
+    info(f"DBLP .bib export: {problem}; asking DBLP's SPARQL endpoint instead")
+    try:
+        return _dblp_entry_via_sparql(dblp_key)
+    except urllib.error.HTTPError as e:
+        raise DBLPError(f"{problem}; SPARQL endpoint: HTTP {e.code} {e.reason}") from e
+    except (urllib.error.URLError, TimeoutError) as e:
+        raise DBLPError(f"{problem}; SPARQL endpoint: network error: "
+                        f"{getattr(e, 'reason', e)}") from e
+    except (ValueError, KeyError) as e:
+        raise DBLPError(f"{problem}; SPARQL endpoint: unexpected response ({e})") from e
+
+
+DBLP_SPARQL = "https://sparql.dblp.org/sparql"
+
+
+def _sparql(query: str) -> List[Dict[str, Any]]:
+    url = DBLP_SPARQL + "?" + urllib.parse.urlencode({"query": query, "format": "json"})
+    return json.loads(_http_get(url))["results"]["bindings"]
+
+
+def _sparql_props(iri: str) -> Dict[str, List[str]]:
+    """Property local name → values, for one DBLP resource."""
+    props: Dict[str, List[str]] = {}
+    for b in _sparql(f"SELECT ?p ?o WHERE {{ <{iri}> ?p ?o }}"):
+        name = re.split(r"[#/]", b["p"]["value"])[-1]
+        props.setdefault(name, []).append(b["o"]["value"])
+    return props
+
+
+def _sparql_names(iri: str) -> List[str]:
+    """Authors of a paper (or editors of a proceedings volume), in order,
+    without DBLP's homonym numbers ('Subhadeep Sarkar 0001')."""
+    rows = _sparql(
+        "PREFIX dblp: <https://dblp.org/rdf/schema#> "
+        f"SELECT ?name ?ord WHERE {{ <{iri}> dblp:hasSignature ?s . "
+        "?s dblp:signatureDblpName ?name ; dblp:signatureOrdinal ?ord }")
+    rows.sort(key=lambda b: int(b["ord"]["value"]))
+    return [re.sub(r"\s+\d{4}$", "", b["name"]["value"]) for b in rows]
+
+
+def _bib_text(text: str, is_title: bool = False) -> str:
+    """DBLP text → its BibTeX form: all-caps words (and a one-letter word not
+    at the start) braced, as in DBLP's .bib export. Titles lose DBLP's final
+    period; abbreviations like 'Syst.' keep theirs."""
+    if is_title:
+        text = text.rstrip(".")
+    words = text.replace("&", "{\\&}").split(" ")
+    for i, w in enumerate(words):
+        m = re.fullmatch(r"([A-Z][A-Z0-9/]*)([,:;?!]?)", w)
+        if m and (len(m.group(1)) > 1 or i > 0):
+            words[i] = "{" + m.group(1) + "}" + m.group(2)
+    return " ".join(words)
+
+
+def _dblp_entry_via_sparql(dblp_key: str) -> Optional[Dict[str, Any]]:
+    """Rebuild DBLP's .bib entry for `dblp_key` from its SPARQL endpoint, with
+    the fields compare_with_dblp() uses. None if DBLP has no such record."""
+    iri = f"https://dblp.org/rec/{dblp_key}"
+    p = _sparql_props(iri)
+    if "title" not in p:
         return None
-    if "@" not in text:
+    first = lambda props, name: props.get(name, [""])[0]
+    f: Dict[str, str] = {}
+    authors = _sparql_names(iri)
+    if authors:
+        f["author"] = " and ".join(authors)
+    f["title"] = _bib_text(first(p, "title"), is_title=True)
+    if "publishedInJournal" in p:
+        f["journal"] = _bib_text(first(p, "publishedInJournal"))
+        f["volume"] = first(p, "publishedInJournalVolume")
+        f["number"] = first(p, "publishedInJournalVolumeIssue")
+    if "publishedAsPartOf" in p:
+        parent_iri = first(p, "publishedAsPartOf")
+        parent = _sparql_props(parent_iri)
+        f["booktitle"] = _bib_text(first(parent, "title"), is_title=True)
+        editors = _sparql_names(parent_iri)
+        if editors:
+            f["editor"] = " and ".join(editors)
+        f["series"] = first(parent, "publishedInSeries")
+        f["volume"] = first(parent, "publishedInSeriesVolume")
+        f["publisher"] = _bib_text(first(parent, "publishedBy"))
+    f["pages"] = re.sub(r"(?<!-)-(?!-)", "--", first(p, "pagination"))
+    f["year"] = first(p, "yearOfEvent") or first(p, "yearOfPublication")
+    doi = first(p, "doi").replace("https://doi.org/", "")
+    f["doi"] = doi.upper().replace("_", "\\_")
+    f["url"] = first(p, "primaryDocumentPage").replace("_", "\\_")
+    f["biburl"] = f"https://dblp.org/rec/{dblp_key}.bib"
+    f["bibsource"] = "dblp computer science bibliography, https://dblp.org"
+    btype = first(p, "bibtexType").split("#")[-1].lower() or "misc"
+    return {"type": btype, "key": f"DBLP:{dblp_key}",
+            "fields": {k: v for k, v in f.items() if v}}
+
+
+def lookup_dblp(dblp_key: str) -> Optional[Dict[str, Any]]:
+    """fetch_dblp_record(), saying why nothing came back."""
+    try:
+        entry = fetch_dblp_record(dblp_key)
+    except DBLPError as e:
+        info(f"could not check DBLP for {dblp_key}: {e}")
         return None
-    m = re.search(r"@\w+\{", text)
-    if not m:
-        return None
-    entry, _ = parse_bib_entry_block(text, m.start())
+    if entry is None:
+        info(f"DBLP has no record for {dblp_key} (yet)")
     return entry
 
 
@@ -575,6 +765,27 @@ def prepend_bib_entry(text: str, new_block: str) -> str:
     return head + new_block + "\n\n" + rest
 
 
+def order_bib_like_json(text: str, keys: List[str]) -> str:
+    """Rearrange the entries whose key is in `keys` so they appear in that
+    order (the publications page lists a year's papers in papers.bib order).
+    They swap among the positions they already hold; other entries stay put."""
+    spans: Dict[str, Tuple[int, int]] = {}
+    for m in re.finditer(r"^@\w+\{\s*([^,\s]+)\s*,", text, re.MULTILINE):
+        if m.group(1) in keys and m.group(1) not in spans:
+            _, end = parse_bib_entry_block(text, m.start())
+            spans[m.group(1)] = (m.start(), end + 1)
+    slots = sorted(spans.values())
+    wanted = [k for k in keys if k in spans]
+    out, pos = [], 0
+    for (start, end), key in zip(slots, wanted):
+        s, e = spans[key]
+        out.append(text[pos:start])
+        out.append(text[s:e])
+        pos = end
+    out.append(text[pos:])
+    return "".join(out)
+
+
 # ---------------------------------------------------------------------------
 # Preview generation
 # ---------------------------------------------------------------------------
@@ -629,7 +840,12 @@ def resolve_pdf_for_new_entry(rec: Dict[str, Any], force_yes: bool) -> None:
             return
     if force_yes:
         return
-    typed = input("  PDF filename in assets/fulltext/ (blank to skip): ").strip()
+    # Accept only a file that exists (or a URL), so a stray "y" can't become the pdf.
+    while True:
+        typed = input("  PDF filename in assets/fulltext/ (blank if there's no PDF yet): ").strip()
+        if not typed or "://" in typed or (FULLTEXT_DIR / typed).is_file():
+            break
+        info(f"no such file: assets/fulltext/{typed}")
     if typed:
         rec["pdf"] = typed
 
@@ -727,17 +943,41 @@ def _dblp_extras_from(bib_entry: Dict[str, Any]) -> Dict[str, str]:
             if f in bib_entry["fields"]}
 
 
-def process_new(rec: Dict[str, Any], bib_text: str,
-                args: argparse.Namespace) -> Tuple[str, bool]:
+def _title_id(title: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", re.sub(r"<[^>]+>", "", title).lower())
+
+
+def find_renamed_entry(rec: Dict[str, Any], bib_text: str, json_keys: set) -> Optional[str]:
+    """Key of a papers.bib entry for the same paper (same title) under a key
+    publication.json no longer has, e.g. after a record's `key` was changed.
+    That entry is replaced rather than the paper being added twice."""
+    want = _title_id(rec.get("title", ""))
+    if not want:
+        return None
+    for m in re.finditer(r"^@\w+\{", bib_text, re.MULTILINE):
+        try:
+            entry, _ = parse_bib_entry_block(bib_text, m.start())
+        except ValueError:
+            continue
+        if entry["key"] not in json_keys and _title_id(entry["fields"].get("title", "")) == want:
+            return entry["key"]
+    return None
+
+
+def process_new(rec: Dict[str, Any], bib_text: str, args: argparse.Namespace,
+                json_keys: set) -> Tuple[str, bool]:
     """Create a fresh papers.bib entry for a new JSON record."""
     heading(f"NEW: {rec['key']}")
     print(json.dumps(rec, indent=2, ensure_ascii=False))
+    old_key = find_renamed_entry(rec, bib_text, json_keys)
+    if old_key:
+        info(f"papers.bib already lists this paper as {old_key}; that entry will be replaced")
 
     dblp_extras: Dict[str, str] = {}
-    if rec["key"].startswith("DBLP:") and not rec.get("dblp_citation_verified", False):
-        bare = rec["key"][len("DBLP:"):]
+    bare = dblp_key_of(rec)
+    if bare and not rec.get("dblp_citation_verified", False):
         info(f"verifying with DBLP: {bare}")
-        dblp = fetch_dblp_record(bare)
+        dblp = lookup_dblp(bare)
         if dblp:
             dblp_diff = compare_with_dblp(rec, dblp)
             if dblp_diff:
@@ -752,7 +992,6 @@ def process_new(rec: Dict[str, Any], bib_text: str,
             dblp_extras = {f: dblp["fields"][f] for f in ("timestamp", "biburl", "bibsource")
                            if f in dblp["fields"]}
         else:
-            info(f"DBLP has no record for {bare} (yet)")
             rec["dblp_citation_verified"] = False
 
     if not ask("add this entry to papers.bib?", default=True, force=args.yes or None):
@@ -766,19 +1005,28 @@ def process_new(rec: Dict[str, Any], bib_text: str,
         rec["selected"] = True
     new_block = render_bib_entry(rec, dblp_extras or None)
     if args.dry_run:
-        info("DRY-RUN: would append entry")
+        info(f"DRY-RUN: would {'replace ' + old_key if old_key else 'append entry'}")
         return bib_text, True
+    if old_key:
+        return replace_bib_entry(bib_text, old_key, new_block)[0], True
     return prepend_bib_entry(bib_text, new_block), True
+
+
+# Fields taken from DBLP when a paper is consolidated. `venue_long` only when
+# the record has none: DBLP's booktitle carries edition, place and dates.
+DBLP_FIELDS = ("title", "authors", "year", "venue_long",
+               "pages", "volume", "number", "publisher", "doi", "url")
 
 
 def compare_with_dblp(rec: Dict[str, Any], dblp: Dict[str, Any]) -> List[Tuple[str, Any, Any]]:
     """Return diff (field, dblp_value, json_value) for a new record vs. DBLP."""
     dblp_view = bib_to_record(dblp)
     diffs: List[Tuple[str, Any, Any]] = []
-    for f in ("title", "authors", "year", "venue_long",
-              "pages", "volume", "number", "publisher", "doi", "url"):
+    for f in DBLP_FIELDS:
         jv = rec.get(f)
         dv = dblp_view.get(f)
+        if f == "venue_long" and jv:
+            continue  # keep the site's own venue text (DBLP's is long)
         if dv is not None and jv != dv:
             diffs.append((f, dv, jv))
     return diffs
@@ -787,8 +1035,9 @@ def compare_with_dblp(rec: Dict[str, Any], dblp: Dict[str, Any]) -> List[Tuple[s
 def apply_dblp(rec: Dict[str, Any], dblp: Dict[str, Any]) -> None:
     """Mutate `rec` to absorb DBLP-canonical fields."""
     dblp_view = bib_to_record(dblp)
-    for f in ("title", "authors", "year", "venue_long",
-              "pages", "volume", "number", "publisher", "doi", "url"):
+    for f in DBLP_FIELDS:
+        if f == "venue_long" and rec.get(f):
+            continue
         if f in dblp_view:
             rec[f] = dblp_view[f]
 
@@ -796,19 +1045,16 @@ def apply_dblp(rec: Dict[str, Any], dblp: Dict[str, Any]) -> None:
 def recheck_dblp_missing(rec: Dict[str, Any], bib_text: str,
                          args: argparse.Namespace) -> Tuple[str, bool]:
     """For dblp_citation_verified=false records within age cutoff, retry DBLP."""
-    if rec.get("dblp_citation_verified", True):
+    bare = dblp_key_of(rec)
+    if not bare or rec.get("dblp_citation_verified", True):
         return bib_text, False
-    if not rec["key"].startswith("DBLP:"):
-        rec["dblp_citation_verified"] = True
-        return bib_text, True
     age = current_year() - int(rec.get("year", 0))
     if age > DBLP_RECHECK_AGE_YEARS:
         return bib_text, False
-    bare = rec["key"][len("DBLP:"):]
-    info(f"re-checking DBLP for {rec['key']} (age {age}y) ...")
-    dblp = fetch_dblp_record(bare)
+    info(f"re-checking DBLP for {rec['key']} ({bare}, age {age}y) ...")
+    dblp = lookup_dblp(bare)
     if not dblp:
-        info("  still missing; will retry next run")
+        info("  will retry next run")
         return bib_text, False
     info("  found! showing diff vs JSON")
     diffs = compare_with_dblp(rec, dblp)
@@ -828,11 +1074,34 @@ def recheck_dblp_missing(rec: Dict[str, Any], bib_text: str,
     return bib_text, False
 
 
+def report_status(records: List[Dict[str, Any]]) -> None:
+    """List open papers, flagging any past the consolidation deadline, and any
+    record that has aged out of the WINDOW_YEARS window (to be deleted)."""
+    open_recs = [r for r in records if derive_status(r) == "open"]
+    heading(f"Status: {len(records) - len(open_recs)} consolidated, {len(open_recs)} open")
+    for r in open_recs:
+        age = current_year() - int(r.get("year") or 0)
+        late = (f"  <- over {CONSOLIDATE_WITHIN_YEARS} years without a verified DBLP entry"
+                if age > CONSOLIDATE_WITHIN_YEARS else "")
+        info(f"open: {r['key']} ({r.get('year')}){late}")
+    for r in records:
+        if in_window(r):
+            continue
+        if derive_status(r) == "consolidated":
+            what = "should be removed: delete its record (the paper stays on both sites)"
+        else:
+            what = ("should be removed, but is still open: consolidate it, "
+                    "then delete its record")
+        info(f"aged out: {r['key']} ({r.get('year')}) — {what}")
+
+
 def main() -> int:
     args = parse_args()
 
     # 0. Sync artifact folders from Dropbox/_control/ to assets/
-    if FETCH_ARTIFACTS_PY.exists():
+    if args.dry_run:
+        info("DRY-RUN: skipping artifact sync")
+    elif FETCH_ARTIFACTS_PY.exists():
         subprocess.run(["python3", str(FETCH_ARTIFACTS_PY)], check=False)
     else:
         info(f"WARN: {FETCH_ARTIFACTS_PY.name} not found, skipping artifact sync")
@@ -847,6 +1116,13 @@ def main() -> int:
     raw = PUB_JSON.read_text()
     had_comments = ("//" in raw) or ("/*" in raw)
     all_records: List[Dict[str, Any]] = json.loads(strip_jsonc_comments(raw))
+    json_keys = {r.get("key", "") for r in all_records}
+    # A space-only value (" ") means "not filled in yet"; treat it as empty so
+    # it doesn't render as a blank link or badge on the site.
+    for r in all_records:
+        for f, v in r.items():
+            if isinstance(v, str) and v and not v.strip():
+                r[f] = [] if f == "editor" else ""
     # Skip template entries (keys starting with underscore) and any record
     # explicitly flagged `placeholder: true` (e.g. al-folio sample entries).
     records = [r for r in all_records
@@ -876,24 +1152,44 @@ def main() -> int:
     for rec in records:
         key = rec["key"]
         if key not in bib_entries:
-            bib_text, changed = process_new(rec, bib_text, args)
+            bib_text, changed = process_new(rec, bib_text, args, json_keys)
             if changed:
                 bib_dirty = True
                 json_dirty = True
                 if rec.get("pdf"):
                     new_pdfs.append(rec["pdf"])
 
+    # 4b. Keep every record's `status` current (open / consolidated). Without a
+    # DBLP key nothing can be verified, so keep that flag honest too.
+    for r in records:
+        if not dblp_key_of(r) and r.get("dblp_citation_verified"):
+            r["dblp_citation_verified"] = False
+            json_dirty = True
+    if any(r.get("status") != derive_status(r) for r in records):
+        json_dirty = True
+
+    # 4c. List the papers in papers.bib in publication.json's order.
+    ordered = order_bib_like_json(bib_text, [r["key"] for r in records])
+    if ordered != bib_text:
+        info("reordering papers.bib to match publication.json")
+        bib_text, bib_dirty = ordered, True
+
     # 5. Persist
     if json_dirty and not args.dry_run:
         if had_comments:
             info(f"NOTE: {PUB_JSON.name} contained // or /* */ comments — "
-                 f"those are stripped on rewrite (the sample template is "
-                 f"re-prepended automatically; other comments need to be re-added).")
-        write_publication_json(records)
+                 f"those are stripped on rewrite (the header and sample template "
+                 f"are re-prepended automatically; other comments need to be re-added).")
+        # Write back *all* records, including ignored ones (`_` keys,
+        # placeholders) — the file is shared with the SSD Lab site.
+        write_publication_json(all_records)
         info(f"wrote {PUB_JSON.name}")
     if bib_dirty and not args.dry_run:
         PAPERS_BIB.write_text(bib_text)
         info(f"wrote {PAPERS_BIB.relative_to(REPO_ROOT)}")
+
+    # 5a. Report open vs. consolidated papers and flag policy violations
+    report_status(records)
 
     # 5b. Ensure publications.md exposes every year present in records
     ensure_publications_years(records, args.dry_run)

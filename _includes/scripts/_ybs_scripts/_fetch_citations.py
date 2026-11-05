@@ -32,6 +32,7 @@ import html as html_lib
 import json
 import re
 import sys
+import unicodedata
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -97,22 +98,30 @@ def parse_profile(html: str) -> Dict[str, Any]:
     return profile
 
 
+def _cell_text(fragment: str) -> str:
+    """HTML fragment → plain text. NFKC turns styled Unicode (e.g. Scholar's
+    "T𝒆𝒙𝑩𝒆𝒏𝒄𝒉") into plain letters, so the site can match titles."""
+    text = html_lib.unescape(re.sub(r"<[^>]+>", "", fragment))
+    return " ".join(unicodedata.normalize("NFKC", text).split())
+
+
 def parse_publications(html: str) -> List[Dict[str, Any]]:
     pubs: List[Dict[str, Any]] = []
     for row_m in re.finditer(r'<tr class="gsc_a_tr">(.*?)</tr>', html, re.DOTALL):
         row = row_m.group(1)
         # The title <a> may have href before or after class — handle either.
-        link_m = re.search(r'<a ([^>]*class="gsc_a_at"[^>]*)>([^<]+)</a>', row)
+        # Titles and venues may contain markup (e.g. "<i>TexBench</i>: ...").
+        link_m = re.search(r'<a ([^>]*class="gsc_a_at"[^>]*)>(.*?)</a>', row, re.DOTALL)
         if not link_m:
             continue
         attrs = link_m.group(1)
-        title = html_lib.unescape(link_m.group(2)).strip()
+        title = _cell_text(link_m.group(2))
         href_m = re.search(r'href="([^"]+)"', attrs)
         url_path = html_lib.unescape(href_m.group(1)) if href_m else ""
-        # Two .gs_gray divs: authors then venue
-        gray = re.findall(r'<div class="gs_gray">([^<]*)</div>', row)
-        authors = html_lib.unescape(gray[0]).strip() if len(gray) > 0 else ""
-        venue = html_lib.unescape(gray[1]).strip() if len(gray) > 1 else ""
+        # Two .gs_gray divs: authors then venue (the venue ends in a year span)
+        gray = re.findall(r'<div class="gs_gray">(.*?)</div>', row, re.DOTALL)
+        authors = _cell_text(gray[0]) if len(gray) > 0 else ""
+        venue = _cell_text(re.sub(r'<span class="gs_oph">.*?</span>', "", gray[1])) if len(gray) > 1 else ""
         cited_m = re.search(r'<a [^>]*class="gsc_a_ac[^"]*"[^>]*>([^<]*)</a>', row)
         cited_by = 0
         if cited_m and cited_m.group(1).strip().isdigit():
