@@ -82,8 +82,9 @@
     <!-- Journal/Book title and date -->
     {% assign proceedings = "inproceedings,incollection" | split: ','%} {%
     assign thesis = "thesis,mastersthesis,phdthesis" | split: ','%} {% if
-    entry.type == "article" -%} {%- capture entrytype
-    -%}<em>{{entry.journal}}</em>{%- endcapture -%} {%- elsif proceedings
+    entry.type == "article" -%} {%- capture entrytype -%}<em
+      >{%- assign journal_head = entry.journal | slice: 0, 11 -%}{%- if journal_head == "Proceedings" -%}In {% endif -%}{{entry.journal}}</em
+    >{%- endcapture -%} {%- elsif proceedings
     contains entry.type -%} {%- capture entrytype -%}<em
       >In {{entry.booktitle}}</em
     >
