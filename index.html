@@ -478,13 +478,331 @@
 <!-- _layouts/bib.html -->
 <div class="row">
     <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#4f9a6d"><a href="https://vldb.org/" rel="external nofollow noopener" target="_blank">VLDB</a></abbr><img src="/assets/img/publication_preview/placeholder.png" class="pdf-preview z-depth-1 rounded" alt="PDF coming soon">
+</div>
+
+    <!-- Entry bib key -->
+    <div id="Boao_vldb" class="col-sm-8">
+        <!-- Title / Author / Venue — click to toggle abstract -->
+        <div class="abstract-toggle-block">
+        <!-- Title -->
+        <div class="title">
+            <h5>Mind the Buffer: Dissecting the LSM-Buffer Design Space</h5>
+        </div>
+        <!-- Author -->
+        <div class="author">
+             Boao Chen, Shubham Kaushik, and <em>Subhadeep Sarkar</em>
+</div>
+
+    <!-- Journal/Book title and date -->
+      <div class="periodical">
+<em>Proceedings of the VLDB Endowment</em>, 2027</div>
+    <div class="periodical"></div>
+        </div>
+<!-- end abstract-toggle-block -->
+
+    <!-- Links/Buttons -->
+    <div class="links">
+      <a href="https://github.com/SSD-Brandeis/LSMMemoryProfiling" class="pub-icon code-static-icon" target="_blank" rel="noopener noreferrer" title="Code"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"></path><path d="M14.333 19v-1.863c.025-.31-.018-.62-.126-.913a2.2 2.2 0 0 0-.5-.781c2.093-.227 4.293-1 4.293-4.544a3.48 3.48 0 0 0-1-2.434a3.2 3.2 0 0 0-.06-2.448s-.787-.227-2.607.961a9.15 9.15 0 0 0-4.666 0c-1.82-1.188-2.607-.96-2.607-.96A3.2 3.2 0 0 0 7 8.464a3.48 3.48 0 0 0-1 2.453c0 3.519 2.2 4.291 4.293 4.544a2.2 2.2 0 0 0-.496.773a2.1 2.1 0 0 0-.13.902V19"></path><path d="M9.667 17.702c-2 .631-3.667 0-4.667-1.948"></path></g></svg></a>
+      <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
+    </div>
+    
+    <div class="badges">
+      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="10.14778/3860016.3860040"></span>
+        <span class="__dimensions_badge_embed__" data-doi="10.14778/3860016.3860040" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px">
+      </span>
+        </div> <!-- Hidden abstract block -->
+        <div class="abstract hidden">
+            <p>Log-structured merge (LSM)-trees are widely used as the storage layer data structure in modern NoSQL key-value stores due to their superior ingestion throughput, competitive query performance, and efficient space utilization. To enable fast ingestion, LSM-based storage engines first batch the incoming data in an in-memory buffer and then, opportunistically write the data to slower secondary storage as a collection of immutable sorted runs. We point out that while the data is largely storage-resident, the overall performance of an LSM-based storage engine is critically bottlenecked by the (i) implementation, (ii) tuning, and (iii) size of the in-memory buffer. In fact, even with the same buffer configuration, the performance of an LSM-engine may vary by several orders of magnitude if there is a shift in workload. Choosing the appropriate buffer design, thus, is crucial for performance, but, at the same time, hard, as the LSM-buffer design space is vast and largely unexplored.
+  
+  <br> In this paper, we evaluate and analyze the performance of LSM-engines with eleven different buffer implementations – including three hash-hybrid designs – while varying the tuning and size for each implementation to understand their implications on performance and the associated trade-offs. For each configuration, we further vary the workload composition and distribution, the LSM-tuning, and the underlying hardware to quantify their impact on performance. Additionally, we build an Adapt buffer that switches implementation on-the-fly based on the workload shift. To the best of our knowledge, this is the first comprehensive analysis of LSM-buffer design space. Finally, for practitioners, we present a handbook with 10 key guidelines for choosing the appropriate buffer design and tuning for a given workload and performance target.</p>
+        </div>
+<!-- Hidden bibtex block -->
+        <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Boao_vldb</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Chen, Boao and Kaushik, Shubham and Sarkar, Subhadeep}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Mind the Buffer: Dissecting the {LSM}-Buffer Design Space}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Proceedings of the {VLDB} Endowment}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{20}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{3}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{784--797}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2027}</span><span class="p">,</span>
+  <span class="na">issn</span> <span class="p">=</span> <span class="s">{2150-8097}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.14778/3860016.3860040}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.14778/3860016.3860040}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+<div class="row">
+    <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#4f9a6d"><a href="https://vldb.org/" rel="external nofollow noopener" target="_blank">VLDB</a></abbr><a href="/assets/fulltext/Eliminating_the_Hidden_Cost_of_Zone_Management_in_ZNS_SSDs.pdf" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/img/publication_preview/Eliminating_the_Hidden_Cost_of_Zone_Management_in_ZNS_SSDs.png" class="pdf-preview z-depth-1 rounded" alt="Preview">
+              </a>
+</div>
+
+    <!-- Entry bib key -->
+    <div id="Teona_vldb" class="col-sm-8">
+        <!-- Title / Author / Venue — click to toggle abstract -->
+        <div class="abstract-toggle-block">
+        <!-- Title -->
+        <div class="title">
+            <h5>Eliminating the Hidden Cost of Zone Management in ZNS SSDs</h5>
+        </div>
+        <!-- Author -->
+        <div class="author">
+             Teona Bagashvili, Tarikul Islam Papon, <em>Subhadeep Sarkar</em>, and Manos Athanassoulis</div>
+
+    <!-- Journal/Book title and date -->
+      <div class="periodical">
+<em>Proceedings of the VLDB Endowment</em>, 2027</div>
+    <div class="periodical"></div>
+        </div>
+<!-- end abstract-toggle-block -->
+
+    <!-- Links/Buttons -->
+    <div class="links"> <a href="/assets/fulltext/Eliminating_the_Hidden_Cost_of_Zone_Management_in_ZNS_SSDs.pdf" class="pub-icon pdf-icon" target="_blank" rel="noopener noreferrer" title="Local PDF"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M5 12V5a2 2 0 0 1 2-2h7l5 5v4M5 18h1.5a1.5 1.5 0 0 0 0-3H5v6m12-3h2m1-3h-3v6m-6-6v6h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z"></path></g></svg></a>
+      <a href="https://github.com/BU-DiSC/SilentZNS-bench" class="pub-icon code-static-icon" target="_blank" rel="noopener noreferrer" title="Code"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"></path><path d="M14.333 19v-1.863c.025-.31-.018-.62-.126-.913a2.2 2.2 0 0 0-.5-.781c2.093-.227 4.293-1 4.293-4.544a3.48 3.48 0 0 0-1-2.434a3.2 3.2 0 0 0-.06-2.448s-.787-.227-2.607.961a9.15 9.15 0 0 0-4.666 0c-1.82-1.188-2.607-.96-2.607-.96A3.2 3.2 0 0 0 7 8.464a3.48 3.48 0 0 0-1 2.453c0 3.519 2.2 4.291 4.293 4.544a2.2 2.2 0 0 0-.496.773a2.1 2.1 0 0 0-.13.902V19"></path><path d="M9.667 17.702c-2 .631-3.667 0-4.667-1.948"></path></g></svg></a>
+      <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
+        <a href="https://scholar.google.com/scholar?q=eliminating+the+hidden+cost+of+zone+management+in+zns+ssds" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">1</span>
+        </a>
+    </div>
+    
+    <div class="badges">
+      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="10.14778/3849423.3849439"></span>
+        <span class="__dimensions_badge_embed__" data-doi="10.14778/3849423.3849439" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px">
+      </span>
+        </div> <!-- Hidden abstract block -->
+        <div class="abstract hidden">
+            <p>Zoned Namespace (ZNS) SSDs offer a new storage model that allows for high-throughput and low-latency storage by eliminating device-side garbage collection. The ZNS interface exposes storage as append-only zones, thus requiring host applications (e.g., database systems) to append, read, and garbage collect their pages. However, the ZNS storage abstraction hides the substantial differences across ZNS SSD controller designs. These differences affect both the performance and predictability of host applications. We find that existing ZNS designs exhibit (a) increased device-level write amplification (DLWA), (b) increased wear, and (c) increased interference with host I/O. We identify that (i) zone allocation granularity, (ii) zone geometry, (iii) write order, and (iv) zone mapping and management are the four main causes behind this.
+  
+  <br> To provide a predictable storage device, we propose SilentZNS, a new holistic zone management approach that expands the design space of zones and allocates blocks to zones on the fly, while minimizing wear, maintaining parallelism, and avoiding superfluous writes to the device. SilentZNS is a flexible zone allocation scheme that departs from traditional logical-to-physical zone mapping and allows arbitrary collections of blocks to be assigned to a zone. SilentZNS uses wear-aware allocation and maintains competitive read latency, while substantially reducing DLWA. We implement SilentZNS using the state-of-the-art ConfZNS++ emulator and evaluate it on synthetic microbenchmarks and a key-value storage engine. We show that SilentZNS reduces DLWA by 92% at a 10% zone occupancy threshold, reduces wear by 12%, and achieves up to 3.7× faster workload execution.</p>
+        </div>
+<!-- Hidden bibtex block -->
+        <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Teona_vldb</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Bagashvili, Teona and Papon, Tarikul Islam and Sarkar, Subhadeep and Athanassoulis, Manos}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Eliminating the Hidden Cost of Zone Management in ZNS SSDs}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Proceedings of the {VLDB} Endowment}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{20}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{2}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{270--283}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2027}</span><span class="p">,</span>
+  <span class="na">issn</span> <span class="p">=</span> <span class="s">{2150-8097}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.14778/3849423.3849439}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.14778/3849423.3849439}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+<div class="row">
+    <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#4f9a6d"><a href="https://vldb.org/" rel="external nofollow noopener" target="_blank">VLDB</a></abbr><a href="/assets/fulltext/TexBench_A_Unified_Benchmarking_Suite_for_Shifting_Workloads.pdf" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/img/publication_preview/TexBench_A_Unified_Benchmarking_Suite_for_Shifting_Workloads.png" class="pdf-preview z-depth-1 rounded" alt="Preview">
+              </a>
+</div>
+
+    <!-- Entry bib key -->
+    <div id="DBLP:journals/pvldb/ChandaKLS26" class="col-sm-8">
+        <!-- Title / Author / Venue — click to toggle abstract -->
+        <div class="abstract-toggle-block">
+        <!-- Title -->
+        <div class="title">
+            <h5>TexBench: A Unified Benchmarking Suite for Shifting Workloads</h5>
+        </div>
+        <!-- Author -->
+        <div class="author">
+             Abhishek Chanda, Shubham Kaushik, Artem Lavrov, and <em>Subhadeep Sarkar</em>
+</div>
+
+    <!-- Journal/Book title and date -->
+      <div class="periodical">
+<em>In Proceedings of the VLDB Endowment</em>, 2026</div>
+    <div class="periodical"></div>
+        </div>
+<!-- end abstract-toggle-block -->
+
+    <!-- Links/Buttons -->
+    <div class="links"> <a href="/assets/fulltext/TexBench_A_Unified_Benchmarking_Suite_for_Shifting_Workloads.pdf" class="pub-icon pdf-icon" target="_blank" rel="noopener noreferrer" title="Local PDF"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M5 12V5a2 2 0 0 1 2-2h7l5 5v4M5 18h1.5a1.5 1.5 0 0 0 0-3H5v6m12-3h2m1-3h-3v6m-6-6v6h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z"></path></g></svg></a>
+      <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
+        <a href="https://scholar.google.com/scholar?q=texbench%3A+a+unified+benchmarking+suite+for+shifting+workloads" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">1</span>
+        </a>
+    </div>
+    
+    <div class="badges">
+      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="10.14778/3827998.3828108"></span>
+        <span class="__dimensions_badge_embed__" data-doi="10.14778/3827998.3828108" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px">
+      </span>
+        </div> <!-- Hidden abstract block -->
+        <div class="abstract hidden">
+            <p>Key-value stores are widely adopted as the storage engine for modern applications, as they offer high throughput for writes, support for heterogeneous workloads, and are easily tunable. Given the large number of key-value stores available and their performance variability with workload shifts, finding the suitable data store and tuning for a specific use case often entails extensive benchmarking and analysis. State-of-the-art key-value benchmarks, such as YCSB, db_bench, and KVBench, however, are unable to capture several key characteristics of modern application workloads, including dynamically shifting workload characteristics, data with varied degrees of sortedness, or application-specific data formats. Further, existing benchmarks do not provide a unified interface to benchmark and compare multiple databases against the same workload.
+               
+  <br>We present TexBench, a unified key-value benchmarking suite that enables benchmarking key-value stores against dynamically shifting and production-like workloads and comparing their performance side by side. TexBench is built on top of Tectonic, a highly configurable, Rust-based key-value workload generator that can generate multi-phased shifting workloads and supports a rich set of operations, operation-specific distributions, variable data sortedness, and custom data formats. TexBench’s unified framework also allows users to benchmark multiple databases and perform an apples-to-apples comparison under the same workload readily within a single interface. Lastly, we augment TexBench with an LLM core that allows users to describe a workload in natural language, have that translated into a custom key-value workload, and benchmark and compare multiple databases against it in parallel.</p>
+        </div>
+<!-- Hidden bibtex block -->
+        <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:journals/pvldb/ChandaKLS26</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Chanda, Abhishek and Kaushik, Shubham and Lavrov, Artem and Sarkar, Subhadeep}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{TexBench: {A} Unified Benchmarking Suite for Shifting Workloads}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the {VLDB} Endowment}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{19}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{12}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{4730--4733}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.14778/3827998.3828108}</span><span class="p">,</span>
+  <span class="na">biburl</span> <span class="p">=</span> <span class="s">{https://dblp.org/rec/journals/pvldb/ChandaKLS26.bib}</span><span class="p">,</span>
+  <span class="na">bibsource</span> <span class="p">=</span> <span class="s">{dblp computer science bibliography, https://dblp.org}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+<div class="row">
+    <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#4f9a6d">TPCTC</abbr><a href="/assets/fulltext/TexBench_Harnessing_LLMs_for_Efficient_Key-Value_Benchmarking.pdf" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/img/publication_preview/TexBench_Harnessing_LLMs_for_Efficient_Key-Value_Benchmarking.png" class="pdf-preview z-depth-1 rounded" alt="Preview">
+              </a>
+</div>
+
+    <!-- Entry bib key -->
+    <div id="shubham_tpctc" class="col-sm-8">
+        <!-- Title / Author / Venue — click to toggle abstract -->
+        <div class="abstract-toggle-block">
+        <!-- Title -->
+        <div class="title">
+            <h5>TexBench: Harnessing LLMs for Efficient Key-Value Benchmarking</h5>
+        </div>
+        <!-- Author -->
+        <div class="author">
+             Shubham Kaushik, Abhishek Chanda, and <em>Subhadeep Sarkar</em>
+</div>
+
+    <!-- Journal/Book title and date -->
+      <div class="periodical">
+<em>In Performance Evaluation and Benchmarking TPC Technology Conference (TPCTC)</em>, 2026</div>
+    <div class="periodical"></div>
+        </div>
+<!-- end abstract-toggle-block -->
+
+    <!-- Links/Buttons -->
+    <div class="links"> <a href="/assets/fulltext/TexBench_Harnessing_LLMs_for_Efficient_Key-Value_Benchmarking.pdf" class="pub-icon pdf-icon" target="_blank" rel="noopener noreferrer" title="Local PDF"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M5 12V5a2 2 0 0 1 2-2h7l5 5v4M5 18h1.5a1.5 1.5 0 0 0 0-3H5v6m12-3h2m1-3h-3v6m-6-6v6h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z"></path></g></svg></a><a href="/assets/resources/TexBench_TPCTC.pdf" class="pub-icon" target="_blank" rel="noopener noreferrer" title="Slides"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3 4h18M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4m-8 12v4m-3 0h6"></path><path d="m8 12l3-3l2 2l3-3"></path></g></svg></a>
+      <a href="https://github.com/SSD-Brandeis/TexBench" class="pub-icon code-static-icon" target="_blank" rel="noopener noreferrer" title="Code"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"></path><path d="M14.333 19v-1.863c.025-.31-.018-.62-.126-.913a2.2 2.2 0 0 0-.5-.781c2.093-.227 4.293-1 4.293-4.544a3.48 3.48 0 0 0-1-2.434a3.2 3.2 0 0 0-.06-2.448s-.787-.227-2.607.961a9.15 9.15 0 0 0-4.666 0c-1.82-1.188-2.607-.96-2.607-.96A3.2 3.2 0 0 0 7 8.464a3.48 3.48 0 0 0-1 2.453c0 3.519 2.2 4.291 4.293 4.544a2.2 2.2 0 0 0-.496.773a2.1 2.1 0 0 0-.13.902V19"></path><path d="M9.667 17.702c-2 .631-3.667 0-4.667-1.948"></path></g></svg></a>
+      <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
+        <a href="https://scholar.google.com/scholar?q=texbench%3A+harnessing+llms+for+efficient+key-value+benchmarking" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">2</span>
+        </a>
+    </div>
+    
+    <div class="badges">
+      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
+        <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px">
+      </span>
+        </div> <!-- Hidden abstract block -->
+        <div class="abstract hidden">
+            <p>Key-value stores are widely adopted to serve modern heterogeneous workloads, yet selecting the best key-value store for a given workload and target performance remains an incredibly complex and time-consuming task, even for expert DBAs. In practice, this entails extensive, large-scale benchmarking and analysis involving dozens of candidate key-value stores. Comparing databases using existing key-value benchmarks, such as YCSB, KVBench, db_bench, and Tectonic, has several challenges. (A) It requires a substantial effort in setting up the benchmarking environment and connecting the databases, along with a thorough understanding of benchmark-specific configurations and tuning parameters. Further, existing benchmarks either (B) are completely unable to capture the dynamic and complex nature of real-world workloads, or (C) rely on fixed, templated benchmark workloads, with limited customization options. Thus, benchmarking key-value stores against application-specific, production-like workloads is difficult and does not scale, leading to suboptimal performance. 
+  
+  <br> We introduce TexBench, a unified key-value benchmarking suite that abstracts the complexities of workload configuration, benchmark setup, and database connections behind a unified interface, enabling users to evaluate multiple key-value stores against production-like workloads, and visually compare their performance side-by-side. To emulate the dynamic and complex properties of real-world workloads, TexBench uses Tectonic – a Rust-based, highly configurable key-value benchmark – under the hood. To facilitate benchmarking against custom workloads, TexBench integrates a large language model (LLM) plugin that captures benchmarking specifications expressed in natural language and translates them into a JSON format interpretable by Tectonic. TexBench currently supports four key-value stores - ScyllaDB, RocksDB, Cassandra, and Redis, and performs up to 16.7× faster in terms of workload generation compared to raw LLM prompting. The source code of TexBench is available at https://github.com/SSD-Brandeis/TexBench.</p>
+        </div>
+<!-- Hidden bibtex block -->
+        <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">shubham_tpctc</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Kaushik, Shubham and Chanda, Abhishek and Sarkar, Subhadeep}</span><span class="p">,</span>
+  <span class="na">editor</span> <span class="p">=</span> <span class="s">{Nambiar, Raghunath and Poess, Meikel}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{TexBench: Harnessing LLMs for Efficient Key-Value Benchmarking}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Performance Evaluation and Benchmarking {TPC} Technology Conference ({TPCTC})}</span><span class="p">,</span>
+  <span class="na">series</span> <span class="p">=</span> <span class="s">{Lecture Notes in Computer Science}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Springer}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+<div class="row">
+    <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#4f9a6d">DaMoN</abbr><a href="/assets/fulltext/ZARC_Re-inventing_Zone_Allocation_for_LSMs_on_ZNS_SSD.pdf" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/img/publication_preview/ZARC_Re-inventing_Zone_Allocation_for_LSMs_on_ZNS_SSD.png" class="pdf-preview z-depth-1 rounded" alt="Preview">
+              </a>
+</div>
+
+    <!-- Entry bib key -->
+    <div id="DBLP:conf/damon/ChowdhuryESP26" class="col-sm-8">
+        <!-- Title / Author / Venue — click to toggle abstract -->
+        <div class="abstract-toggle-block">
+        <!-- Title -->
+        <div class="title">
+            <h5>ZARC: Re-inventing Zone Allocation for LSMs on ZNS SSD</h5>
+        </div>
+        <!-- Author -->
+        <div class="author">
+             Farhan S. Chowdhury, Shadman Saqib Eusuf, <em>Subhadeep Sarkar</em>, and Tarikul Islam Papon</div>
+
+    <!-- Journal/Book title and date -->
+      <div class="periodical">
+<em>In Proceedings of the International Workshop on Data Management on New Hardware (DaMoN)</em>, 2026</div>
+    <div class="periodical"></div>
+        </div>
+<!-- end abstract-toggle-block -->
+
+    <!-- Links/Buttons -->
+    <div class="links"> <a href="/assets/fulltext/ZARC_Re-inventing_Zone_Allocation_for_LSMs_on_ZNS_SSD.pdf" class="pub-icon pdf-icon" target="_blank" rel="noopener noreferrer" title="Local PDF"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M5 12V5a2 2 0 0 1 2-2h7l5 5v4M5 18h1.5a1.5 1.5 0 0 0 0-3H5v6m12-3h2m1-3h-3v6m-6-6v6h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z"></path></g></svg></a>
+      <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
+        <a href="https://scholar.google.com/scholar?q=zarc%3A+re-inventing+zone+allocation+for+lsms+on+zns+ssd" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">1</span>
+        </a>
+    </div>
+    
+    <div class="badges">
+      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="10.1145/3789237.3809132"></span>
+        <span class="__dimensions_badge_embed__" data-doi="10.1145/3789237.3809132" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px">
+      </span>
+        </div> <!-- Hidden abstract block -->
+        <div class="abstract hidden">
+            <p>Log-Structured Merge (LSM)-based storage engines offer high write throughput by storing the data on storage as immutable files that are opportunistically reorganized through compactions. Immutability of the files and their frequent garbage collection (GC), however, leads to a major performance bottleneck: high write amplification. This is further exacerbated by the device-level GC when LSM engines run on top of ZNS SSDs. While prior research has shown that compaction-aware file placement at the device level can reduce the overall write amplification, we point out that the proposed solutions are tuned exclusively for specific compaction strategies, SSD configurations, and workloads. 
+  
+  <br> In this early-stage work, we highlight that for LSM engines on ZNS SSDs, performance is governed by a critical four-way trade-off between the compaction file picking policy (LSM-side) and the file placement, GC, and new zone allocation policies (ZNS-side). To this end, we introduce ZARC, a novel framework for Zone Allocation &amp; Reclamation after Compaction that offers a continuum of hy- brid file placement policies to bring the overall write amplification closer to its theoretical lower bound and allows the user to navi- gate this vast design space for a given workload and configuration. ZARC’s hybrid file placement policies optimize performance for each LSM-level independently, leading to level-specific file placement, garbage collection, and zone allocation policies. Preliminary results from experimentation on ZenFS, a RocksDB file system for ZNS SSDs, show that ZARC’s hybrid file placement policies reduce data movement by up to 86% and ZARC-GC improves ZenFS garbage col- lection performance by (i) reclaiming sufficient free space and (ii) maintaining a small reserve of empty zones to prevent GC-induced stalls, and (iii) reducing GC-induced data movement by 8.6%.</p>
+        </div>
+<!-- Hidden bibtex block -->
+        <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:conf/damon/ChowdhuryESP26</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Chowdhury, Farhan S. and Eusuf, Shadman Saqib and Sarkar, Subhadeep and Papon, Tarikul Islam}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{{ZARC}: Re-inventing Zone Allocation for LSMs on {ZNS} {SSD}}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the International Workshop on Data Management on New Hardware ({DaMoN})}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{13:1--13:5}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{{ACM}}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1145/3789237.3809132}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1145/3789237.3809132}</span><span class="p">,</span>
+  <span class="na">biburl</span> <span class="p">=</span> <span class="s">{https://dblp.org/rec/conf/damon/ChowdhuryESP26.bib}</span><span class="p">,</span>
+  <span class="na">bibsource</span> <span class="p">=</span> <span class="s">{dblp computer science bibliography, https://dblp.org}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+<div class="row">
+    <div class="col-sm-2 abbr">
 <abbr class="badge" style="background-color:#4f9a6d">ICDE</abbr><a href="/assets/fulltext/RangeReduce_Query-Driven_LSM_Compactions.pdf" target="_blank" rel="noopener noreferrer">
                 <img src="/assets/img/publication_preview/RangeReduce_Query-Driven_LSM_Compactions.png" class="pdf-preview z-depth-1 rounded" alt="Preview">
               </a>
 </div>
 
     <!-- Entry bib key -->
-    <div id="Shubham_icde" class="col-sm-8">
+    <div id="DBLP:conf/icde/KaushikAS26" class="col-sm-8">
         <!-- Title / Author / Venue — click to toggle abstract -->
         <div class="abstract-toggle-block">
         <!-- Title -->
@@ -508,11 +826,14 @@
       <a href="https://www.youtube.com/watch?v=xgJ2g_CLjSQ" class="pub-icon" target="_blank" rel="noopener noreferrer" title="Video Presentation"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m15 10l4.553-2.276A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14zM3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></a>
       <a href="https://github.com/SSD-Brandeis/RangeReduce" class="pub-icon code-static-icon" target="_blank" rel="noopener noreferrer" title="Code"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"></path><path d="M14.333 19v-1.863c.025-.31-.018-.62-.126-.913a2.2 2.2 0 0 0-.5-.781c2.093-.227 4.293-1 4.293-4.544a3.48 3.48 0 0 0-1-2.434a3.2 3.2 0 0 0-.06-2.448s-.787-.227-2.607.961a9.15 9.15 0 0 0-4.666 0c-1.82-1.188-2.607-.96-2.607-.96A3.2 3.2 0 0 0 7 8.464a3.48 3.48 0 0 0-1 2.453c0 3.519 2.2 4.291 4.293 4.544a2.2 2.2 0 0 0-.496.773a2.1 2.1 0 0 0-.13.902V19"></path><path d="M9.667 17.702c-2 .631-3.667 0-4.667-1.948"></path></g></svg></a>
       <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
+        <a href="https://scholar.google.com/scholar?q=rangereduce%3A+query-driven+lsm+compactions" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">2</span>
+        </a>
     </div>
     
     <div class="badges">
-      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
-        <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px">
+      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="10.1109/ICDE65706.2026.00194"></span>
+        <span class="__dimensions_badge_embed__" data-doi="10.1109/ICDE65706.2026.00194" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px">
       </span>
         </div> <!-- Hidden abstract block -->
         <div class="abstract hidden">
@@ -522,12 +843,17 @@
         </div>
 <!-- Hidden bibtex block -->
         <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Shubham_icde</span><span class="p">,</span>
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:conf/icde/KaushikAS26</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Kaushik, Shubham and Athanassoulis, Manos and Sarkar, Subhadeep}</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{RangeReduce: Query-Driven LSM Compactions}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{{RangeReduce}: Query-Driven {LSM} Compactions}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the IEEE International Conference on Data Engineering ({ICDE})}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{2601--2614}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
   <span class="na">publisher</span> <span class="p">=</span> <span class="s">{{IEEE}}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1109/ICDE65706.2026.00194}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1109/ICDE65706.2026.00194}</span><span class="p">,</span>
+  <span class="na">biburl</span> <span class="p">=</span> <span class="s">{https://dblp.org/rec/conf/icde/KaushikAS26.bib}</span><span class="p">,</span>
+  <span class="na">bibsource</span> <span class="p">=</span> <span class="s">{dblp computer science bibliography, https://dblp.org}</span><span class="p">,</span>
   <span class="na">video</span> <span class="p">=</span> <span class="s">{https://www.youtube.com/watch?v=xgJ2g_CLjSQ}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure>
         </div>
@@ -538,52 +864,64 @@
 <!-- _layouts/bib.html -->
 <div class="row">
     <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#4f9a6d">DaMoN</abbr><a href="/assets/fulltext/ZARC_Re-inventing_Zone_Allocation_for_LSMs_on_ZNS_SSD.pdf" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/img/publication_preview/ZARC_Re-inventing_Zone_Allocation_for_LSMs_on_ZNS_SSD.png" class="pdf-preview z-depth-1 rounded" alt="Preview">
+<abbr class="badge" style="background-color:#4f9a6d">EDBT</abbr><a href="/assets/fulltext/QuIT_your_B+_tree_for_the_Quick_Insertion_Tree.pdf" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/img/publication_preview/QuIT_your_B+_tree_for_the_Quick_Insertion_Tree.png" class="pdf-preview z-depth-1 rounded" alt="Preview">
               </a>
 </div>
 
     <!-- Entry bib key -->
-    <div id="Farhan_damon" class="col-sm-8">
+    <div id="DBLP:conf/edbt/RamanKXOSA25" class="col-sm-8">
         <!-- Title / Author / Venue — click to toggle abstract -->
         <div class="abstract-toggle-block">
         <!-- Title -->
         <div class="title">
-            <h5>ZARC: Re-inventing Zone Allocation for LSMs on ZNS SSD</h5>
+            <h5>QuIT your B<sup>+</sup>-tree for the Quick Insertion Tree</h5>
         </div>
         <!-- Author -->
         <div class="author">
-             Farhan S. Chowdhury, Shadman Saqib Eusuf, <em>Subhadeep Sarkar</em>, and Tarikul Islam Papon</div>
+             Aneesh Raman, Konstantinos Karatsenidis, Shaolin Xie, Matthaios Olma, <em>Subhadeep Sarkar</em>, and Manos Athanassoulis</div>
 
     <!-- Journal/Book title and date -->
       <div class="periodical">
-<em>In International Workshop on Data Management on New Hardware (DaMoN)</em>, 2026</div>
+<em>In Proceedings of the International Conference on Extending Database Technology (EDBT)</em>, 2025</div>
     <div class="periodical"></div>
         </div>
 <!-- end abstract-toggle-block -->
 
     <!-- Links/Buttons -->
-    <div class="links"> <a href="/assets/fulltext/ZARC_Re-inventing_Zone_Allocation_for_LSMs_on_ZNS_SSD.pdf" class="pub-icon pdf-icon" target="_blank" rel="noopener noreferrer" title="Local PDF"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M5 12V5a2 2 0 0 1 2-2h7l5 5v4M5 18h1.5a1.5 1.5 0 0 0 0-3H5v6m12-3h2m1-3h-3v6m-6-6v6h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z"></path></g></svg></a>
+    <div class="links"> <a href="/assets/fulltext/QuIT_your_B+_tree_for_the_Quick_Insertion_Tree.pdf" class="pub-icon pdf-icon" target="_blank" rel="noopener noreferrer" title="Local PDF"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M5 12V5a2 2 0 0 1 2-2h7l5 5v4M5 18h1.5a1.5 1.5 0 0 0 0-3H5v6m12-3h2m1-3h-3v6m-6-6v6h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z"></path></g></svg></a><a href="/assets/resources/QuiT_EDBT.pdf" class="pub-icon" target="_blank" rel="noopener noreferrer" title="Slides"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3 4h18M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4m-8 12v4m-3 0h6"></path><path d="m8 12l3-3l2 2l3-3"></path></g></svg></a>
+      <a href="https://github.com/BU-DiSC/quick-insertion-tree" class="pub-icon code-static-icon" target="_blank" rel="noopener noreferrer" title="Code"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"></path><path d="M14.333 19v-1.863c.025-.31-.018-.62-.126-.913a2.2 2.2 0 0 0-.5-.781c2.093-.227 4.293-1 4.293-4.544a3.48 3.48 0 0 0-1-2.434a3.2 3.2 0 0 0-.06-2.448s-.787-.227-2.607.961a9.15 9.15 0 0 0-4.666 0c-1.82-1.188-2.607-.96-2.607-.96A3.2 3.2 0 0 0 7 8.464a3.48 3.48 0 0 0-1 2.453c0 3.519 2.2 4.291 4.293 4.544a2.2 2.2 0 0 0-.496.773a2.1 2.1 0 0 0-.13.902V19"></path><path d="M9.667 17.702c-2 .631-3.667 0-4.667-1.948"></path></g></svg></a>
       <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
+        <a href="https://scholar.google.com/scholar?q=quit+your+b%2B-tree+for+the+quick+insertion+tree" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">6</span>
+        </a>
     </div>
     
     <div class="badges">
-      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
-        <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px">
+      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="10.48786/EDBT.2025.36"></span>
+        <span class="__dimensions_badge_embed__" data-doi="10.48786/EDBT.2025.36" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px">
       </span>
         </div> <!-- Hidden abstract block -->
         <div class="abstract hidden">
-            <p>Log-Structured Merge (LSM)-based storage engines offer high write throughput by storing the data on storage as immutable files that are opportunistically reorganized through compactions. Immutability of the files and their frequent garbage collection (GC), however, leads to a major performance bottleneck: high write amplification. This is further exacerbated by the device-level GC when LSM engines run on top of ZNS SSDs. While prior research has shown that compaction-aware file placement at the device level can reduce the overall write amplification, we point out that the proposed solutions are tuned exclusively for specific compaction strategies, SSD configurations, and workloads. 
+            <p>Search trees, like B<sup>+</sup>-trees, are often used as index structures in data systems to improve query performance at the cost of index construction and maintenance. For state-of-the-art B<sup>+</sup>-tree designs used in commercial data systems, this cost is negligible if the data arrives as fully sorted on the index attribute. Further, production systems employ a fast-path ingestion technique for B<sup>+</sup>-trees that directly appends the incoming entries to the tail leaf if the data is fully sorted, drastically reducing the index construction cost. However, this is only effective if the incoming data arrives fully sorted or with an extremely small number of out-of-order entries. In addition, the state-of-the-art sortedness-aware design (SWARE) navigates a tradeoff between reads and writes by buffering incoming data to absorb near-sortedness, which comes at the cost of slower query performance and increased overall design complexity.
   
-  <br> In this early-stage work, we highlight that for LSM engines on ZNS SSDs, performance is governed by a critical four-way trade-off between the compaction file picking policy (LSM-side) and the file placement, GC, and new zone allocation policies (ZNS-side). To this end, we introduce ZARC, a novel framework for Zone Allocation &amp; Reclamation after Compaction that offers a continuum of hy- brid file placement policies to bring the overall write amplification closer to its theoretical lower bound and allows the user to navi- gate this vast design space for a given workload and configuration. ZARC’s hybrid file placement policies optimize performance for each LSM-level independently, leading to level-specific file placement, garbage collection, and zone allocation policies. Preliminary results from experimentation on ZenFS, a RocksDB file system for ZNS SSDs, show that ZARC’s hybrid file placement policies reduce data movement by up to 86% and ZARC-GC improves ZenFS garbage col- lection performance by (i) reclaiming sufficient free space and (ii) maintaining a small reserve of empty zones to prevent GC-induced stalls, and (iii) reducing GC-induced data movement by 8.6%.</p>
+  <br> To address these challenges, we present Quick Insertion Tree (QuIT), a sortedness-aware indexing data structure that improves ingestion performance with minimal design complexity and no read overhead. QuIT maintains in memory a pointer to the predicted ordered-leaf (pole) that provides a sortedness-aware fast-path optimization, and facilitates faster index ingestion. The key benefit comes from accurately predicting pole throughout data ingestion. Further, QuIT achieves high memory utilization by maintaining tightly packed leaf nodes when the ingested data arrives as near-sorted. This, in turn, helps improve performance during range lookups. Overall, we demonstrate that QuIT outperforms B<sup>+</sup>-tree (SWARE) by up to 3× (2×) for ingestion, while maintaining the same point lookup performance (up to 1.23× faster). QuIT also accesses up to 2× fewer leaf nodes than the B<sup>+</sup>-tree during range lookups.</p>
         </div>
 <!-- Hidden bibtex block -->
         <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Farhan_damon</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Chowdhury, Farhan S. and Eusuf, Shadman Saqib and Sarkar, Subhadeep and Papon, Tarikul Islam}</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{{ZARC}: Re-inventing Zone Allocation for LSMs on ZNS SSD}</span><span class="p">,</span>
-  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{International Workshop on Data Management on New Hardware ({DaMoN})}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:conf/edbt/RamanKXOSA25</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Raman, Aneesh and Karatsenidis, Konstantinos and Xie, Shaolin and Olma, Matthaios and Sarkar, Subhadeep and Athanassoulis, Manos}</span><span class="p">,</span>
+  <span class="na">editor</span> <span class="p">=</span> <span class="s">{Simitsis, Alkis and Kemme, Bettina and Queralt, Anna and Romero, Oscar and Jovanovic, Petar}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{QuIT your B&lt;sup&gt;+&lt;/sup&gt;-tree for the Quick Insertion Tree}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the International Conference on Extending Database Technology ({EDBT})}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{451--463}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{OpenProceedings.org}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48786/EDBT.2025.36}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.48786/edbt.2025.36}</span><span class="p">,</span>
+  <span class="na">timestamp</span> <span class="p">=</span> <span class="s">{Sat, 06 Sep 2025 20:31:17 +0200}</span><span class="p">,</span>
+  <span class="na">biburl</span> <span class="p">=</span> <span class="s">{https://dblp.org/rec/conf/edbt/RamanKXOSA25.bib}</span><span class="p">,</span>
+  <span class="na">bibsource</span> <span class="p">=</span> <span class="s">{dblp computer science bibliography, https://dblp.org}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure>
         </div>
     </div>
@@ -623,13 +961,13 @@
       <a href="https://github.com/SSD-Brandeis/tectonic" class="pub-icon code-static-icon" target="_blank" rel="noopener noreferrer" title="Code"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"></path><path d="M14.333 19v-1.863c.025-.31-.018-.62-.126-.913a2.2 2.2 0 0 0-.5-.781c2.093-.227 4.293-1 4.293-4.544a3.48 3.48 0 0 0-1-2.434a3.2 3.2 0 0 0-.06-2.448s-.787-.227-2.607.961a9.15 9.15 0 0 0-4.666 0c-1.82-1.188-2.607-.96-2.607-.96A3.2 3.2 0 0 0 7 8.464a3.48 3.48 0 0 0-1 2.453c0 3.519 2.2 4.291 4.293 4.544a2.2 2.2 0 0 0-.496.773a2.1 2.1 0 0 0-.13.902V19"></path><path d="M9.667 17.702c-2 .631-3.667 0-4.667-1.948"></path></g></svg></a>
       <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
         <a href="https://scholar.google.com/scholar?q=tectonic%3A+bridging+synthetic+and+real-world+workloads+for+key-value+benchmarking" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
-          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">1</span>
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">6</span>
         </a>
     </div>
     
     <div class="badges">
-      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="doi.org/10.1007/978-3-032-18070-4_5"></span>
-        <span class="__dimensions_badge_embed__" data-doi="doi.org/10.1007/978-3-032-18070-4_5" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px">
+      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="10.1007/978-3-032-18070-4_5"></span>
+        <span class="__dimensions_badge_embed__" data-doi="10.1007/978-3-032-18070-4_5" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px">
       </span>
         </div> <!-- Hidden abstract block -->
         <div class="abstract hidden">
@@ -650,75 +988,8 @@
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
   <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Springer}</span><span class="p">,</span>
   <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-3-032-18070-4}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{doi.org/10.1007/978-3-032-18070-4_5}</span><span class="p">,</span>
-  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1007/978-3-032-18070-4_5}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-        </div>
-    </div>
-</div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-<div class="row">
-    <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#4f9a6d">EDBT</abbr><a href="/assets/fulltext/QuIT_your_B+_tree_for_the_Quick_Insertion_Tree.pdf" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/img/publication_preview/QuIT_your_B+_tree_for_the_Quick_Insertion_Tree.png" class="pdf-preview z-depth-1 rounded" alt="Preview">
-              </a>
-</div>
-
-    <!-- Entry bib key -->
-    <div id="DBLP:conf/edbt/RamanKXOSA25" class="col-sm-8">
-        <!-- Title / Author / Venue — click to toggle abstract -->
-        <div class="abstract-toggle-block">
-        <!-- Title -->
-        <div class="title">
-            <h5>QuIT your B<sup>+</sup>-tree for the Quick Insertion Tree</h5>
-        </div>
-        <!-- Author -->
-        <div class="author">
-             Aneesh Raman, Konstantinos Karatsenidis, Shaolin Xie, Matthaios Olma, <em>Subhadeep Sarkar</em>, and Manos Athanassoulis</div>
-
-    <!-- Journal/Book title and date -->
-      <div class="periodical">
-<em>In Proceedings of the International Conference on Extending Database Technology (EDBT)</em>, 2025</div>
-    <div class="periodical"></div>
-        </div>
-<!-- end abstract-toggle-block -->
-
-    <!-- Links/Buttons -->
-    <div class="links"> <a href="/assets/fulltext/QuIT_your_B+_tree_for_the_Quick_Insertion_Tree.pdf" class="pub-icon pdf-icon" target="_blank" rel="noopener noreferrer" title="Local PDF"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M5 12V5a2 2 0 0 1 2-2h7l5 5v4M5 18h1.5a1.5 1.5 0 0 0 0-3H5v6m12-3h2m1-3h-3v6m-6-6v6h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z"></path></g></svg></a><a href="/assets/resources/QuiT_EDBT.pdf" class="pub-icon" target="_blank" rel="noopener noreferrer" title="Slides"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3 4h18M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4m-8 12v4m-3 0h6"></path><path d="m8 12l3-3l2 2l3-3"></path></g></svg></a>
-      <a href="https://github.com/BU-DiSC/quick-insertion-tree" class="pub-icon code-static-icon" target="_blank" rel="noopener noreferrer" title="Code"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"></path><path d="M14.333 19v-1.863c.025-.31-.018-.62-.126-.913a2.2 2.2 0 0 0-.5-.781c2.093-.227 4.293-1 4.293-4.544a3.48 3.48 0 0 0-1-2.434a3.2 3.2 0 0 0-.06-2.448s-.787-.227-2.607.961a9.15 9.15 0 0 0-4.666 0c-1.82-1.188-2.607-.96-2.607-.96A3.2 3.2 0 0 0 7 8.464a3.48 3.48 0 0 0-1 2.453c0 3.519 2.2 4.291 4.293 4.544a2.2 2.2 0 0 0-.496.773a2.1 2.1 0 0 0-.13.902V19"></path><path d="M9.667 17.702c-2 .631-3.667 0-4.667-1.948"></path></g></svg></a>
-      <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
-        <a href="https://scholar.google.com/scholar?q=quit+your+b%2B-tree+for+the+quick+insertion+tree" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
-          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">3</span>
-        </a>
-    </div>
-    
-    <div class="badges">
-      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="10.48786/EDBT.2025.36"></span>
-        <span class="__dimensions_badge_embed__" data-doi="10.48786/EDBT.2025.36" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px">
-      </span>
-        </div> <!-- Hidden abstract block -->
-        <div class="abstract hidden">
-            <p>Search trees, like B<sup>+</sup>-trees, are often used as index structures in data systems to improve query performance at the cost of index construction and maintenance. For state-of-the-art B<sup>+</sup>-tree designs used in commercial data systems, this cost is negligible if the data arrives as fully sorted on the index attribute. Further, production systems employ a fast-path ingestion technique for B<sup>+</sup>-trees that directly appends the incoming entries to the tail leaf if the data is fully sorted, drastically reducing the index construction cost. However, this is only effective if the incoming data arrives fully sorted or with an extremely small number of out-of-order entries. In addition, the state-of-the-art sortedness-aware design (SWARE) navigates a tradeoff between reads and writes by buffering incoming data to absorb near-sortedness, which comes at the cost of slower query performance and increased overall design complexity.
-  
-  <br> To address these challenges, we present Quick Insertion Tree (QuIT), a sortedness-aware indexing data structure that improves ingestion performance with minimal design complexity and no read overhead. QuIT maintains in memory a pointer to the predicted ordered-leaf (pole) that provides a sortedness-aware fast-path optimization, and facilitates faster index ingestion. The key benefit comes from accurately predicting pole throughout data ingestion. Further, QuIT achieves high memory utilization by maintaining tightly packed leaf nodes when the ingested data arrives as near-sorted. This, in turn, helps improve performance during range lookups. Overall, we demonstrate that QuIT outperforms B<sup>+</sup>-tree (SWARE) by up to 3× (2×) for ingestion, while maintaining the same point lookup performance (up to 1.23× faster). QuIT also accesses up to 2× fewer leaf nodes than the B<sup>+</sup>-tree during range lookups.</p>
-        </div>
-<!-- Hidden bibtex block -->
-        <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:conf/edbt/RamanKXOSA25</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Raman, Aneesh and Karatsenidis, Konstantinos and Xie, Shaolin and Olma, Matthaios and Sarkar, Subhadeep and Athanassoulis, Manos}</span><span class="p">,</span>
-  <span class="na">editor</span> <span class="p">=</span> <span class="s">{Simitsis, Alkis and Kemme, Bettina and Queralt, Anna and Romero, Oscar and Jovanovic, Petar}</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{QuIT your B&lt;sup&gt;+&lt;/sup&gt;-tree for the Quick Insertion Tree}</span><span class="p">,</span>
-  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the International Conference on Extending Database Technology ({EDBT})}</span><span class="p">,</span>
-  <span class="na">pages</span> <span class="p">=</span> <span class="s">{451--463}</span><span class="p">,</span>
-  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{OpenProceedings.org}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.48786/edbt.2025.36}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48786/EDBT.2025.36}</span><span class="p">,</span>
-  <span class="na">timestamp</span> <span class="p">=</span> <span class="s">{Sat, 06 Sep 2025 20:31:17 +0200}</span><span class="p">,</span>
-  <span class="na">biburl</span> <span class="p">=</span> <span class="s">{https://dblp.org/rec/conf/edbt/RamanKXOSA25.bib}</span><span class="p">,</span>
-  <span class="na">bibsource</span> <span class="p">=</span> <span class="s">{dblp computer science bibliography, https://dblp.org}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1007/978-3-032-18070-4\_5}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1007/978-3-032-18070-4\_5}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure>
         </div>
     </div>
@@ -758,7 +1029,7 @@
       <a href="https://github.com/SSD-Brandeis/LSMMemoryProfiling" class="pub-icon code-static-icon" target="_blank" rel="noopener noreferrer" title="Code"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"></path><path d="M14.333 19v-1.863c.025-.31-.018-.62-.126-.913a2.2 2.2 0 0 0-.5-.781c2.093-.227 4.293-1 4.293-4.544a3.48 3.48 0 0 0-1-2.434a3.2 3.2 0 0 0-.06-2.448s-.787-.227-2.607.961a9.15 9.15 0 0 0-4.666 0c-1.82-1.188-2.607-.96-2.607-.96A3.2 3.2 0 0 0 7 8.464a3.48 3.48 0 0 0-1 2.453c0 3.519 2.2 4.291 4.293 4.544a2.2 2.2 0 0 0-.496.773a2.1 2.1 0 0 0-.13.902V19"></path><path d="M9.667 17.702c-2 .631-3.667 0-4.667-1.948"></path></g></svg></a>
       <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
         <a href="https://scholar.google.com/scholar?q=anatomy+of+the+lsm+memory+buffer%3A+insights+%26+implications" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
-          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">6</span>
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">9</span>
         </a>
     </div>
     
@@ -769,7 +1040,7 @@
         </div> <!-- Hidden abstract block -->
         <div class="abstract hidden">
             <p>Log-structured merge (LSM) tree is an ingestion-optimized data structure that is widely used in modern NoSQL key-value stores. To support high throughput for writes, LSM-trees maintain an in-memory buffer that absorbs the incoming entries before writing them to slower secondary storage. We point out that the choice of the data structure and implementation of the memory buffer has a significant impact on the overall performance of LSM-based storage engines. In fact, even with the same implementation of the buffer, the performance of a storage engine can vary by up to several orders of magnitude if there is a shift in the input workload.
-               
+  
   <br>In this paper, we benchmark the performance of LSM-based storage engines with different memory buffer implementations and under different workload characteristics. We experiment with four buffer implementations, namely, (i) vector, (ii) skip-list, (iii) hash skip-list, and (iv) hash linked-list, and for each implementation, we vary any design choices (such as bucket count in a hash skip-list and prefix length in a hash linked-list). We present a comprehensive performance benchmark for each buffer configuration, and highlight how the relative performance of the different buffer implementations varies with a shift in input workload. Lastly, we present a guideline for selecting the appropriate buffer implementation for a given workload and performance goal.</p>
         </div>
 <!-- Hidden bibtex block -->
@@ -779,12 +1050,78 @@
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Anatomy of the {LSM} Memory Buffer: Insights {\&amp;} Implications}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the International Workshop on Testing Database Systems ({DBT}est)}</span><span class="p">,</span>
   <span class="na">pages</span> <span class="p">=</span> <span class="s">{23--29}</span><span class="p">,</span>
-  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{{ACM}}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
-  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1145/3662165.3662766}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{{ACM}}</span><span class="p">,</span>
   <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1145/3662165.3662766}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1145/3662165.3662766}</span><span class="p">,</span>
   <span class="na">timestamp</span> <span class="p">=</span> <span class="s">{Tue, 08 Apr 2025 11:34:11 +0200}</span><span class="p">,</span>
   <span class="na">biburl</span> <span class="p">=</span> <span class="s">{https://dblp.org/rec/conf/dbtest-ws/KaushikS24.bib}</span><span class="p">,</span>
+  <span class="na">bibsource</span> <span class="p">=</span> <span class="s">{dblp computer science bibliography, https://dblp.org}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+<div class="row">
+    <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#4f9a6d">ICDE</abbr><a href="/assets/fulltext/Indexing_for_Near-Sorted_Data.pdf" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/img/publication_preview/Indexing_for_Near-Sorted_Data.png" class="pdf-preview z-depth-1 rounded" alt="Preview">
+              </a>
+</div>
+
+    <!-- Entry bib key -->
+    <div id="DBLP:conf/icde/RamanSOA23" class="col-sm-8">
+        <!-- Title / Author / Venue — click to toggle abstract -->
+        <div class="abstract-toggle-block">
+        <!-- Title -->
+        <div class="title">
+            <h5>Indexing for Near-Sorted Data</h5>
+        </div>
+        <!-- Author -->
+        <div class="author">
+             Aneesh Raman, <em>Subhadeep Sarkar</em>, Matthaios Olma, and Manos Athanassoulis</div>
+
+    <!-- Journal/Book title and date -->
+      <div class="periodical">
+<em>In Proceedings of the IEEE International Conference on Data Engineering (ICDE)</em>, 2023</div>
+    <div class="periodical"></div>
+        </div>
+<!-- end abstract-toggle-block -->
+
+    <!-- Links/Buttons -->
+    <div class="links"> <a href="/assets/fulltext/Indexing_for_Near-Sorted_Data.pdf" class="pub-icon pdf-icon" target="_blank" rel="noopener noreferrer" title="Local PDF"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M5 12V5a2 2 0 0 1 2-2h7l5 5v4M5 18h1.5a1.5 1.5 0 0 0 0-3H5v6m12-3h2m1-3h-3v6m-6-6v6h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z"></path></g></svg></a><a href="/assets/resources/Sware_ICDE.pdf" class="pub-icon" target="_blank" rel="noopener noreferrer" title="Slides"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3 4h18M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4m-8 12v4m-3 0h6"></path><path d="m8 12l3-3l2 2l3-3"></path></g></svg></a> <a href="/assets/resources/SWARE_ICDE_poster.pdf" class="pub-icon" target="_blank" rel="noopener noreferrer" title="Poster"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M15 8h.01M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z"></path><path d="m3 16l5-5c.928-.893 2.072-.893 3 0l5 5"></path><path d="m14 14l1-1c.928-.893 2.072-.893 3 0l3 3"></path></g></svg></a>
+      <a href="https://github.com/BU-DiSC/sware" class="pub-icon code-static-icon" target="_blank" rel="noopener noreferrer" title="Code"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"></path><path d="M14.333 19v-1.863c.025-.31-.018-.62-.126-.913a2.2 2.2 0 0 0-.5-.781c2.093-.227 4.293-1 4.293-4.544a3.48 3.48 0 0 0-1-2.434a3.2 3.2 0 0 0-.06-2.448s-.787-.227-2.607.961a9.15 9.15 0 0 0-4.666 0c-1.82-1.188-2.607-.96-2.607-.96A3.2 3.2 0 0 0 7 8.464a3.48 3.48 0 0 0-1 2.453c0 3.519 2.2 4.291 4.293 4.544a2.2 2.2 0 0 0-.496.773a2.1 2.1 0 0 0-.13.902V19"></path><path d="M9.667 17.702c-2 .631-3.667 0-4.667-1.948"></path></g></svg></a>
+      <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
+        <a href="https://scholar.google.com/scholar?q=indexing+for+near-sorted+data" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">15</span>
+        </a>
+    </div>
+    
+    <div class="badges">
+      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="10.1109/ICDE55515.2023.00117"></span>
+        <span class="__dimensions_badge_embed__" data-doi="10.1109/ICDE55515.2023.00117" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px">
+      </span>
+        </div> <!-- Hidden abstract block -->
+        <div class="abstract hidden">
+            <p>Indexing in modern data systems facilitates efficient query processing when the selection predicate is on an indexed key. As new data is ingested, indexes are gradually populated with incoming entries. In that respect, indexing can be perceived as the process of adding structure to incoming, otherwise unsorted data. Adding structure, however, comes at a cost. Instead of simply appending the incoming entries, we insert them into the index. If the ingestion order matches the indexed attribute order, the ingestion cost is entirely redundant and can be avoided altogether (e.g., via bulk loading in a B<sup>+</sup>-tree). However, classical tree index designs do not benefit when incoming data comes with an implicit ordering that is close to being sorted, but not fully sorted.
+               
+  <br>In this paper, we study how indexes can exploit near-sortedness. Particularly, we identify sortedness as a resource that can accelerate index ingestion. We propose a new sortedness-aware (SWARE) design paradigm that combines opportunistic bulk loading, index appends, variable node fill and split factors, and an intelligent buffering scheme, to optimize ingestion and read queries in a tree index in the presence of near-sortedness. We apply SWARE to two state-of-the-art search trees (B<sup>+</sup>-tree and B<sup>ε</sup>-tree), and we demonstrate that their Sortedness-Aware counterparts (SA B<sup>+</sup>-tree and SA B<sup>ε</sup>-tree) outperform their respective baselines by up to 8.8× (SA B<sup>+</sup>-tree) and 7.8× (SA B<sup>ε</sup>-tree) for a write-heavy workload in the presence of data sortedness, while offering competitive read performance, leading to overall benefits between 1.3×-5× for mixed read/write workloads with near-sorted data. Overall, we highlight that SWARE can be applied to other tree-like data structures to accelerate index ingestion and improve their performance in the presence of data sortedness.</p>
+        </div>
+<!-- Hidden bibtex block -->
+        <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:conf/icde/RamanSOA23</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Raman, Aneesh and Sarkar, Subhadeep and Olma, Matthaios and Athanassoulis, Manos}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Indexing for Near-Sorted Data}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the IEEE International Conference on Data Engineering ({ICDE})}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{1475--1488}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{{IEEE}}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1109/ICDE55515.2023.00117}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1109/ICDE55515.2023.00117}</span><span class="p">,</span>
+  <span class="na">timestamp</span> <span class="p">=</span> <span class="s">{Sun, 02 Nov 2025 21:27:15 +0100}</span><span class="p">,</span>
+  <span class="na">biburl</span> <span class="p">=</span> <span class="s">{https://dblp.org/rec/conf/icde/RamanSOA23.bib}</span><span class="p">,</span>
   <span class="na">bibsource</span> <span class="p">=</span> <span class="s">{dblp computer science bibliography, https://dblp.org}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure>
         </div>
@@ -823,7 +1160,7 @@
     <div class="links"> <a href="/assets/fulltext/The_LSM_Design_Space_and_its_Read_Optimizations.pdf" class="pub-icon pdf-icon" target="_blank" rel="noopener noreferrer" title="Local PDF"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M5 12V5a2 2 0 0 1 2-2h7l5 5v4M5 18h1.5a1.5 1.5 0 0 0 0-3H5v6m12-3h2m1-3h-3v6m-6-6v6h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z"></path></g></svg></a><a href="/assets/resources/ICDE_LSM_Tutorial.pdf" class="pub-icon" target="_blank" rel="noopener noreferrer" title="Slides"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3 4h18M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4m-8 12v4m-3 0h6"></path><path d="m8 12l3-3l2 2l3-3"></path></g></svg></a>
       <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
         <a href="https://scholar.google.com/scholar?q=the+lsm+design+space+and+its+read+optimizations" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
-          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">27</span>
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">38</span>
         </a>
     </div>
     
@@ -844,12 +1181,79 @@
   <span class="na">title</span> <span class="p">=</span> <span class="s">{The {LSM} Design Space and its Read Optimizations}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the IEEE International Conference on Data Engineering ({ICDE})}</span><span class="p">,</span>
   <span class="na">pages</span> <span class="p">=</span> <span class="s">{3578--3584}</span><span class="p">,</span>
-  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{{IEEE}}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
-  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1109/ICDE55515.2023.00273}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{{IEEE}}</span><span class="p">,</span>
   <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1109/ICDE55515.2023.00273}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1109/ICDE55515.2023.00273}</span><span class="p">,</span>
   <span class="na">timestamp</span> <span class="p">=</span> <span class="s">{Sun, 02 Nov 2025 21:27:15 +0100}</span><span class="p">,</span>
   <span class="na">biburl</span> <span class="p">=</span> <span class="s">{https://dblp.org/rec/conf/icde/SarkarDA23.bib}</span><span class="p">,</span>
+  <span class="na">bibsource</span> <span class="p">=</span> <span class="s">{dblp computer science bibliography, https://dblp.org}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+<div class="row">
+    <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#4f9a6d">SIGMOD</abbr><a href="/assets/fulltext/Acheron_Persisting_Tombstones_in_LSM_Engines.pdf" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/img/publication_preview/Acheron_Persisting_Tombstones_in_LSM_Engines.png" class="pdf-preview z-depth-1 rounded" alt="Preview">
+              </a>
+</div>
+
+    <!-- Entry bib key -->
+    <div id="DBLP:conf/sigmod/ZhuSA23" class="col-sm-8">
+        <!-- Title / Author / Venue — click to toggle abstract -->
+        <div class="abstract-toggle-block">
+        <!-- Title -->
+        <div class="title">
+            <h5>Acheron: Persisting Tombstones in LSM Engines</h5>
+        </div>
+        <!-- Author -->
+        <div class="author">
+             Zichen Zhu, <em>Subhadeep Sarkar</em>, and Manos Athanassoulis</div>
+
+    <!-- Journal/Book title and date -->
+      <div class="periodical">
+<em>In Proceedings of the ACM SIGMOD International Conference on Management of Data</em>, 2023</div>
+    <div class="periodical"></div>
+        </div>
+<!-- end abstract-toggle-block -->
+
+    <!-- Links/Buttons -->
+    <div class="links"> <a href="/assets/fulltext/Acheron_Persisting_Tombstones_in_LSM_Engines.pdf" class="pub-icon pdf-icon" target="_blank" rel="noopener noreferrer" title="Local PDF"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M5 12V5a2 2 0 0 1 2-2h7l5 5v4M5 18h1.5a1.5 1.5 0 0 0 0-3H5v6m12-3h2m1-3h-3v6m-6-6v6h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z"></path></g></svg></a>
+      <a href="https://disc-projects.bu.edu/acheron/research.html" class="pub-icon" target="_blank" rel="noopener noreferrer" title="Project Website"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"></path></svg></a>
+      <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
+        <a href="https://scholar.google.com/scholar?q=acheron%3A+persisting+tombstones+in+lsm+engines" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">8</span>
+        </a>
+    </div>
+    
+    <div class="badges">
+      <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="10.1145/3555041.3589719"></span>
+        <span class="__dimensions_badge_embed__" data-doi="10.1145/3555041.3589719" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px">
+      </span>
+        </div> <!-- Hidden abstract block -->
+        <div class="abstract hidden">
+            <p>Modern NoSQL storage engines frequently employ log-structured merge (LSM) trees as their core data structures because they offer high ingestion rates and low latency for query processing. Client writes are captured in memory first and are gradually merged on disk in a level-wise manner. While this out-of-place paradigm sustains fast ingestion rates, it implements delete operations via inserting tombstones which logically invalidate older entries. Thus, obsolete data cannot be removed instantly and may be retained for an arbitrarily long time. Therefore, out-of-place deletion in LSM trees may, on the one hand, violate data privacy regulations (e.g., the right to be forgotten in EU’s GDPR, right to delete in California’s CCPA and CPRA), and on the other hand, it hurts performance.
+               
+  <br>In this paper, we develop Acheron, which demonstrates the performance implications of out-of-place deletes and how our method achieves timely persistent deletes. We integrate both prior state-of-the-art compaction policies and our recently presented method, FADE, into Acheron and visualize the life cycle of tombstones in LSM trees. Using the Acheron visualization, users can observe that the state of the art does not provide guarantees on when obsolete entries can be physically removed and also observe that FADE can achieve timely persistent deletes without full tree compaction. Users can further customize the workload, LSM tuning knobs, and disk parameters to investigate their impact on tombstones and performance. This demonstration provides key insights into the impact of tombstones on LSM-interested researchers and practitioners.</p>
+        </div>
+<!-- Hidden bibtex block -->
+        <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:conf/sigmod/ZhuSA23</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Zhu, Zichen and Sarkar, Subhadeep and Athanassoulis, Manos}</span><span class="p">,</span>
+  <span class="na">editor</span> <span class="p">=</span> <span class="s">{Das, Sudipto and Pandis, Ippokratis and Candan, K. Sel{\c{c}}uk and Amer{-}Yahia, Sihem}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Acheron: Persisting Tombstones in {LSM} Engines}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the {ACM SIGMOD} International Conference on Management of Data}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{131--134}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{{ACM}}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1145/3555041.3589719}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1145/3555041.3589719}</span><span class="p">,</span>
+  <span class="na">timestamp</span> <span class="p">=</span> <span class="s">{Thu, 15 Jun 2023 21:56:55 +0200}</span><span class="p">,</span>
+  <span class="na">biburl</span> <span class="p">=</span> <span class="s">{https://dblp.org/rec/conf/sigmod/ZhuSA23.bib}</span><span class="p">,</span>
   <span class="na">bibsource</span> <span class="p">=</span> <span class="s">{dblp computer science bibliography, https://dblp.org}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure>
         </div>
@@ -889,7 +1293,7 @@
       <a href="https://disc-projects.bu.edu/compactionary/#interactiveDemo" class="pub-icon" target="_blank" rel="noopener noreferrer" title="Project Website"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"></path></svg></a>
       <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
         <a href="https://scholar.google.com/scholar?q=compactionary%3A+a+dictionary+for+lsm+compactions" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
-          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">29</span>
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">33</span>
         </a>
     </div>
     
@@ -956,7 +1360,7 @@
       <a href="https://www.youtube.com/watch?v=Al3krW4Sh3Q" class="pub-icon" target="_blank" rel="noopener noreferrer" title="Video Presentation"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m15 10l4.553-2.276A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14zM3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></a>
       <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
         <a href="https://scholar.google.com/scholar?q=dissecting%2C+designing%2C+and+optimizing+lsm-based+data+stores" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
-          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">39</span>
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">51</span>
         </a>
     </div>
     
@@ -1026,7 +1430,7 @@
       <a href="https://github.com/BU-DiSC/LSM-Compaction-Analysis" class="pub-icon code-static-icon" target="_blank" rel="noopener noreferrer" title="Code"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"></path><path d="M14.333 19v-1.863c.025-.31-.018-.62-.126-.913a2.2 2.2 0 0 0-.5-.781c2.093-.227 4.293-1 4.293-4.544a3.48 3.48 0 0 0-1-2.434a3.2 3.2 0 0 0-.06-2.448s-.787-.227-2.607.961a9.15 9.15 0 0 0-4.666 0c-1.82-1.188-2.607-.96-2.607-.96A3.2 3.2 0 0 0 7 8.464a3.48 3.48 0 0 0-1 2.453c0 3.519 2.2 4.291 4.293 4.544a2.2 2.2 0 0 0-.496.773a2.1 2.1 0 0 0-.13.902V19"></path><path d="M9.667 17.702c-2 .631-3.667 0-4.667-1.948"></path></g></svg></a>
       <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
         <a href="https://scholar.google.com/scholar?q=constructing+and+analyzing+the+lsm+compaction+design+space" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
-          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">93</span>
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">122</span>
         </a>
     </div>
     
@@ -1095,7 +1499,7 @@
       <a href="http://disc-projects.bu.edu/lethe/" class="pub-icon" target="_blank" rel="noopener noreferrer" title="Project Website"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"></path></svg></a>
       <a class="bibtex pub-icon" role="button" title="BibTeX"><svg class="pub-svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="transparent"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5m13-7h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6q0 4-4 5"></path></svg></a>
         <a href="https://scholar.google.com/scholar?q=lethe%3A+a+tunable+delete-aware+lsm+engine" target="_blank" rel="noopener noreferrer" class="scholar-badge" title="View on Google Scholar">
-          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">106</span>
+          <img src="https://img.shields.io/badge/Citations-white?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-light"><img src="https://img.shields.io/badge/Citations-2a2a2e?style=flat&amp;logo=googlescholar&amp;logoColor=4285F4" alt="Citations" class="citations-badge-dark"><span class="scholar-citation-count">117</span>
         </a>
     </div>
     
