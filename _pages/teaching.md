@@ -15,9 +15,9 @@ nav_order: 4
 
 <table style="undefined;table-layout: fixed; width: 100%">
 <colgroup>
-<col style="width: 20%">
+<col style="width: 18%">
 <col style="width: 4mm">
-<col style="width: 80%">
+<col style="width: 82%">
 </colgroup>
 <tbody>
   <tr>
@@ -25,7 +25,7 @@ nav_order: 4
       <div style="margin-top: 7mm;"></div>
       <a href="https://ssd-brandeis.github.io/COSI-131A/" style="text-decoration: none;">
         <div style="margin-top: 2mm;"></div> 
-        <img src="/assets/img/CS350.png" class="img-fluid z-depth-1" width="225" height="225" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+        <img src="/assets/img/COSI131A.png" class="img-fluid z-depth-1" width="225" height="225" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
       </a>
     </td>
     <td></td>
@@ -122,9 +122,9 @@ nav_order: 4
 
 <table style="undefined;table-layout: fixed; width: 100%">
 <colgroup>
-<col style="width: 20%">
+<col style="width: 18%">
 <col style="width: 4mm">
-<col style="width: 80%">
+<col style="width: 82%">
 </colgroup>
 <tbody>
   <tr>
