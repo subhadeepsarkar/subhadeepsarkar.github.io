@@ -164,7 +164,7 @@ collections:
     output: false
     permalink: /news/:path/
   projects:
-    output: true
+    output: false
     permalink: /projects/:path/
 
 news:
