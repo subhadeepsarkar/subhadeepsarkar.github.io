@@ -105,26 +105,3 @@ nav_order: 5
   </div>
 </div>
 
-
-<div class="projects">
-  <!-- Display categorized projects -->
-  <h2 class="category" style="margin-top: -40px;">external reviewer -- conferences (selected)</h2>
-  <div style="width: 100%; float:left; margin-top: -20px; margin-bottom: 120px;">
-    <br> 
-    <ul>
-      <li>International Conference on Innovative Data Systems Research (<b>CIDR</b>) [2023]</li>
-      <li>Proceedings of the VLDB Endowment (<b>PVLDB</b>) [2022, 2021]</li>
-      <li>IEEE International Conference on Big Data (<b>BigData</b>) [2021, 2017]</li>
-      <li>International European Conference on Parallel and Distributed Computing (<b>Euro-Par</b>) [2018]</li>
-      <li>IEEE International Conference on Fog and Edge Computing (<b>ICFEC</b>) [2018, 2017]</li>
-      <li>IEEE International Conference on Distributed Computing Systems (<b>ICDCS</b>) [2017]</li>
-      <li>IEEE International Conference on Cloud Computing Technology and Sciences (<b>CloudCom</b>) [2017]</li>
-      <li>IEEE Conference on Network Function Virtualization and Software Defined Networks (<b>NFV-SDN</b>) [2017]</li>
-      <li>International Conference on Electronics, Communications and Networks (<b>CECNet</b>) [2017]</li>
-      <li>IEEE Wireless Communications and Networking Conference (<b>WCNC</b>) [2016]</li>
-      <li>International Conference on Software, Telecommunications and Computer Networks (<b>SoftCom</b>) [2016]</li>
-      <li>IEEE International Conference on Advanced Networks and Telecommunications Systems (<b>ANTS</b>) [2016, 2015]</li>
-    </ul>
-  </div>
-</div>
-
