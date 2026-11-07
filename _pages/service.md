@@ -43,7 +43,6 @@ nav_order: 5
       <li>IEEE International Conference on Data Engineering (<b>ICDE</b>) <b>Demo</b>, 2026</li>
       <li>ACM <b>SIGMOD</b> International Conference on Management of Data <b>Demo</b>, 2026</li>
       <li>International Conference on Very Large Data Bases (<b>VLDB</b>), 2026</li>
-      <li>IEEE International Conference on Big Data (<b>BigData</b>), 2026</li>
       <li>IEEE International Conference on Big Data (<b>BigData</b>), 2025</li>
       <li>International Workshop on Accelerating Analytics and Data Management Systems Using Modern Processor and Storage Architectures (<b>ADMS</b>), 2025</li>
       <li>International Conference on Very Large Data Bases (<b>VLDB</b>) <b>Demo</b>, 2025</li>
@@ -65,11 +64,9 @@ nav_order: 5
       <li>IEEE <b>SmartData</b>, 2019</li>
       <li>ACM <b>SIGMOD</b> International Conference on Management of Data <b>Reproducibility</b>, 2018</li>
       <li>ACM <b>MobiCom</b> workshop on Future Industrial Communication Networks (<b>FICN</b>), 2018</li>
-      <li>The European Conference on Computer Systems (<b>EuroSys</b>), 2018 (<i>Shadow PC</i>)</li>
       <li>International Conference on Advanced Computing, Networking, and Informatics (<b>ICACNI</b>), 2018</li>
       <li>International Conference on Advanced Computing and Intelligent Engineering (<b>ICACIE</b>), 2018</li>
       <li>International Conference on Advanced Computing and Intelligent Engineering (<b>ICACIE</b>), 2017</li>
-      <li>IEEE Students' Technology Symposium (<b>TechSym</b>), 2016 (Track Co-Chair: <i>RF System, Communication and Computer Networks</i>)</li>
       <li>International Conference on Advanced Computing and Intelligent Engineering (<b>ICACIE</b>), 2016</li>
     </ul>
   </div>
